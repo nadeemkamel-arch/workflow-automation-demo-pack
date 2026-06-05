@@ -8,6 +8,10 @@ Portfolio page:
 
 https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/
 
+Pilot inquiry form:
+
+https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-pilot.yml
+
 ## Demos
 
 ### n8n AI Ops Triage

@@ -1,0 +1,90 @@
+name: Workflow automation pilot inquiry
+description: Ask about a small paid workflow automation pilot.
+title: "[Pilot] "
+labels:
+  - pilot-inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for opening a pilot inquiry.
+
+        Please do not include production credentials, API keys, private customer records, regulated data, payment details, or confidential business data. Use fictional, redacted, or high-level examples only.
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Workflow to automate
+      description: Describe the manual process or broken automation in a few sentences.
+      placeholder: "Example: inbound form submissions need to be validated, scored, and routed to a spreadsheet plus Slack alert."
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Input source
+      description: What starts the workflow?
+      placeholder: "Webhook, CSV export, Google Sheet, CRM export, inbox export, form submission, API payload..."
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Desired output
+      description: What should the workflow produce?
+      placeholder: "Clean spreadsheet, JSON summary, CRM update, draft for human review, report, notification..."
+    validations:
+      required: true
+  - type: dropdown
+    id: stack
+    attributes:
+      label: Preferred implementation style
+      options:
+        - n8n workflow
+        - Python script
+        - Hybrid n8n plus Python/API
+        - Not sure yet
+    validations:
+      required: true
+  - type: textarea
+    id: systems
+    attributes:
+      label: Systems involved
+      description: List tools by name only. Do not include credentials or private URLs.
+      placeholder: "OpenAI, Google Sheets, Airtable, HubSpot, Slack, internal REST API, CSV files..."
+    validations:
+      required: false
+  - type: textarea
+    id: edge_cases
+    attributes:
+      label: Edge cases or failure modes
+      description: What goes wrong today?
+      placeholder: "Duplicate rows, missing fields, malformed exports, API timeouts, unclear routing rules..."
+    validations:
+      required: false
+  - type: dropdown
+    id: data_safety
+    attributes:
+      label: Data boundary for first pilot
+      options:
+        - Fictional sample data
+        - Redacted sample data
+        - Sandbox/test account data
+        - Needs discussion before sharing anything
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: How would you judge the first pilot?
+      placeholder: "Example: one test payload produces the expected spreadsheet row, review draft, and error log."
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact route
+      description: Optional. You can also email directly from the portfolio page.
+      placeholder: "Email or preferred public contact route"
+    validations:
+      required: false
