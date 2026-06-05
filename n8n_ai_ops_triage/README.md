@@ -32,6 +32,17 @@ python3 -m pytest test_workflow_contract.py
 
 The test does not require a running n8n instance. It validates the JSON contract and runs the Code node logic locally through Node.js.
 
+## Handoff Shape
+
+For a client pilot, pair the exported workflow with:
+
+- one sample webhook payload,
+- one expected response,
+- one validation command or checklist,
+- notes for credentials, retry behavior, and review gates.
+
+See `../handoff_template.md` for the public handoff checklist.
+
 ## Client Adaptation
 
 A paid version would replace the sample webhook payload with the client's approved source:

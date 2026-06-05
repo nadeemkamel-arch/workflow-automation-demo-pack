@@ -12,6 +12,10 @@ Pilot inquiry form:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-pilot.yml
 
+Sandbox handoff checklist:
+
+https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/handoff_template.md
+
 ## Demos
 
 ### n8n AI Ops Triage
@@ -80,6 +84,8 @@ A good first milestone is narrow:
 - basic validation,
 - setup notes,
 - a review gate before customer-facing actions.
+
+Use `handoff_template.md` to agree on data boundaries, acceptance criteria, validation, and expansion rules before moving from sample data to client systems.
 
 ## Boundaries
 
