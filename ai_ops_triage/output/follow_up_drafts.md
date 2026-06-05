@@ -13,7 +13,7 @@ My suggested first milestone would be: confirm the input, define the output, bui
 Could you share a small sample file or a redacted example of the current workflow?
 
 Best,
-Nadeem
+Automation Team
 
 ## REQ-1006 - Helio Roof Co
 
@@ -26,7 +26,7 @@ My suggested first milestone would be: confirm the input, define the output, bui
 Could you share a small sample file or a redacted example of the current workflow?
 
 Best,
-Nadeem
+Automation Team
 
 ## REQ-1002 - Blue Harbor Supply
 
@@ -39,7 +39,7 @@ My suggested first milestone would be: confirm the input, define the output, bui
 Could you share a small sample file or a redacted example of the current workflow?
 
 Best,
-Nadeem
+Automation Team
 
 ## REQ-1001 - Northstar Dental
 
@@ -52,7 +52,7 @@ My suggested first milestone would be: confirm the input, define the output, bui
 Could you share a small sample file or a redacted example of the current workflow?
 
 Best,
-Nadeem
+Automation Team
 
 ## REQ-1003 - SunnyFit Studio
 
@@ -65,7 +65,7 @@ My suggested first milestone would be: confirm the input, define the output, bui
 Could you share a small sample file or a redacted example of the current workflow?
 
 Best,
-Nadeem
+Automation Team
 
 ## REQ-1005 - Campus Tutors
 

@@ -14,7 +14,7 @@ The demo uses deterministic scoring rather than a paid LLM call. In a client pro
 ## Run
 
 ```bash
-python3 triage.py --input input/inquiries.csv --out output
+python3 triage.py --input input/inquiries.csv --out output --today 2026-06-04
 python3 -m pytest test_triage.py
 ```
 

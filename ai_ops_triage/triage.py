@@ -257,7 +257,7 @@ def render_follow_up_drafts(results: list[TriageResult]) -> str:
                 "Could you share a small sample file or a redacted example of the current workflow?",
                 "",
                 "Best,",
-                "Nadeem",
+                "Automation Team",
                 "",
             ]
         )
@@ -268,9 +268,10 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Triage inbound automation requests into an action queue.")
     parser.add_argument("--input", required=True, type=Path, help="CSV input path")
     parser.add_argument("--out", required=True, type=Path, help="Output directory")
+    parser.add_argument("--today", type=date.fromisoformat, help="Override today's date in YYYY-MM-DD format for reproducible demo output")
     args = parser.parse_args()
 
-    results = triage(args.input)
+    results = triage(args.input, today=args.today)
     write_outputs(results, args.out)
     print(f"Wrote {len(results)} triaged rows to {args.out}")
 

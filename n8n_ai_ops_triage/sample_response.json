@@ -1,0 +1,26 @@
+{
+  "summary": {
+    "total_requests": 6,
+    "high": 2,
+    "review_first": 1,
+    "do_not_pursue": 3
+  },
+  "action_plan": [
+    {
+      "id": "REQ-1001",
+      "company": "Cedar Ops",
+      "priority": "high",
+      "score": 90,
+      "risk_label": "green",
+      "next_step": "Propose a scoped first milestone with sample data, logging, setup notes, and a review gate."
+    },
+    {
+      "id": "REQ-1004",
+      "company": "Northstar Rentals",
+      "priority": "high",
+      "score": 76,
+      "risk_label": "green",
+      "next_step": "Propose a scoped first milestone with sample data, logging, setup notes, and a review gate."
+    }
+  ]
+}

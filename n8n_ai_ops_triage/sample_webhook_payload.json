@@ -1,0 +1,64 @@
+{
+  "requests": [
+    {
+      "id": "REQ-1001",
+      "company": "Cedar Ops",
+      "channel": "referral",
+      "request": "Our Zapier automation breaks when a lead has two phone numbers",
+      "last_touch_days": 21,
+      "value_estimate": 1200,
+      "deadline": "2026-06-06",
+      "notes": "Existing automation; quick rescue"
+    },
+    {
+      "id": "REQ-1002",
+      "company": "Bay Legal Templates",
+      "channel": "web",
+      "request": "Need help drafting legal advice emails for clients",
+      "last_touch_days": 2,
+      "value_estimate": 600,
+      "deadline": "2026-06-10",
+      "notes": "Regulated advice risk"
+    },
+    {
+      "id": "REQ-1003",
+      "company": "SunnyFit Studio",
+      "channel": "instagram",
+      "request": "Want a chatbot that books consultations and texts prospects automatically",
+      "last_touch_days": 1,
+      "value_estimate": 350,
+      "deadline": "2026-06-14",
+      "notes": "Needs outreach policy review"
+    },
+    {
+      "id": "REQ-1004",
+      "company": "Northstar Rentals",
+      "channel": "email",
+      "request": "Can you turn quote requests into a checklist for our staff?",
+      "last_touch_days": 9,
+      "value_estimate": 450,
+      "deadline": "2026-06-09",
+      "notes": "Good small workflow"
+    },
+    {
+      "id": "REQ-1005",
+      "company": "Campus Tutors",
+      "channel": "email",
+      "request": "Can you write homework answers with AI?",
+      "last_touch_days": 0,
+      "value_estimate": 200,
+      "deadline": "2026-06-09",
+      "notes": "Reject academic cheating"
+    },
+    {
+      "id": "REQ-1006",
+      "company": "Clearwater Finance",
+      "channel": "web",
+      "request": "Need an AI agent to recommend stock trades to customers",
+      "last_touch_days": 3,
+      "value_estimate": 900,
+      "deadline": "2026-06-12",
+      "notes": "Regulated financial advice risk"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "name": "AI Ops Triage - Webhook to Reviewed Action Plan",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "ai-ops-triage",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "a1f9f1fd-1d6f-4d53-8e9a-000000000001",
+      "name": "Webhook: Inbound Requests",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -620,
+        0
+      ],
+      "webhookId": "ai-ops-triage-demo"
+    },
+    {
+      "parameters": {
+        "jsCode": "const payload = items[0]?.json ?? {};\nconst requests = Array.isArray(payload.requests) ? payload.requests : [];\n\nconst redFlags = [\n  ['homework', 'red:academic_cheating'],\n  ['legal advice', 'red:regulated_advice'],\n  ['stock trades', 'red:regulated_financial_advice'],\n  ['fake reviews', 'red:deceptive_promotion'],\n  ['mass dm', 'red:spam_or_bulk_outreach']\n];\nconst yellowFlags = [\n  ['texts prospects', 'yellow:automated_outreach_review'],\n  ['sms', 'yellow:automated_outreach_review'],\n  ['automatically', 'yellow:automation_review']\n];\n\nfunction parseNumber(value) {\n  const parsed = Number(value);\n  return Number.isFinite(parsed) ? parsed : 0;\n}\n\nfunction detectRisk(requestText, notes) {\n  const haystack = `${requestText} ${notes}`.toLowerCase();\n  for (const [term, label] of redFlags) {\n    if (haystack.includes(term)) return label;\n  }\n  for (const [term, label] of yellowFlags) {\n    if (haystack.includes(term)) return label;\n  }\n  return 'green';\n}\n\nfunction scoreRequest(row) {\n  const requestText = String(row.request ?? '');\n  const notes = String(row.notes ?? '');\n  const riskLabel = detectRisk(requestText, notes);\n  if (riskLabel.startsWith('red:')) {\n    return {\n      ...row,\n      score: 0,\n      priority: 'do_not_pursue',\n      risk_label: riskLabel,\n      next_step: 'Decline or ignore because the request conflicts with service boundaries.'\n    };\n  }\n\n  const value = parseNumber(row.value_estimate);\n  const lastTouchDays = parseNumber(row.last_touch_days);\n  let score = 25;\n  if (value >= 1000) score += 35;\n  else if (value >= 400) score += 25;\n  else if (value >= 250) score += 15;\n\n  if (lastTouchDays >= 14) score += 15;\n  else if (lastTouchDays >= 7) score += 10;\n  else if (lastTouchDays <= 2) score += 5;\n\n  const lower = requestText.toLowerCase();\n  if (lower.includes('zapier') || lower.includes('automation')) score += 15;\n  if (lower.includes('quote') || lower.includes('checklist') || lower.includes('staff')) score += 16;\n  if (riskLabel.startsWith('yellow:')) score -= 20;\n\n  const priority = score >= 70 && riskLabel === 'green' ? 'high' : 'review_first';\n  return {\n    ...row,\n    score,\n    priority,\n    risk_label: riskLabel,\n    next_step: priority === 'high'\n      ? 'Propose a scoped first milestone with sample data, logging, setup notes, and a review gate.'\n      : 'Review policy and scope before proposing. Keep human approval gates in place.'\n  };\n}\n\nconst triaged = requests.map(scoreRequest);\nconst summary = triaged.reduce((acc, row) => {\n  acc.total_requests += 1;\n  acc[row.priority] = (acc[row.priority] ?? 0) + 1;\n  return acc;\n}, {total_requests: 0, high: 0, review_first: 0, do_not_pursue: 0});\nconst actionPlan = triaged\n  .filter((row) => row.priority === 'high')\n  .map(({id, company, priority, score, risk_label, next_step}) => ({id, company, priority, score, risk_label, next_step}));\n\nreturn [{json: {summary, action_plan: actionPlan, triaged_requests: triaged}}];"
+      },
+      "id": "a1f9f1fd-1d6f-4d53-8e9a-000000000002",
+      "name": "Code: Score Requests",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -340,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{$json}}",
+        "options": {}
+      },
+      "id": "a1f9f1fd-1d6f-4d53-8e9a-000000000003",
+      "name": "Respond: Reviewed Action Plan",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Webhook: Inbound Requests": {
+      "main": [
+        [
+          {
+            "node": "Code: Score Requests",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code: Score Requests": {
+      "main": [
+        [
+          {
+            "node": "Respond: Reviewed Action Plan",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2026-06-05T00:00:00.000Z",
+  "versionId": "ai-ops-triage-demo-v1"
+}

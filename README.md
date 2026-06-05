@@ -6,6 +6,24 @@ These examples use fictional data and deterministic logic. In a client project, 
 
 ## Demos
 
+### n8n AI Ops Triage
+
+Path: `n8n_ai_ops_triage/`
+
+Shows an importable n8n workflow that:
+
+- receives inbound automation requests through a webhook,
+- scores requests in a Code node,
+- returns a structured action plan through a webhook response,
+- keeps customer-facing replies behind review.
+
+Run the contract test:
+
+```bash
+cd n8n_ai_ops_triage
+python3 -m pytest test_workflow_contract.py
+```
+
 ### AI Ops Triage
 
 Path: `ai_ops_triage/`
@@ -21,7 +39,7 @@ Run:
 
 ```bash
 cd ai_ops_triage
-python3 triage.py --input input/inquiries.csv --out output
+python3 triage.py --input input/inquiries.csv --out output --today 2026-06-04
 python3 -m pytest test_triage.py
 ```
 
