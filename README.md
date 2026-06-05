@@ -1,8 +1,8 @@
-# Workflow Automation Demo Pack
+# Agentic Workflow Automation Demo Pack
 
-Public-safe demos for scoped automation work: Python scripts, structured inputs, reproducible outputs, tests, and handoff notes.
+Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, reproducible outputs, tests, and handoff notes.
 
-These examples use fictional data and deterministic logic. In a client project, the same delivery shape can connect to approved tools such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, or an n8n/Make/Zapier workflow. LLM calls can be added where they make sense, with clear data boundaries and cost approval.
+These examples use fictional data so the code, outputs, and runbooks can be inspected publicly. The same delivery shape can connect to approved client systems such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, LLM calls, or n8n/Make/Zapier workflows once the data source, credentials, cost controls, and launch gate are agreed.
 
 Portfolio page:
 
@@ -108,7 +108,7 @@ python3 -m pytest test_conversation_flow_qa.py
 
 Path: `document_intake_agent/`
 
-Turns fictional purchase order, invoice, and contract documents into:
+Shows a multi-step document-processing agent flow that turns fictional purchase order, invoice, and contract documents into:
 
 - extracted document fields,
 - risk and review routing,
@@ -128,7 +128,7 @@ python3 -m pytest test_document_intake_agent.py
 
 Path: `statement_email_workflow/`
 
-Turns fictional session records into:
+Shows a database-backed automation pattern that turns fictional session records into:
 
 - SQL-backed weekly statement groups,
 - internal pair statements with one CC policy,
