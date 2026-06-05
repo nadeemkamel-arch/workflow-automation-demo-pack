@@ -1,0 +1,62 @@
+[
+  {
+    "statement_id": "external:2026-06-01:gomez@example.test",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 1
+  },
+  {
+    "statement_id": "external:2026-06-01:lee@example.test",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 1
+  },
+  {
+    "statement_id": "external:2026-06-01:patel@example.test",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 1
+  },
+  {
+    "statement_id": "external:2026-06-08:lee@example.test",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 1
+  },
+  {
+    "statement_id": "external:2026-06-08:patel@example.test",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 1
+  },
+  {
+    "statement_id": "pair:2026-06-01:North-Clinic:Cedar-Billing",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 2
+  },
+  {
+    "statement_id": "pair:2026-06-01:North-Clinic:River-Billing",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 2
+  },
+  {
+    "statement_id": "pair:2026-06-01:South-Clinic:River-Billing",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 2
+  },
+  {
+    "statement_id": "pair:2026-06-08:North-Clinic:River-Billing",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 2
+  },
+  {
+    "statement_id": "pair:2026-06-08:South-Clinic:Cedar-Billing",
+    "status": "not_sent",
+    "reason": "dry_run_only",
+    "recipient_count": 2
+  }
+]

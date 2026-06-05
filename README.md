@@ -124,6 +124,26 @@ python3 document_intake_agent.py --input-dir input/documents --out output
 python3 -m pytest test_document_intake_agent.py
 ```
 
+### Statement Email Workflow
+
+Path: `statement_email_workflow/`
+
+Turns fictional session records into:
+
+- SQL-backed weekly statement groups,
+- internal pair statements with one CC policy,
+- external-recipient statements with another CC policy,
+- dry-run email payloads with idempotency keys,
+- preview and run-summary outputs.
+
+Run:
+
+```bash
+cd statement_email_workflow
+python3 statement_email_workflow.py --input input/session_records.csv --out output
+python3 -m pytest test_statement_email_workflow.py
+```
+
 ## Good First Project
 
 A good first milestone is narrow:

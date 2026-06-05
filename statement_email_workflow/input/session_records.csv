@@ -1,0 +1,7 @@
+session_id,week_start,party_a,party_a_email,party_b,party_b_email,external_recipient,external_email,service_code,minutes,amount_usd
+S-1001,2026-06-01,North Clinic,ops+north@example.test,River Billing,billing+river@example.test,Dr. Lee,lee@example.test,CONSULT,45,180.00
+S-1002,2026-06-01,North Clinic,ops+north@example.test,River Billing,billing+river@example.test,Dr. Lee,lee@example.test,ADMIN,15,45.00
+S-1003,2026-06-01,North Clinic,ops+north@example.test,Cedar Billing,billing+cedar@example.test,Dr. Patel,patel@example.test,CONSULT,30,120.00
+S-1004,2026-06-01,South Clinic,ops+south@example.test,River Billing,billing+river@example.test,Dr. Gomez,gomez@example.test,CONSULT,60,240.00
+S-1005,2026-06-08,North Clinic,ops+north@example.test,River Billing,billing+river@example.test,Dr. Lee,lee@example.test,CONSULT,50,200.00
+S-1006,2026-06-08,South Clinic,ops+south@example.test,Cedar Billing,billing+cedar@example.test,Dr. Patel,patel@example.test,ADMIN,20,60.00

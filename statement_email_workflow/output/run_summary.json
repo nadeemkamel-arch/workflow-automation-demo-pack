@@ -1,0 +1,9 @@
+{
+  "total_statements": 10,
+  "by_statement_type": {
+    "external_recipient_weekly": 5,
+    "party_pair_weekly": 5
+  },
+  "total_amount_usd": 1690.0,
+  "send_mode": "dry_run_only"
+}

@@ -1,0 +1,202 @@
+[
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "external:2026-06-01:gomez@example.test",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "gomez@example.test"
+      ],
+      "cc": [
+        "ops@example.test",
+        "billing@example.test"
+      ],
+      "subject": "Weekly statement for Dr. Gomez (2026-06-01)",
+      "markdownBody": "Weekly external statement for Dr. Gomez\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1004 | CONSULT | 60 | $240.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "external:2026-06-01:lee@example.test",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "lee@example.test"
+      ],
+      "cc": [
+        "ops@example.test",
+        "billing@example.test"
+      ],
+      "subject": "Weekly statement for Dr. Lee (2026-06-01)",
+      "markdownBody": "Weekly external statement for Dr. Lee\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1001 | CONSULT | 45 | $180.00 |\n| S-1002 | ADMIN | 15 | $45.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "external:2026-06-01:patel@example.test",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "patel@example.test"
+      ],
+      "cc": [
+        "ops@example.test",
+        "billing@example.test"
+      ],
+      "subject": "Weekly statement for Dr. Patel (2026-06-01)",
+      "markdownBody": "Weekly external statement for Dr. Patel\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1003 | CONSULT | 30 | $120.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "external:2026-06-08:lee@example.test",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "lee@example.test"
+      ],
+      "cc": [
+        "ops@example.test",
+        "billing@example.test"
+      ],
+      "subject": "Weekly statement for Dr. Lee (2026-06-08)",
+      "markdownBody": "Weekly external statement for Dr. Lee\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1005 | CONSULT | 50 | $200.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "external:2026-06-08:patel@example.test",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "patel@example.test"
+      ],
+      "cc": [
+        "ops@example.test",
+        "billing@example.test"
+      ],
+      "subject": "Weekly statement for Dr. Patel (2026-06-08)",
+      "markdownBody": "Weekly external statement for Dr. Patel\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1006 | ADMIN | 20 | $60.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "pair:2026-06-01:North-Clinic:Cedar-Billing",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "ops+north@example.test",
+        "billing+cedar@example.test"
+      ],
+      "cc": [
+        "statements@example.test"
+      ],
+      "subject": "Weekly statement: North Clinic + Cedar Billing (2026-06-01)",
+      "markdownBody": "Weekly paired statement for North Clinic and Cedar Billing\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1003 | CONSULT | 30 | $120.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "pair:2026-06-01:North-Clinic:River-Billing",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "ops+north@example.test",
+        "billing+river@example.test"
+      ],
+      "cc": [
+        "statements@example.test"
+      ],
+      "subject": "Weekly statement: North Clinic + River Billing (2026-06-01)",
+      "markdownBody": "Weekly paired statement for North Clinic and River Billing\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1001 | CONSULT | 45 | $180.00 |\n| S-1002 | ADMIN | 15 | $45.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "pair:2026-06-01:South-Clinic:River-Billing",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "ops+south@example.test",
+        "billing+river@example.test"
+      ],
+      "cc": [
+        "statements@example.test"
+      ],
+      "subject": "Weekly statement: South Clinic + River Billing (2026-06-01)",
+      "markdownBody": "Weekly paired statement for South Clinic and River Billing\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1004 | CONSULT | 60 | $240.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "pair:2026-06-08:North-Clinic:River-Billing",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "ops+north@example.test",
+        "billing+river@example.test"
+      ],
+      "cc": [
+        "statements@example.test"
+      ],
+      "subject": "Weekly statement: North Clinic + River Billing (2026-06-08)",
+      "markdownBody": "Weekly paired statement for North Clinic and River Billing\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1005 | CONSULT | 50 | $200.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  },
+  {
+    "provider": "example-mail-service",
+    "method": "POST",
+    "endpoint": "/messages/send",
+    "headers": {
+      "Idempotency-Key": "pair:2026-06-08:South-Clinic:Cedar-Billing",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "to": [
+        "ops+south@example.test",
+        "billing+cedar@example.test"
+      ],
+      "cc": [
+        "statements@example.test"
+      ],
+      "subject": "Weekly statement: South Clinic + Cedar Billing (2026-06-08)",
+      "markdownBody": "Weekly paired statement for South Clinic and Cedar Billing\n\n| Session | Service | Minutes | Amount |\n| --- | --- | ---: | ---: |\n| S-1006 | ADMIN | 20 | $60.00 |\n\nPlease review before sending from the approved mail service."
+    }
+  }
+]
