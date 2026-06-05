@@ -1,0 +1,5 @@
+id,event_name,event_date,event_type,wishlist_items,guest_count,city,venue_address,delivery_window,setup_notes,budget_notes
+EVT-001,Backyard birthday lounge,2026-07-18,Birthday,"lounge seating x2, umbrellas x4, cocktail tables x6",45,San Diego,123 Fictional Canyon Rd,10:00-12:00,Backyard setup with side gate access,
+EVT-002,Corporate mixer,2026-08-02,Corporate mixer,"bar x1, cocktail tables x12, stools x24",,La Jolla,456 Sample Venue Way,,Indoor/outdoor space TBD,Needs quote this week
+EVT-003,Wedding welcome party,TBD,Wedding welcome party,,80,Encinitas,,,Beach-adjacent venue,Flexible package ideas requested
+EVT-004,Rooftop alumni reception,2026-09-14,Reception,"high boys x10, bar x1, lounge chairs x8",120,Los Angeles,789 Example Rooftop,13:00-15:00,Rooftop setup with elevator access,

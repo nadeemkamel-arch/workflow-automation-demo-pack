@@ -1,0 +1,16 @@
+{
+  "total": 4,
+  "by_readiness": {
+    "high": 1,
+    "low": 1,
+    "medium": 2
+  },
+  "top_ready_ids": [
+    "EVT-001"
+  ],
+  "needs_follow_up_ids": [
+    "EVT-004",
+    "EVT-002",
+    "EVT-003"
+  ]
+}

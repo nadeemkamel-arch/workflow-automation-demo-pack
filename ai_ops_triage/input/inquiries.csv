@@ -1,0 +1,7 @@
+id,company,channel,request,last_touch_days,value_estimate,deadline,notes
+REQ-1001,Northstar Dental,email,"Need a script that turns patient intake CSVs into a daily office summary",12,900,2026-06-10,"HIPAA-sensitive; use sample data only for first pass"
+REQ-1002,Blue Harbor Supply,webform,"Can you automate purchase order PDFs into a spreadsheet?",4,650,2026-06-07,"Has 30 sample PDFs ready"
+REQ-1003,SunnyFit Studio,instagram,"Want a chatbot that books consultations and texts prospects automatically",1,350,2026-06-14,"Needs consent review before SMS"
+REQ-1004,Cedar Ops,referral,"Our Zapier flow breaks when a lead has two phone numbers",21,1200,2026-06-06,"Existing automation; likely quick rescue"
+REQ-1005,Campus Tutors,email,"Can you write our homework answers with AI?",0,200,2026-06-09,"Reject academic cheating"
+REQ-1006,Helio Roof Co,email,"Need weekly lead report from form exports with follow-up drafts",6,800,2026-06-08,"Good fit for CSV triage and drafts"

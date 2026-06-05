@@ -1,0 +1,20 @@
+{
+  "total": 6,
+  "by_priority": {
+    "do_not_pursue": 1,
+    "high": 2,
+    "medium": 1,
+    "review_first": 2
+  },
+  "by_risk": {
+    "green": 3,
+    "red:academic_cheating": 1,
+    "yellow:automated_outreach_review": 1,
+    "yellow:regulated_or_sensitive_data": 1
+  },
+  "top_ids": [
+    "REQ-1004",
+    "REQ-1006",
+    "REQ-1002"
+  ]
+}

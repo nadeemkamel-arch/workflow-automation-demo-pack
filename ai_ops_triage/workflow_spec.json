@@ -1,0 +1,41 @@
+{
+  "name": "AI Ops Triage Automation Demo",
+  "purpose": "Convert inbound requests into a prioritized action queue with draft follow-ups for human review.",
+  "trigger": {
+    "type": "scheduled_or_manual",
+    "source": "CSV export, Google Sheet, CRM export, or webhook payload"
+  },
+  "steps": [
+    {
+      "id": "normalize",
+      "description": "Read source rows, trim text, coerce numeric fields, and validate required columns."
+    },
+    {
+      "id": "safety_filter",
+      "description": "Flag requests that involve academic cheating, sensitive regulated data, spam, or risky automated outreach."
+    },
+    {
+      "id": "score",
+      "description": "Score each request by urgency, estimated value, age, fit keywords, and safety status."
+    },
+    {
+      "id": "route",
+      "description": "Assign priority labels and recommended next actions."
+    },
+    {
+      "id": "draft",
+      "description": "Prepare short follow-up drafts for human review. Do not send automatically."
+    },
+    {
+      "id": "export",
+      "description": "Write triaged CSV, action plan Markdown, draft replies, and JSON summary."
+    }
+  ],
+  "human_approval_gate": "All external replies remain drafts until the account owner approves and sends them.",
+  "production_notes": [
+    "Use sample or redacted data for the first milestone.",
+    "Do not store production credentials in chat or source files.",
+    "For healthcare, finance, legal, hiring, housing, or education workflows, confirm policy and compliance constraints before adding AI steps.",
+    "For n8n or Make deployment, keep idempotency keys and logging visible."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Event Quote Triage Demo",
+  "status": "public_safe_sample",
+  "inputs": [
+    "event_date",
+    "event_type",
+    "wishlist_items",
+    "guest_count",
+    "city",
+    "venue_address",
+    "delivery_window",
+    "setup_notes",
+    "budget_notes"
+  ],
+  "outputs": [
+    "readiness",
+    "readiness_score",
+    "missing_info",
+    "delivery_flags",
+    "staff_next_step",
+    "draft_follow_up_questions"
+  ],
+  "boundaries": [
+    "fictional sample data only",
+    "no credentials",
+    "no customer records",
+    "no automatic customer messages",
+    "no payment, deposit, booking, or SMS automation"
+  ],
+  "starter_milestone": {
+    "price_target_usd": 150,
+    "deliverables": [
+      "workflow map",
+      "sample spreadsheet schema",
+      "small Python script or no-code implementation plan",
+      "validation checklist"
+    ]
+  }
+}
