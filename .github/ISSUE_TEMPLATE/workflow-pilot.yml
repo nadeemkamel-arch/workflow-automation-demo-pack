@@ -18,6 +18,19 @@ body:
       placeholder: "Example: inbound form submissions need to be validated, scored, and routed to a spreadsheet plus Slack alert."
     validations:
       required: true
+  - type: dropdown
+    id: pilot_type
+    attributes:
+      label: Best-fit pilot
+      description: Pick the closest starter package. This can change after review.
+      options:
+        - Document/API Intake Sprint
+        - Conversation Flow QA Sprint
+        - n8n/Python Workflow Rescue Sprint
+        - Data Extraction and Report Pack
+        - Not sure yet
+    validations:
+      required: true
   - type: textarea
     id: input
     attributes:
@@ -45,6 +58,18 @@ body:
         - Not sure yet
     validations:
       required: true
+  - type: dropdown
+    id: starter_budget
+    attributes:
+      label: Target first milestone budget
+      description: Optional guide for scoping the first small pilot.
+      options:
+        - $75-$150
+        - $150-$300
+        - $300-$600
+        - Needs discussion
+    validations:
+      required: false
   - type: textarea
     id: systems
     attributes:

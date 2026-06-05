@@ -16,6 +16,17 @@ Sandbox handoff checklist:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/handoff_template.md
 
+## Paid Pilot Menu
+
+Good starter projects are intentionally small:
+
+- **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
+- **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
+- **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
+- **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
+
+Most first milestones should use fictional, redacted, or sandbox data and stay in the $75-$300 range unless the scope is already well defined.
+
 ## Demos
 
 ### n8n AI Ops Triage
