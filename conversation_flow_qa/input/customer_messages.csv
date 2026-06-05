@@ -1,0 +1,13 @@
+id,campaign,message,customer_status,last_appointment_days
+MSG-001,rebooking,"Do you have anything next Friday afternoon? I need to move my facial.",active,38
+MSG-002,rebooking,"How much is the hydrafacial if I add dermaplaning?",active,52
+MSG-003,winback,"STOP texting me",lapsed,190
+MSG-004,winback,"I was unhappy last time. My skin reacted badly and nobody followed up.",lapsed,145
+MSG-005,vip_retention,"Can I use my package credit for my sister?",vip,21
+MSG-006,vip_retention,"Yes book me for the same time as last month",vip,31
+MSG-007,post_visit,"The redness is still there today. Is that normal?",active,2
+MSG-008,rebooking,"Maybe, what times do you have?",active,44
+MSG-009,winback,"I already booked somewhere else.",lapsed,210
+MSG-010,rebooking,"Running 15 min late, still ok?",active,0
+MSG-011,vip_retention,"Can you send me the address again?",vip,29
+MSG-012,winback,"I want to come back but only if you can match my old price.",lapsed,167

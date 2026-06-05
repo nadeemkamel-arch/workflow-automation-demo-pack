@@ -1,0 +1,32 @@
+{
+  "total": 12,
+  "by_route": {
+    "ai_draft_then_human_review": 5,
+    "front_desk_review": 1,
+    "human_owner_review": 2,
+    "manager_policy_review": 2,
+    "no_push_follow_up": 1,
+    "suppress_and_confirm": 1
+  },
+  "by_intent": {
+    "logistics_question": 1,
+    "not_ready": 1,
+    "opt_out": 1,
+    "policy_or_pricing_question": 2,
+    "pricing_question": 1,
+    "same_day_schedule_issue": 1,
+    "schedule_request": 2,
+    "service_recovery": 2,
+    "unclear_interest": 1
+  },
+  "human_review_ids": [
+    "MSG-010",
+    "MSG-004",
+    "MSG-007",
+    "MSG-005",
+    "MSG-012"
+  ],
+  "suppressed_ids": [
+    "MSG-003"
+  ]
+}

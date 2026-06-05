@@ -263,6 +263,7 @@
 
       .repo-row strong {
         display: block;
+        overflow-wrap: anywhere;
       }
 
       .repo-row span {
@@ -368,7 +369,7 @@
 
       <section id="proof" aria-labelledby="proof-title">
         <h2 id="proof-title">Proof Artifacts</h2>
-        <div class="grid-3">
+        <div class="grid-2">
           <article class="card">
             <h3>n8n Companion Workflow</h3>
             <p>
@@ -388,6 +389,13 @@
             <p>
               Fictional quote-intake demo that produces staff checklists, missing-info prompts,
               and a run summary.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Conversation Flow QA</h3>
+            <p>
+              SMS-style conversation test matrix with intent classification, opt-out handling,
+              service-recovery routes, pricing guardrails, and human review gates.
             </p>
           </article>
         </div>
@@ -420,6 +428,15 @@
               <span>Quote-readiness workflow for spreadsheet-ready operations output.</span>
             </div>
             <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/tree/main/event_quote_triage">
+              Open
+            </a>
+          </div>
+          <div class="repo-row">
+            <div>
+              <strong>conversation_flow_qa/conversation_flow_qa.py</strong>
+              <span>Conversation-rule QA for appointment-based customer messaging.</span>
+            </div>
+            <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/tree/main/conversation_flow_qa">
               Open
             </a>
           </div>
@@ -479,7 +496,8 @@
         <h2 id="checks-title">Verification Commands</h2>
         <pre><code>python3 -m pytest n8n_ai_ops_triage/test_workflow_contract.py \
   ai_ops_triage/test_triage.py \
-  event_quote_triage/test_event_quote_triage.py</code></pre>
+  event_quote_triage/test_event_quote_triage.py \
+  conversation_flow_qa/test_conversation_flow_qa.py</code></pre>
       </section>
 
       <section id="contact" aria-labelledby="contact-title">

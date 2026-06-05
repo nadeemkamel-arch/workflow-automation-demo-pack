@@ -74,6 +74,25 @@ python3 event_quote_triage.py --input input/event_requests.csv --out output
 python3 -m pytest test_event_quote_triage.py
 ```
 
+### Conversation Flow QA
+
+Path: `conversation_flow_qa/`
+
+Turns fictional SMS-style customer replies for an appointment-based beauty studio into:
+
+- intent and risk classification,
+- opt-out, complaint, reaction, pricing, and schedule handoff routes,
+- a conversation test matrix,
+- a JSON run summary.
+
+Run:
+
+```bash
+cd conversation_flow_qa
+python3 conversation_flow_qa.py --input input/customer_messages.csv --out output
+python3 -m pytest test_conversation_flow_qa.py
+```
+
 ## Good First Project
 
 A good first milestone is narrow:
