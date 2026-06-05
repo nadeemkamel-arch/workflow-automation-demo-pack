@@ -22,6 +22,7 @@ Good starter projects are intentionally small:
 
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
+- **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
 
@@ -142,6 +143,26 @@ Run:
 cd statement_email_workflow
 python3 statement_email_workflow.py --input input/session_records.csv --out output
 python3 -m pytest test_statement_email_workflow.py
+```
+
+### Telegram Lead Qualifier
+
+Path: `telegram_lead_qualifier/`
+
+Shows a first-milestone Telegram bot pattern that turns fictional intake answers into:
+
+- scored lead records with referral/source tracking,
+- structured AI summary payloads,
+- dry-run owner notification payloads,
+- consent and off-scope review routes,
+- an MVP acceptance report with deferred payment/CRM scope.
+
+Run:
+
+```bash
+cd telegram_lead_qualifier
+python3 telegram_lead_qualifier.py --input input/lead_intake.csv --out output
+python3 -m pytest test_telegram_lead_qualifier.py
 ```
 
 ## Good First Project

@@ -1,0 +1,30 @@
+[
+  {
+    "method": "POST",
+    "endpoint": "/telegram/sendMessage",
+    "headers": {
+      "Idempotency-Key": "telegram-lead:TL-1001:ref-austin-condo",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "chat_id": "OWNER_CHAT_ID_PLACEHOLDER",
+      "text": "Hot lead: Maya Chen (@maya_test)\nAustin condo | score 100\nMaya Chen is a hot lead for Austin condo with budget $180,000, timeline 0-3 months, financing status 'preapproved'. Route: telegram_owner_alert. Notes: Needs rental yield estimate and neighborhood shortlist",
+      "parse_mode": "Markdown"
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/telegram/sendMessage",
+    "headers": {
+      "Idempotency-Key": "telegram-lead:TL-1004:ref-investor-rus",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "chat_id": "OWNER_CHAT_ID_PLACEHOLDER",
+      "text": "Hot lead: Nadia Petrova (@nadia_test)\nMiami multi-family | score 93\nNadia Petrova is a hot lead for Miami multi-family with budget $260,000, timeline 3-6 months, financing status 'cash buyer'. Route: telegram_owner_alert. Notes: Wants short AI summary and Telegram notification for partner review",
+      "parse_mode": "Markdown"
+    },
+    "status": "dry_run_only"
+  }
+]

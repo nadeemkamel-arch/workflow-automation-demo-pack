@@ -1,0 +1,12 @@
+{
+  "lead_count": 4,
+  "hot_count": 2,
+  "warm_count": 1,
+  "review_count": 1,
+  "dry_run_notifications": 2,
+  "routes": [
+    "consent_review_queue",
+    "telegram_owner_alert",
+    "weekly_lead_digest"
+  ]
+}
