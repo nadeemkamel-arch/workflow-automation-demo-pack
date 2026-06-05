@@ -1,0 +1,70 @@
+[
+  {
+    "method": "POST",
+    "endpoint": "/api/reviews/compliance",
+    "headers": {
+      "Idempotency-Key": "contract:CON-208",
+      "X-Review-Route": "legal_or_compliance_review"
+    },
+    "body": {
+      "documentId": "CON-208",
+      "documentType": "contract",
+      "vendor": "Atlas Outreach Labs",
+      "requester": "Priya Raman",
+      "department": "Growth",
+      "amountUsd": 3200.0,
+      "dueDate": "2026-07-01",
+      "riskFlags": [
+        "outbound_compliance",
+        "manager_approval_amount"
+      ],
+      "notes": "Includes outbound campaign setup. Requires compliance review before activation.",
+      "status": "ready_for_review"
+    }
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/ap/invoices",
+    "headers": {
+      "Idempotency-Key": "invoice:INV-7781",
+      "X-Review-Route": "accounts_payable_queue"
+    },
+    "body": {
+      "documentId": "INV-7781",
+      "documentType": "invoice",
+      "vendor": "BrightPath Data Services",
+      "requester": "Jordan Lee",
+      "department": "Analytics",
+      "amountUsd": 420.0,
+      "dueDate": "2026-06-28",
+      "riskFlags": [
+        "standard"
+      ],
+      "notes": "Matches approved June reporting sprint.",
+      "status": "ready_to_queue"
+    }
+  },
+  {
+    "method": "POST",
+    "endpoint": "/api/reviews/manager",
+    "headers": {
+      "Idempotency-Key": "purchase_order:PO-1042",
+      "X-Review-Route": "manager_review"
+    },
+    "body": {
+      "documentId": "PO-1042",
+      "documentType": "purchase_order",
+      "vendor": "North Coast Event Supply",
+      "requester": "Maya Chen",
+      "department": "Operations",
+      "amountUsd": 1840.0,
+      "dueDate": "2026-07-12",
+      "riskFlags": [
+        "deposit_required",
+        "rush_timing"
+      ],
+      "notes": "Rush setup for a Saturday event. Vendor asks for 50% deposit before dispatch.",
+      "status": "ready_for_review"
+    }
+  }
+]

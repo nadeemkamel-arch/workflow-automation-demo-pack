@@ -93,6 +93,26 @@ python3 conversation_flow_qa.py --input input/customer_messages.csv --out output
 python3 -m pytest test_conversation_flow_qa.py
 ```
 
+### Document Intake Agent
+
+Path: `document_intake_agent/`
+
+Turns fictional purchase order, invoice, and contract documents into:
+
+- extracted document fields,
+- risk and review routing,
+- staged REST API payloads with idempotency keys,
+- an agent-style tool trace,
+- a Markdown review queue and JSON run summary.
+
+Run:
+
+```bash
+cd document_intake_agent
+python3 document_intake_agent.py --input-dir input/documents --out output
+python3 -m pytest test_document_intake_agent.py
+```
+
 ## Good First Project
 
 A good first milestone is narrow:

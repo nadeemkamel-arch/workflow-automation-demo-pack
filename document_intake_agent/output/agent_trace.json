@@ -1,0 +1,101 @@
+[
+  {
+    "document_id": "CON-208",
+    "steps": [
+      {
+        "tool": "read_document",
+        "result": "CON-208.txt"
+      },
+      {
+        "tool": "classify_document",
+        "result": "contract"
+      },
+      {
+        "tool": "extract_fields",
+        "result": "vendor, requester, department, amount, due date, notes"
+      },
+      {
+        "tool": "validate_amount_and_date",
+        "result": "passed"
+      },
+      {
+        "tool": "detect_risk_flags",
+        "result": "outbound_compliance, manager_approval_amount"
+      },
+      {
+        "tool": "build_api_payload",
+        "result": "POST /api/reviews/compliance"
+      },
+      {
+        "tool": "route_for_review",
+        "result": "legal_or_compliance_review"
+      }
+    ]
+  },
+  {
+    "document_id": "INV-7781",
+    "steps": [
+      {
+        "tool": "read_document",
+        "result": "INV-7781.txt"
+      },
+      {
+        "tool": "classify_document",
+        "result": "invoice"
+      },
+      {
+        "tool": "extract_fields",
+        "result": "vendor, requester, department, amount, due date, notes"
+      },
+      {
+        "tool": "validate_amount_and_date",
+        "result": "passed"
+      },
+      {
+        "tool": "detect_risk_flags",
+        "result": "standard"
+      },
+      {
+        "tool": "build_api_payload",
+        "result": "POST /api/ap/invoices"
+      },
+      {
+        "tool": "route_for_review",
+        "result": "accounts_payable_queue"
+      }
+    ]
+  },
+  {
+    "document_id": "PO-1042",
+    "steps": [
+      {
+        "tool": "read_document",
+        "result": "PO-1042.txt"
+      },
+      {
+        "tool": "classify_document",
+        "result": "purchase_order"
+      },
+      {
+        "tool": "extract_fields",
+        "result": "vendor, requester, department, amount, due date, notes"
+      },
+      {
+        "tool": "validate_amount_and_date",
+        "result": "passed"
+      },
+      {
+        "tool": "detect_risk_flags",
+        "result": "deposit_required, rush_timing"
+      },
+      {
+        "tool": "build_api_payload",
+        "result": "POST /api/reviews/manager"
+      },
+      {
+        "tool": "route_for_review",
+        "result": "manager_review"
+      }
+    ]
+  }
+]

@@ -340,8 +340,9 @@
         <div>
           <h1 id="title">Scoped workflow automation with tests and handoff notes.</h1>
           <p class="lede">
-            Public-safe examples for n8n-style orchestration, Python data workflows, CSV/JSON
-            handling, human review gates, and client-ready documentation.
+            Public-safe examples for n8n-style orchestration, agent-style document intake,
+            API handoffs, Python data workflows, human review gates, and client-ready
+            documentation.
           </p>
           <div class="actions">
             <a class="button" href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack">
@@ -398,6 +399,13 @@
               service-recovery routes, pricing guardrails, and human review gates.
             </p>
           </article>
+          <article class="card">
+            <h3>Document Intake Agent</h3>
+            <p>
+              Multi-step document workflow that extracts fields, flags risk, builds staged REST
+              payloads, and records an agent-style tool trace.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -437,6 +445,15 @@
               <span>Conversation-rule QA for appointment-based customer messaging.</span>
             </div>
             <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/tree/main/conversation_flow_qa">
+              Open
+            </a>
+          </div>
+          <div class="repo-row">
+            <div>
+              <strong>document_intake_agent/document_intake_agent.py</strong>
+              <span>Document parsing, review routing, and API payload handoff with agent trace.</span>
+            </div>
+            <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/tree/main/document_intake_agent">
               Open
             </a>
           </div>
@@ -497,7 +514,8 @@
         <pre><code>python3 -m pytest n8n_ai_ops_triage/test_workflow_contract.py \
   ai_ops_triage/test_triage.py \
   event_quote_triage/test_event_quote_triage.py \
-  conversation_flow_qa/test_conversation_flow_qa.py</code></pre>
+  conversation_flow_qa/test_conversation_flow_qa.py \
+  document_intake_agent/test_document_intake_agent.py</code></pre>
       </section>
 
       <section id="contact" aria-labelledby="contact-title">

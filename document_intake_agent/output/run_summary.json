@@ -1,0 +1,22 @@
+{
+  "total": 3,
+  "by_document_type": {
+    "contract": 1,
+    "invoice": 1,
+    "purchase_order": 1
+  },
+  "by_review_route": {
+    "accounts_payable_queue": 1,
+    "legal_or_compliance_review": 1,
+    "manager_review": 1
+  },
+  "human_review_ids": [
+    "CON-208",
+    "PO-1042"
+  ],
+  "api_endpoints": [
+    "/api/ap/invoices",
+    "/api/reviews/compliance",
+    "/api/reviews/manager"
+  ]
+}

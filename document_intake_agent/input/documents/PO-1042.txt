@@ -1,0 +1,10 @@
+Purchase Order: PO-1042
+Vendor: North Coast Event Supply
+Requester: Maya Chen
+Department: Operations
+Amount: 1840.00 USD
+Due Date: 2026-07-12
+Line Items:
+- Folding chairs x 200
+- Linen delivery x 1
+Notes: Rush setup for a Saturday event. Vendor asks for 50% deposit before dispatch.
