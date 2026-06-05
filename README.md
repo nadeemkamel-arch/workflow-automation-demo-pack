@@ -4,6 +4,10 @@ Public-safe demos for scoped automation work: Python scripts, structured inputs,
 
 These examples use fictional data and deterministic logic. In a client project, the same delivery shape can connect to approved tools such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, or an n8n/Make/Zapier workflow. LLM calls can be added where they make sense, with clear data boundaries and cost approval.
 
+Portfolio page:
+
+https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/
+
 ## Demos
 
 ### n8n AI Ops Triage
