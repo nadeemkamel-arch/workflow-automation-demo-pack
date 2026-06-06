@@ -1,0 +1,8 @@
+run_id,workflow,started_at,duration_sec,status,attempt,max_attempts,idempotency_key,owner,error_code
+RUN-1001,invoice_intake,2026-06-05T08:05:00Z,42,succeeded,1,3,invoice:INV-7781,finance_ops,
+RUN-1002,invoice_intake,2026-06-05T08:07:00Z,44,succeeded,2,3,invoice:INV-7781,finance_ops,
+RUN-1003,telegram_lead_alert,2026-06-05T08:15:00Z,18,failed,1,3,telegram-lead:TL-1001,sales_ops,RATE_LIMIT
+RUN-1004,telegram_lead_alert,2026-06-05T08:16:00Z,21,failed,3,3,telegram-lead:TL-1004,sales_ops,AUTH_EXPIRED
+RUN-1005,statement_email,2026-06-05T08:22:00Z,188,succeeded,1,2,statement:2026-06-01:pair-a,finance_ops,
+RUN-1006,crm_sync,2026-06-05T08:31:00Z,96,failed,2,4,crm-sync:lead-771,rev_ops,TIMEOUT
+RUN-1007,crm_sync,2026-06-05T08:34:00Z,34,succeeded,3,4,crm-sync:lead-771,rev_ops,

@@ -1,0 +1,36 @@
+[
+  {
+    "method": "POST",
+    "endpoint": "/ops/workflow-retries",
+    "headers": {
+      "Idempotency-Key": "retry:telegram-lead:TL-1001:2",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "runId": "RUN-1003",
+      "workflow": "telegram_lead_alert",
+      "nextAttempt": 2,
+      "maxAttempts": 3,
+      "reason": "RATE_LIMIT",
+      "owner": "sales_ops"
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/ops/workflow-retries",
+    "headers": {
+      "Idempotency-Key": "retry:crm-sync:lead-771:3",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "runId": "RUN-1006",
+      "workflow": "crm_sync",
+      "nextAttempt": 3,
+      "maxAttempts": 4,
+      "reason": "TIMEOUT",
+      "owner": "rev_ops"
+    },
+    "status": "dry_run_only"
+  }
+]

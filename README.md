@@ -23,6 +23,7 @@ Good starter projects are intentionally small:
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
+- **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
 
@@ -163,6 +164,26 @@ Run:
 cd telegram_lead_qualifier
 python3 telegram_lead_qualifier.py --input input/lead_intake.csv --out output
 python3 -m pytest test_telegram_lead_qualifier.py
+```
+
+### Workflow Reliability Monitor
+
+Path: `workflow_reliability_monitor/`
+
+Shows an operations layer for automation handoff that turns fictional workflow run logs into:
+
+- per-run severity and routing,
+- retry payloads with idempotency keys,
+- duplicate-write and slow-run review paths,
+- an incident digest for the workflow owner,
+- run-summary metrics for handoff.
+
+Run:
+
+```bash
+cd workflow_reliability_monitor
+python3 workflow_reliability_monitor.py --input input/flow_runs.csv --out output
+python3 -m pytest test_workflow_reliability_monitor.py
 ```
 
 ## Good First Project

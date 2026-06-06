@@ -1,0 +1,22 @@
+{
+  "run_count": 7,
+  "success_count": 4,
+  "success_rate": 0.571,
+  "retry_payload_count": 2,
+  "severity_counts": {
+    "critical": 1,
+    "notice": 1,
+    "warning": 5
+  },
+  "route_counts": {
+    "idempotency_review": 3,
+    "incident_review": 1,
+    "performance_review": 1,
+    "retry_queue": 2
+  },
+  "owner_counts": {
+    "finance_ops": 3,
+    "rev_ops": 2,
+    "sales_ops": 2
+  }
+}
