@@ -23,6 +23,7 @@ Good starter projects are intentionally small:
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
+- **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
@@ -164,6 +165,26 @@ Run:
 cd telegram_lead_qualifier
 python3 telegram_lead_qualifier.py --input input/lead_intake.csv --out output
 python3 -m pytest test_telegram_lead_qualifier.py
+```
+
+### Property Ops Triage
+
+Path: `property_ops_triage/`
+
+Shows a property-management inbox automation pattern that turns fictional tenant/vendor messages into:
+
+- maintenance, tenant-admin, vendor-invoice, statement-export, and duplicate-invoice routes,
+- dry-run Asana-style task payloads,
+- vendor invoice review packets with staged QuickBooks-style draft payloads,
+- Slack-style owner digest with launch gates,
+- idempotency keys and no live tenant/vendor/accounting actions.
+
+Run:
+
+```bash
+cd property_ops_triage
+python3 property_ops_triage.py --input input/property_messages.csv --out output
+python3 -m pytest test_property_ops_triage.py
 ```
 
 ### Workflow Reliability Monitor

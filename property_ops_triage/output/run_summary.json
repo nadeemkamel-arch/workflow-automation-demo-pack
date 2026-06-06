@@ -1,0 +1,16 @@
+{
+  "message_count": 10,
+  "route_counts": {
+    "accounting_review": 5,
+    "maintenance_dispatch": 3,
+    "property_manager_review": 2
+  },
+  "priority_counts": {
+    "high": 2,
+    "normal": 5,
+    "urgent": 3
+  },
+  "invoice_packets": 4,
+  "send_mode": "dry_run_only",
+  "live_actions_taken": 0
+}

@@ -1,0 +1,172 @@
+[
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-a4c3fd38448e50e9",
+    "task": {
+      "name": "Harbor Lofts: maintenance_request (urgent)",
+      "project": "maintenance_dispatch",
+      "custom_fields": {
+        "message_id": "M-1001",
+        "thread_id": "T-9001",
+        "property": "Harbor Lofts",
+        "unit": "4B",
+        "confidence": 0.86
+      },
+      "notes": "Maintenance wording detected; dispatch draft stays behind human approval."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-3268ef0d42246071",
+    "task": {
+      "name": "Harbor Lofts: vendor_invoice (normal)",
+      "project": "accounting_review",
+      "custom_fields": {
+        "message_id": "M-1002",
+        "thread_id": "T-9002",
+        "property": "Harbor Lofts",
+        "unit": "not_applicable",
+        "confidence": 0.88
+      },
+      "notes": "Invoice-like message; extract fields and route to reviewer before QuickBooks draft."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-90c601194ccdcf02",
+    "task": {
+      "name": "Oak Terrace: tenant_admin (normal)",
+      "project": "property_manager_review",
+      "custom_fields": {
+        "message_id": "M-1003",
+        "thread_id": "T-9003",
+        "property": "Oak Terrace",
+        "unit": "12A",
+        "confidence": 0.78
+      },
+      "notes": "Tenant/admin issue; manager review before any tenant response."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-884b6ce64adb4e32",
+    "task": {
+      "name": "Oak Terrace: vendor_invoice (high)",
+      "project": "accounting_review",
+      "custom_fields": {
+        "message_id": "M-1004",
+        "thread_id": "T-9004",
+        "property": "Oak Terrace",
+        "unit": "not_applicable",
+        "confidence": 0.88
+      },
+      "notes": "Invoice-like message; extract fields and route to reviewer before QuickBooks draft."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-2a69c96c91b6582d",
+    "task": {
+      "name": "Harbor Lofts: tenant_admin (normal)",
+      "project": "property_manager_review",
+      "custom_fields": {
+        "message_id": "M-1005",
+        "thread_id": "T-9005",
+        "property": "Harbor Lofts",
+        "unit": "2C",
+        "confidence": 0.78
+      },
+      "notes": "Tenant/admin issue; manager review before any tenant response."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-5032bb1af5edc54e",
+    "task": {
+      "name": "Cedar Court: vendor_statement_export (normal)",
+      "project": "accounting_review",
+      "custom_fields": {
+        "message_id": "M-1006",
+        "thread_id": "T-9006",
+        "property": "Cedar Court",
+        "unit": "not_applicable",
+        "confidence": 0.82
+      },
+      "notes": "Vendor statement/export detected; review before reconciliation, but do not create invoice draft."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-5b9e685e837c9e83",
+    "task": {
+      "name": "Cedar Court: maintenance_request (urgent)",
+      "project": "maintenance_dispatch",
+      "custom_fields": {
+        "message_id": "M-1007",
+        "thread_id": "T-9007",
+        "property": "Cedar Court",
+        "unit": "9D",
+        "confidence": 0.86
+      },
+      "notes": "Maintenance wording detected; dispatch draft stays behind human approval."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-144d4611d25fd631",
+    "task": {
+      "name": "Harbor Lofts: invoice_duplicate_review (high)",
+      "project": "accounting_review",
+      "custom_fields": {
+        "message_id": "M-1008",
+        "thread_id": "T-9008",
+        "property": "Harbor Lofts",
+        "unit": "not_applicable",
+        "confidence": 0.92
+      },
+      "notes": "Possible duplicate invoice signal; block live posting until accounting confirms."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-24ed752d94e335fd",
+    "task": {
+      "name": "Cedar Court: vendor_invoice (normal)",
+      "project": "accounting_review",
+      "custom_fields": {
+        "message_id": "M-1009",
+        "thread_id": "T-9009",
+        "property": "Cedar Court",
+        "unit": "not_applicable",
+        "confidence": 0.88
+      },
+      "notes": "Invoice-like message; extract fields and route to reviewer before QuickBooks draft."
+    }
+  },
+  {
+    "provider": "asana",
+    "mode": "dry_run",
+    "idempotency_key": "pm-35a36d222c3cc2a5",
+    "task": {
+      "name": "Oak Terrace: maintenance_request (urgent)",
+      "project": "maintenance_dispatch",
+      "custom_fields": {
+        "message_id": "M-1010",
+        "thread_id": "T-9010",
+        "property": "Oak Terrace",
+        "unit": "7F",
+        "confidence": 0.86
+      },
+      "notes": "Maintenance wording detected; dispatch draft stays behind human approval."
+    }
+  }
+]

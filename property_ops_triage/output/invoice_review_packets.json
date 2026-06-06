@@ -1,0 +1,85 @@
+[
+  {
+    "message_id": "M-1002",
+    "property": "Harbor Lofts",
+    "vendor_email": "dispatch@pacific-plumbing.example.test",
+    "attachment_names": [
+      "invoice-8841.pdf"
+    ],
+    "amount_usd": 485.25,
+    "review_route": "accounting_review",
+    "status": "review_required",
+    "quickbooks_draft_payload": {
+      "mode": "dry_run",
+      "idempotency_key": "pm-3268ef0d42246071",
+      "vendor": "Pacific Plumbing",
+      "property": "Harbor Lofts",
+      "amount_usd": 485.25,
+      "source_message_id": "M-1002",
+      "memo": "Review before posting: Invoice 8841 - emergency sink repair"
+    },
+    "blocker": "Invoice-like message; extract fields and route to reviewer before QuickBooks draft."
+  },
+  {
+    "message_id": "M-1004",
+    "property": "Oak Terrace",
+    "vendor_email": "billing@northline-electric.example.test",
+    "attachment_names": [
+      "invoice-7719.pdf",
+      "photos.zip"
+    ],
+    "amount_usd": 1290.0,
+    "review_route": "accounting_review",
+    "status": "review_required",
+    "quickbooks_draft_payload": {
+      "mode": "dry_run",
+      "idempotency_key": "pm-884b6ce64adb4e32",
+      "vendor": "Northline Electric",
+      "property": "Oak Terrace",
+      "amount_usd": 1290.0,
+      "source_message_id": "M-1004",
+      "memo": "Review before posting: Past due invoice 7719"
+    },
+    "blocker": "Invoice-like message; extract fields and route to reviewer before QuickBooks draft."
+  },
+  {
+    "message_id": "M-1008",
+    "property": "Harbor Lofts",
+    "vendor_email": "alerts@quickbooks.example.test",
+    "attachment_names": [],
+    "amount_usd": 485.25,
+    "review_route": "accounting_review",
+    "status": "review_required",
+    "quickbooks_draft_payload": {
+      "mode": "dry_run",
+      "idempotency_key": "pm-144d4611d25fd631",
+      "vendor": "QuickBooks Alerts",
+      "property": "Harbor Lofts",
+      "amount_usd": 485.25,
+      "source_message_id": "M-1008",
+      "memo": "Review before posting: Duplicate invoice warning"
+    },
+    "blocker": "Possible duplicate invoice signal; block live posting until accounting confirms."
+  },
+  {
+    "message_id": "M-1009",
+    "property": "Cedar Court",
+    "vendor_email": "ap@river-roofing.example.test",
+    "attachment_names": [
+      "invoice-9044.pdf"
+    ],
+    "amount_usd": 760.0,
+    "review_route": "accounting_review",
+    "status": "review_required",
+    "quickbooks_draft_payload": {
+      "mode": "dry_run",
+      "idempotency_key": "pm-24ed752d94e335fd",
+      "vendor": "River Roofing",
+      "property": "Cedar Court",
+      "amount_usd": 760.0,
+      "source_message_id": "M-1009",
+      "memo": "Review before posting: Invoice 9044 roof inspection"
+    },
+    "blocker": "Invoice-like message; extract fields and route to reviewer before QuickBooks draft."
+  }
+]
