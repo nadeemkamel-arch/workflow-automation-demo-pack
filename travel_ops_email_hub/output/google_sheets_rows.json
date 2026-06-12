@@ -1,0 +1,154 @@
+[
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:e4de01052359b683",
+    "values": {
+      "messageId": "M-1001",
+      "receivedAt": "2026-06-08T09:14:00Z",
+      "sender": "ops@northwind-events.example",
+      "travelerName": "Maya Singh",
+      "bookingRef": "unassigned",
+      "category": "new_group_request",
+      "priority": "normal",
+      "status": "new_lead",
+      "ownerRoute": "new_request_queue",
+      "confidence": 0.79,
+      "reviewReason": "New request can receive a draft acknowledgement after duplicate check."
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:dbaf294e4c55ff53",
+    "values": {
+      "messageId": "M-1002",
+      "receivedAt": "2026-06-08T10:02:00Z",
+      "sender": "reservations@hotel-river.example",
+      "travelerName": "Jordan Lee",
+      "bookingRef": "BR-7781",
+      "category": "hotel_update",
+      "priority": "normal",
+      "status": "hotel_update_pending",
+      "ownerRoute": "supplier_coordination",
+      "confidence": 0.88,
+      "reviewReason": "Hotel or room-block update requires operator review before booking-engine write."
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:e056f5a065211c2e",
+    "values": {
+      "messageId": "M-1003",
+      "receivedAt": "2026-06-08T11:26:00Z",
+      "sender": "alex.chen@example.test",
+      "travelerName": "Alex Chen",
+      "bookingRef": "BR-7722",
+      "category": "urgent_traveler_issue",
+      "priority": "urgent",
+      "status": "urgent_review",
+      "ownerRoute": "travel_ops_lead",
+      "confidence": 0.94,
+      "reviewReason": "Urgent travel risk terms detected; Slack alert is dry-run only."
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:3124abc4b43816be",
+    "values": {
+      "messageId": "M-1004",
+      "receivedAt": "2026-06-08T12:05:00Z",
+      "sender": "finance@cobalt-consulting.example",
+      "travelerName": "Riley Moss",
+      "bookingRef": "BR-7719",
+      "category": "invoice_or_payment",
+      "priority": "normal",
+      "status": "finance_question",
+      "ownerRoute": "finance_review",
+      "confidence": 0.84,
+      "reviewReason": "Payment language should not trigger an automatic financial response."
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:4e876c5b1c86efe6",
+    "values": {
+      "messageId": "M-1005",
+      "receivedAt": "2026-06-08T13:31:00Z",
+      "sender": "pat.taylor@example.test",
+      "travelerName": "Pat Taylor",
+      "bookingRef": "BR-7708",
+      "category": "hotel_update",
+      "priority": "normal",
+      "status": "hotel_update_pending",
+      "ownerRoute": "supplier_coordination",
+      "confidence": 0.88,
+      "reviewReason": "Hotel or room-block update requires operator review before booking-engine write."
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:642082ef0cccae55",
+    "values": {
+      "messageId": "M-1006",
+      "receivedAt": "2026-06-08T14:07:00Z",
+      "sender": "frontdesk@harbor-inn.example",
+      "travelerName": "Jordan Lee",
+      "bookingRef": "BR-7781",
+      "category": "hotel_update",
+      "priority": "normal",
+      "status": "hotel_update_pending",
+      "ownerRoute": "supplier_coordination",
+      "confidence": 0.88,
+      "reviewReason": "Hotel or room-block update requires operator review before booking-engine write."
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:4a378166441ba58e",
+    "values": {
+      "messageId": "M-1007",
+      "receivedAt": "2026-06-08T15:22:00Z",
+      "sender": "sam.rivera@example.test",
+      "travelerName": "Sam Rivera",
+      "bookingRef": "BR-7790",
+      "category": "urgent_traveler_issue",
+      "priority": "urgent",
+      "status": "urgent_review",
+      "ownerRoute": "travel_ops_lead",
+      "confidence": 0.94,
+      "reviewReason": "Urgent travel risk terms detected; Slack alert is dry-run only."
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "range": "TravelOps!A:K",
+    "operation": "append_or_update",
+    "lookupKey": "travel-email:097836ba639547be",
+    "values": {
+      "messageId": "M-1008",
+      "receivedAt": "2026-06-08T16:03:00Z",
+      "sender": "hello@unknownvendor.example",
+      "travelerName": "Unknown Vendor",
+      "bookingRef": "unassigned",
+      "category": "unknown_review",
+      "priority": "review",
+      "status": "needs_triage",
+      "ownerRoute": "manual_review",
+      "confidence": 0.55,
+      "reviewReason": "Message does not match the approved travel operations routes."
+    },
+    "status": "dry_run_only"
+  }
+]

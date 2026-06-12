@@ -1,0 +1,20 @@
+{
+  "message_count": 8,
+  "category_counts": {
+    "hotel_update": 3,
+    "invoice_or_payment": 1,
+    "new_group_request": 1,
+    "unknown_review": 1,
+    "urgent_traveler_issue": 2
+  },
+  "priority_counts": {
+    "normal": 5,
+    "review": 1,
+    "urgent": 2
+  },
+  "sheet_row_count": 8,
+  "slack_alert_count": 2,
+  "draft_auto_reply_count": 1,
+  "booking_api_payload_count": 5,
+  "live_action_count": 0
+}

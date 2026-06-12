@@ -1,0 +1,11 @@
+[
+  {
+    "provider": "gmail_draft",
+    "to": "ops@northwind-events.example",
+    "subject": "Re: your group travel request",
+    "body": "Hi Maya Singh,\n\nThanks for the details. We are reviewing the request and will confirm options, budget range, and missing details before anything is booked.\n\nBest,\nTravel Ops",
+    "loopProtectionKey": "auto-reply:9c334800a4a81d61",
+    "requiresHumanApproval": true,
+    "status": "draft_only"
+  }
+]

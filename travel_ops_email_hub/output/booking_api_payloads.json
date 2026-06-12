@@ -1,0 +1,87 @@
+[
+  {
+    "method": "PATCH",
+    "endpoint": "/bookings/BR-7781/inbox-events",
+    "headers": {
+      "Idempotency-Key": "booking-event:b8aba9d0b400cf9e",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "messageId": "M-1002",
+      "category": "hotel_update",
+      "priority": "normal",
+      "ownerRoute": "supplier_coordination",
+      "status": "hotel_update_pending",
+      "requiresHumanApproval": true
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/bookings/BR-7722/inbox-events",
+    "headers": {
+      "Idempotency-Key": "booking-event:626b3d10fda0a290",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "messageId": "M-1003",
+      "category": "urgent_traveler_issue",
+      "priority": "urgent",
+      "ownerRoute": "travel_ops_lead",
+      "status": "urgent_review",
+      "requiresHumanApproval": true
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/bookings/BR-7708/inbox-events",
+    "headers": {
+      "Idempotency-Key": "booking-event:94f8403e96c05122",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "messageId": "M-1005",
+      "category": "hotel_update",
+      "priority": "normal",
+      "ownerRoute": "supplier_coordination",
+      "status": "hotel_update_pending",
+      "requiresHumanApproval": true
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/bookings/BR-7781/inbox-events",
+    "headers": {
+      "Idempotency-Key": "booking-event:aac4509a9c3bc0cf",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "messageId": "M-1006",
+      "category": "hotel_update",
+      "priority": "normal",
+      "ownerRoute": "supplier_coordination",
+      "status": "hotel_update_pending",
+      "requiresHumanApproval": true
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "PATCH",
+    "endpoint": "/bookings/BR-7790/inbox-events",
+    "headers": {
+      "Idempotency-Key": "booking-event:a1801dafe07b0964",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "messageId": "M-1007",
+      "category": "urgent_traveler_issue",
+      "priority": "urgent",
+      "ownerRoute": "travel_ops_lead",
+      "status": "urgent_review",
+      "requiresHumanApproval": true
+    },
+    "status": "dry_run_only"
+  }
+]

@@ -1,6 +1,6 @@
 # Agentic Workflow Automation Demo Pack
 
-Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, reproducible outputs, tests, and handoff notes.
+Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, travel-ops email routing, reproducible outputs, tests, and handoff notes.
 
 These examples use fictional data so the code, outputs, and runbooks can be inspected publicly. The same delivery shape can connect to approved client systems such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, LLM calls, or n8n/Make/Zapier workflows once the data source, credentials, cost controls, and launch gate are agreed.
 
@@ -24,6 +24,7 @@ Good starter projects are intentionally small:
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
+- **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
@@ -145,6 +146,27 @@ Run:
 cd statement_email_workflow
 python3 statement_email_workflow.py --input input/session_records.csv --out output
 python3 -m pytest test_statement_email_workflow.py
+```
+
+### Travel Ops Email Hub
+
+Path: `travel_ops_email_hub/`
+
+Shows a B2B travel-agency automation pattern that turns fictional inbox messages into:
+
+- Gmail-style email classification,
+- Google Sheets status rows,
+- Slack urgent-travel alerts,
+- draft auto-replies with loop-protection keys,
+- staged booking-engine REST payloads,
+- an operations digest and run summary with zero live actions.
+
+Run:
+
+```bash
+cd travel_ops_email_hub
+python3 travel_ops_email_hub.py --input input/travel_messages.csv --out output
+python3 -m pytest test_travel_ops_email_hub.py
 ```
 
 ### Telegram Lead Qualifier

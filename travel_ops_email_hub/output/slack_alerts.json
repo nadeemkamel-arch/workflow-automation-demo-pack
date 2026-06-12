@@ -1,0 +1,34 @@
+[
+  {
+    "channel": "#travel-ops-urgent",
+    "text": "Urgent travel issue: Alex Chen (BR-7722) from message M-1003",
+    "blocks": [
+      {
+        "type": "section",
+        "text": "Route: travel_ops_lead"
+      },
+      {
+        "type": "context",
+        "text": "Urgent travel risk terms detected; Slack alert is dry-run only."
+      }
+    ],
+    "idempotencyKey": "slack-alert:626b3d10fda0a290",
+    "status": "dry_run_only"
+  },
+  {
+    "channel": "#travel-ops-urgent",
+    "text": "Urgent travel issue: Sam Rivera (BR-7790) from message M-1007",
+    "blocks": [
+      {
+        "type": "section",
+        "text": "Route: travel_ops_lead"
+      },
+      {
+        "type": "context",
+        "text": "Urgent travel risk terms detected; Slack alert is dry-run only."
+      }
+    ],
+    "idempotencyKey": "slack-alert:a1801dafe07b0964",
+    "status": "dry_run_only"
+  }
+]

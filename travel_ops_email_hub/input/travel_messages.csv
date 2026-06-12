@@ -1,0 +1,9 @@
+message_id,received_at,sender,subject,body,booking_ref,traveler_name,status_hint
+M-1001,2026-06-08T09:14:00Z,ops@northwind-events.example,Quote request for Berlin team trip,"We need hotel options for 18 people near Alexanderplatz for September 14-18. Please send an itinerary and budget range.",,Maya Singh,new_request
+M-1002,2026-06-08T10:02:00Z,reservations@hotel-river.example,Room block confirmation BR-7781,"Confirmed 12 rooms for booking BR-7781. Check-in starts at 15:00. Please verify airport transfer notes.",BR-7781,Jordan Lee,hotel_update
+M-1003,2026-06-08T11:26:00Z,alex.chen@example.test,URGENT flight canceled tonight,"Our flight to Lisbon was canceled and the team is stranded tonight. Need a hotel alternative ASAP.",BR-7722,Alex Chen,urgent
+M-1004,2026-06-08T12:05:00Z,finance@cobalt-consulting.example,Invoice question for BR-7719,"Can you confirm whether the deposit invoice for BR-7719 was paid? Our accounting team needs the due date.",BR-7719,Riley Moss,invoice
+M-1005,2026-06-08T13:31:00Z,pat.taylor@example.test,Any update on the Paris booking?,"Following up on the Paris workshop itinerary. Do you have the final hotel list and transfer timing?",BR-7708,Pat Taylor,status_follow_up
+M-1006,2026-06-08T14:07:00Z,frontdesk@harbor-inn.example,Hotel rate change for BR-7781,"The original rate is no longer available for 2 of the rooms. Updated nightly rate is 189 EUR. Please approve or suggest another option.",BR-7781,Jordan Lee,hotel_update
+M-1007,2026-06-08T15:22:00Z,sam.rivera@example.test,Need visa letter support,"Can you send a hotel confirmation letter for the visa file? The consulate appointment is tomorrow morning.",BR-7790,Sam Rivera,urgent
+M-1008,2026-06-08T16:03:00Z,hello@unknownvendor.example,Partnership proposal,"We offer discounted activities for travel agencies. Let us know if you want to talk.",,Unknown Vendor,unknown
