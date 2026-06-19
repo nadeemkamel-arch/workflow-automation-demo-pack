@@ -6,180 +6,197 @@
     <title>Free Student Summer Job Checklist | Local Resume Help</title>
     <meta
       name="description"
-      content="Free student summer job checklist plus local resume and apply-ready packet help for students looking for seasonal or part-time work."
+      content="A free summer job checklist for high school and college students, with optional local resume and interview help."
     />
     <meta property="og:title" content="Free Student Summer Job Checklist" />
-    <meta property="og:description" content="A practical, one-page start-to-apply guide for high school and college students." />
+    <meta property="og:description" content="A practical start-to-apply guide for high school and college students." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/summer-job/" />
     <style>
       :root {
         color-scheme: light;
-        --bg: #f4f7f9;
-        --ink: #1f2933;
-        --muted: #5f6b76;
-        --line: #d7dee6;
+        --navy: #17233c;
+        --teal: #007c83;
+        --ink: #202733;
+        --muted: #5b6674;
+        --line: #d8dee7;
         --paper: #ffffff;
-        --sea: #0b6b78;
-        --leaf: #2f7d4f;
-        --sun: #f3b23c;
-        --rose: #c8554d;
+        --privacy: #fff7df;
       }
 
       * {
         box-sizing: border-box;
       }
 
+      html {
+        border-top: 7px solid var(--teal);
+      }
+
       body {
         margin: 0;
-        background: var(--bg);
+        background: var(--paper);
         color: var(--ink);
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.5;
       }
 
       a {
-        color: var(--sea);
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
+        color: var(--teal);
       }
 
       .page {
-        max-width: 1080px;
+        width: min(960px, calc(100% - 36px));
         margin: 0 auto;
-        padding: 28px 18px 48px;
-      }
-
-      header,
-      section,
-      aside {
-        background: var(--paper);
-        border: 1px solid var(--line);
-        border-radius: 8px;
-      }
-
-      header {
-        display: grid;
-        gap: 18px;
-        padding: 28px;
+        padding: 42px 0 52px;
       }
 
       .eyebrow {
-        margin: 0 0 8px;
-        color: var(--sea);
+        margin: 0 0 20px;
+        color: var(--teal);
         font-size: 13px;
         font-weight: 700;
         text-transform: uppercase;
-        letter-spacing: 0;
       }
 
       h1,
       h2,
       h3,
       p {
-        margin: 0;
+        margin-top: 0;
       }
 
       h1 {
-        max-width: 760px;
-        font-size: 44px;
-        line-height: 1.05;
-        letter-spacing: 0;
+        max-width: 620px;
+        margin-bottom: 22px;
+        color: var(--navy);
+        font-size: 54px;
+        line-height: 1.04;
       }
 
       h2 {
         margin-bottom: 12px;
-        font-size: 24px;
-        line-height: 1.2;
-        letter-spacing: 0;
+        color: var(--navy);
+        font-size: 30px;
+        line-height: 1.15;
       }
 
       h3 {
-        margin: 20px 0 8px;
-        font-size: 18px;
-        letter-spacing: 0;
+        margin-bottom: 8px;
+        color: var(--navy);
+        font-size: 19px;
       }
 
       .intro {
-        max-width: 760px;
-        margin-top: 14px;
+        max-width: 600px;
+        margin-bottom: 0;
         color: var(--muted);
-        font-size: 18px;
+        font-size: 19px;
       }
 
-      .actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 20px;
-      }
-
-      .button {
-        min-height: 42px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 10px 14px;
-        border: 1px solid var(--sea);
-        border-radius: 7px;
-        background: var(--sea);
-        color: #ffffff;
-        font-weight: 700;
-      }
-
-      .button.secondary {
-        background: transparent;
-        color: var(--sea);
-      }
-
-      .price-row {
+      header {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 10px;
-        margin-top: 20px;
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 48px;
+        align-items: start;
       }
 
-      .price {
-        padding: 14px;
-        border: 1px solid var(--line);
-        border-left: 5px solid var(--sea);
-        border-radius: 8px;
-        background: #fbfcfd;
+      .start {
+        padding-left: 34px;
+        border-left: 1px solid var(--line);
       }
 
-      .price:nth-child(2) {
-        border-left-color: var(--leaf);
-      }
-
-      .price:nth-child(3) {
-        border-left-color: var(--sun);
-      }
-
-      .price strong {
-        display: block;
+      .start h2 {
         font-size: 20px;
       }
 
-      .price span {
-        display: block;
-        margin-top: 4px;
+      .button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border: 1px solid var(--teal);
+        border-radius: 6px;
+        background: var(--teal);
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .small {
         color: var(--muted);
         font-size: 13px;
       }
 
-      main {
-        display: grid;
-        grid-template-columns: 1.35fr 0.65fr;
-        gap: 18px;
-        margin-top: 18px;
+      section {
+        padding: 38px 0;
+        border-top: 2px solid var(--teal);
       }
 
-      section,
-      aside {
-        padding: 22px;
+      .section-note {
+        max-width: 650px;
+        margin-bottom: 24px;
+        color: var(--muted);
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      th {
+        padding: 0 12px 10px 0;
+        color: var(--teal);
+        font-size: 12px;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      td {
+        padding: 14px 12px 14px 0;
+        border-top: 1px solid var(--line);
+        vertical-align: top;
+      }
+
+      td:first-child {
+        color: var(--navy);
+        font-weight: 700;
+      }
+
+      .experience td:first-child {
+        width: 40%;
+      }
+
+      .checklist {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .step {
+        min-height: 220px;
+        padding: 28px 34px 28px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .step:nth-child(even) {
+        padding-right: 0;
+        padding-left: 34px;
+        border-left: 1px solid var(--line);
+      }
+
+      .step:nth-child(n + 3) {
+        border-bottom: 0;
+      }
+
+      .step-title {
+        display: grid;
+        grid-template-columns: 34px 1fr;
+        align-items: baseline;
+      }
+
+      .step-number {
+        color: var(--teal);
+        font-size: 28px;
       }
 
       ul {
@@ -188,67 +205,111 @@
       }
 
       li {
-        margin: 6px 0;
+        margin: 7px 0;
       }
 
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
+      .privacy {
+        margin: 2px 0 38px;
+        padding: 24px;
+        background: var(--privacy);
       }
 
-      .mini {
-        padding: 14px;
-        border: 1px solid var(--line);
-        border-radius: 8px;
-        background: #fbfcfd;
+      .privacy h2 {
+        font-size: 21px;
       }
 
-      .mini h3 {
-        margin-top: 0;
+      .help td:nth-child(1) {
+        width: 34%;
       }
 
-      .note {
-        padding: 14px;
-        border-left: 5px solid var(--rose);
-        background: #fff8f6;
-        border-radius: 8px;
-        color: #5f2b27;
-      }
-
-      .contact-box {
-        display: grid;
-        gap: 10px;
-        padding: 16px;
-        border: 1px dashed var(--sea);
-        border-radius: 8px;
-        background: #f2fbfc;
-      }
-
-      .contact-box p {
-        margin: 0;
-      }
-
-      .small {
-        color: var(--muted);
-        font-size: 13px;
+      .help td:nth-child(2) {
+        width: 12%;
+        color: var(--navy);
+        font-weight: 700;
       }
 
       footer {
-        margin-top: 18px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        padding-top: 24px;
+        border-top: 1px solid var(--navy);
         color: var(--muted);
         font-size: 13px;
-        text-align: center;
       }
 
-      @media (max-width: 780px) {
-        h1 {
-          font-size: 34px;
+      footer p {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 700px) {
+        .page {
+          width: min(100% - 28px, 620px);
+          padding-top: 30px;
         }
 
-        main,
-        .price-row,
-        .grid {
+        h1 {
+          font-size: 40px;
+        }
+
+        header {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .start {
+          padding: 26px 0 0;
+          border-top: 1px solid var(--line);
+          border-left: 0;
+        }
+
+        .checklist {
+          grid-template-columns: 1fr;
+        }
+
+        .step,
+        .step:nth-child(even) {
+          min-height: 0;
+          padding: 24px 0;
+          border-right: 0;
+          border-bottom: 1px solid var(--line);
+          border-left: 0;
+        }
+
+        .step:last-child {
+          border-bottom: 0;
+        }
+
+        table,
+        tbody,
+        tr,
+        td {
+          display: block;
+        }
+
+        thead {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          overflow: hidden;
+          clip: rect(0 0 0 0);
+        }
+
+        tr {
+          padding: 14px 0;
+          border-top: 1px solid var(--line);
+        }
+
+        td,
+        .experience td:first-child,
+        .help td:nth-child(1),
+        .help td:nth-child(2) {
+          width: auto;
+          padding: 2px 0;
+          border: 0;
+        }
+
+        footer {
           grid-template-columns: 1fr;
         }
       }
@@ -256,132 +317,113 @@
   </head>
   <body>
     <div class="page">
+      <p class="eyebrow">Local student resource | Summer 2026</p>
+
       <header>
         <div>
-          <p class="eyebrow">Free student resource</p>
-          <h1>Student Summer Job Checklist</h1>
+          <h1>Applying for summer jobs?</h1>
           <p class="intro">
-            A practical checklist for students looking for summer, seasonal, or part-time
-            work, plus optional help getting apply-ready.
+            Turn school, activities, volunteering, and early work experience into a clear first resume.
           </p>
-          <div class="actions">
-            <a class="button" href="student-summer-job-checklist.pdf" download>
-              Download the free checklist
-            </a>
-            <a class="button secondary" href="mailto:nadeemskamel@gmail.com?subject=Summer%20Job%20Hunt%20Packet">
-              Ask about personal help
-            </a>
-          </div>
-          <p class="small" style="margin-top: 10px">No account or sign-in required.</p>
         </div>
 
-        <div class="price-row" aria-label="Launch pricing">
-          <div class="price">
-            <strong>$25</strong>
-            <span>Resume tune-up</span>
-          </div>
-          <div class="price">
-            <strong>$45</strong>
-            <span>Summer job packet</span>
-          </div>
-          <div class="price">
-            <strong>$75</strong>
-            <span>Apply-ready sprint</span>
-          </div>
+        <div class="start">
+          <h2>Get the free checklist</h2>
+          <p class="small">Practical first steps. No sign-in required.</p>
+          <a class="button" href="student-summer-job-checklist.pdf" download>Get the free checklist</a>
+          <p class="small" style="margin-top: 14px">
+            Questions? <a href="mailto:nadeemskamel@gmail.com?subject=Summer%20Job%20Help">Email Nadeem</a>.
+          </p>
         </div>
       </header>
 
-      <main>
-        <section>
-          <h2>Before You Apply</h2>
-          <div class="grid">
-            <div class="mini">
-              <h3>1. Know Your Constraints</h3>
-              <ul>
-                <li>Location radius and transportation.</li>
-                <li>Days and hours available.</li>
-                <li>Earliest start date and last summer availability date.</li>
-                <li>Limits around lifting, standing, outdoor work, weekends, or commute.</li>
-              </ul>
-            </div>
+      <section style="margin-top: 42px">
+        <p class="eyebrow">Your experience already counts</p>
+        <h2>You probably have more experience than you think</h2>
+        <p class="section-note">A first resume can start with the things you already do.</p>
+        <table class="experience">
+          <thead>
+            <tr>
+              <th>What you have done</th>
+              <th>What it can show</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>School projects</td><td>Planning, problem-solving, and follow-through</td></tr>
+            <tr><td>Sports and clubs</td><td>Teamwork, consistency, and communication</td></tr>
+            <tr><td>Volunteering or family help</td><td>Responsibility, service, and patience</td></tr>
+            <tr><td>Part-time work or responsibilities</td><td>Reliability, customer care, and initiative</td></tr>
+          </tbody>
+        </table>
+        <p class="small" style="margin-top: 14px">You do not need professional experience to start.</p>
+      </section>
 
-            <div class="mini">
-              <h3>2. Pick Role Categories</h3>
-              <ul>
-                <li>Camp, recreation, youth sports, or activity assistant.</li>
-                <li>Retail, food service, cafe, host, cashier, or server.</li>
-                <li>Front desk, office assistant, tutoring, event staff, or customer service.</li>
-              </ul>
-            </div>
+      <section>
+        <p class="eyebrow">The checklist</p>
+        <h2>Four steps before you apply</h2>
+        <div class="checklist">
+          <article class="step">
+            <div class="step-title"><strong class="step-number">1</strong><h3>Set your search</h3></div>
+            <ul>
+              <li>Write down your work radius, transportation, start date, and weekly availability.</li>
+              <li>Pick two or three role categories.</li>
+              <li>Track the company, role, date applied, and follow-up date.</li>
+            </ul>
+          </article>
+          <article class="step">
+            <div class="step-title"><strong class="step-number">2</strong><h3>Build your resume</h3></div>
+            <ul>
+              <li>Use school, volunteering, sports, clubs, projects, caregiving, or paid work.</li>
+              <li>Show responsibility, service, teamwork, and reliability.</li>
+              <li>Keep it to one clear page.</li>
+            </ul>
+          </article>
+          <article class="step">
+            <div class="step-title"><strong class="step-number">3</strong><h3>Apply in batches</h3></div>
+            <ul>
+              <li>Start with 8-12 roles, mixing quick applications with better-fit opportunities.</li>
+              <li>Adjust your top bullets and skills to each role.</li>
+              <li>Follow up after 5-7 business days when contact information is available.</li>
+            </ul>
+          </article>
+          <article class="step">
+            <div class="step-title"><strong class="step-number">4</strong><h3>Prepare to talk</h3></div>
+            <ul>
+              <li>Practice a short answer to: Tell me about yourself.</li>
+              <li>Prepare one story about responsibility, teamwork, or a busy situation.</li>
+              <li>Know your availability and ask about pay, training, schedule, and start date.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-            <div class="mini">
-              <h3>3. Build A Simple Resume</h3>
-              <ul>
-                <li>Use school, jobs, volunteering, clubs, sports, projects, or family responsibilities.</li>
-                <li>Write bullets around responsibility, reliability, service, teamwork, and follow-through.</li>
-                <li>Avoid fake experience, inflated titles, or skills you cannot discuss.</li>
-              </ul>
-            </div>
+      <aside class="privacy">
+        <h2>Privacy check</h2>
+        <p>
+          Do not send strangers your Social Security number, bank details, ID photos, payroll forms, or passwords.
+          Confirm the employer and website before sharing personal information. For minors, involve a parent or guardian.
+        </p>
+      </aside>
 
-            <div class="mini">
-              <h3>4. Apply In Batches</h3>
-              <ul>
-                <li>Start with 8-12 applications.</li>
-                <li>Mix quick applications with better-fit roles.</li>
-                <li>Track date applied, company, role, and follow-up date.</li>
-              </ul>
-            </div>
-          </div>
-
-          <h2 style="margin-top: 22px">Interview Prep</h2>
-          <ul>
-            <li>Prepare a short answer for: "Tell me about yourself."</li>
-            <li>Know your real availability before the interview.</li>
-            <li>Have one story about responsibility, conflict, teamwork, or a busy situation.</li>
-            <li>Ask about pay, training, schedule, supervision, and start date before accepting.</li>
-          </ul>
-
-          <h2 style="margin-top: 22px">Safety And Privacy</h2>
-          <div class="note">
-            Do not send strangers Social Security numbers, bank details, ID photos, payroll
-            forms, or passwords. For minors, involve a parent or guardian.
-          </div>
-        </section>
-
-        <aside>
-          <h2>Need Help?</h2>
-          <p>I am testing a local Summer Job Hunt Packet for students who want help getting apply-ready.</p>
-          <ul>
-            <li>One-page resume cleanup.</li>
-            <li>5-8 current role targets or job categories.</li>
-            <li>Application notes for what to emphasize.</li>
-            <li>Quick interview prep.</li>
-          </ul>
-
-          <h3>Contact</h3>
-          <div class="contact-box">
-            <p><strong>Email:</strong> <a href="mailto:nadeemskamel@gmail.com?subject=Summer%20Job%20Hunt%20Packet">nadeemskamel@gmail.com</a></p>
-            <p>
-              <strong>Structured request:</strong>
-              <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=summer-job-packet.yml">open a packet request</a>
-            </p>
-            <p class="small">
-              Email is easiest. The structured request form requires GitHub sign-in and is public, so keep details high-level.
-            </p>
-          </div>
-
-          <h3>Boundaries</h3>
-          <ul>
-            <li>Real experience only.</li>
-            <li>No fake claims.</li>
-            <li>No application submission on anyone's behalf.</li>
-            <li>No sensitive info handled.</li>
-          </ul>
-        </aside>
-      </main>
+      <section>
+        <p class="eyebrow">Paid support</p>
+        <h2>Optional help</h2>
+        <p class="section-note">Choose the amount of support that fits where you are starting.</p>
+        <table class="help">
+          <thead>
+            <tr><th>Format of help</th><th>Cost</th><th>Useful when</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Resume review</td><td>$25</td><td>You already have a draft.</td></tr>
+            <tr><td>Resume + application planning</td><td>$45</td><td>You are starting from scratch.</td></tr>
+            <tr><td>Resume + interview practice</td><td>$75</td><td>You want to prepare what to say.</td></tr>
+          </tbody>
+        </table>
+        <p class="small" style="margin-top: 16px">No application submission. No guarantees. Real experience only.</p>
+      </section>
 
       <footer>
-        This is a local student service experiment, not an official UCSD or employer service.
+        <p>Independent local service, not affiliated with a school or employer.</p>
       </footer>
     </div>
   </body>
