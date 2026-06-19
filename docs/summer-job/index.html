@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Student Summer Job Checklist</title>
+    <meta
+      name="description"
+      content="Free student summer job checklist plus local resume and apply-ready packet help for students looking for seasonal or part-time work."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f7f9;
+        --ink: #1f2933;
+        --muted: #5f6b76;
+        --line: #d7dee6;
+        --paper: #ffffff;
+        --sea: #0b6b78;
+        --leaf: #2f7d4f;
+        --sun: #f3b23c;
+        --rose: #c8554d;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+      }
+
+      a {
+        color: var(--sea);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .page {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 28px 18px 48px;
+      }
+
+      header,
+      section,
+      aside {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      header {
+        display: grid;
+        gap: 18px;
+        padding: 28px;
+      }
+
+      .eyebrow {
+        margin: 0 0 8px;
+        color: var(--sea);
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 760px;
+        font-size: 44px;
+        line-height: 1.05;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 12px;
+        font-size: 24px;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin: 20px 0 8px;
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+
+      .intro {
+        max-width: 760px;
+        margin-top: 14px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .button {
+        min-height: 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border: 1px solid var(--sea);
+        border-radius: 7px;
+        background: var(--sea);
+        color: #ffffff;
+        font-weight: 700;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--sea);
+      }
+
+      .price-row {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .price {
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-left: 5px solid var(--sea);
+        border-radius: 8px;
+        background: #fbfcfd;
+      }
+
+      .price:nth-child(2) {
+        border-left-color: var(--leaf);
+      }
+
+      .price:nth-child(3) {
+        border-left-color: var(--sun);
+      }
+
+      .price strong {
+        display: block;
+        font-size: 20px;
+      }
+
+      .price span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 1.35fr 0.65fr;
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      section,
+      aside {
+        padding: 22px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin: 6px 0;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .mini {
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fbfcfd;
+      }
+
+      .mini h3 {
+        margin-top: 0;
+      }
+
+      .note {
+        padding: 14px;
+        border-left: 5px solid var(--rose);
+        background: #fff8f6;
+        border-radius: 8px;
+        color: #5f2b27;
+      }
+
+      .contact-box {
+        display: grid;
+        gap: 10px;
+        padding: 16px;
+        border: 1px dashed var(--sea);
+        border-radius: 8px;
+        background: #f2fbfc;
+      }
+
+      .contact-box p {
+        margin: 0;
+      }
+
+      .small {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+      }
+
+      @media (max-width: 780px) {
+        h1 {
+          font-size: 34px;
+        }
+
+        main,
+        .price-row,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div>
+          <p class="eyebrow">Free student resource</p>
+          <h1>Student Summer Job Checklist</h1>
+          <p class="intro">
+            A practical checklist for students looking for summer, seasonal, or part-time
+            work, plus optional help getting apply-ready.
+          </p>
+          <div class="actions">
+            <a class="button" href="mailto:nadeemskamel@gmail.com?subject=Summer%20Job%20Hunt%20Packet">
+              Email for help
+            </a>
+            <a
+              class="button secondary"
+              href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=summer-job-packet.yml"
+            >
+              Request packet
+            </a>
+          </div>
+        </div>
+
+        <div class="price-row" aria-label="Launch pricing">
+          <div class="price">
+            <strong>$25</strong>
+            <span>Resume tune-up</span>
+          </div>
+          <div class="price">
+            <strong>$45</strong>
+            <span>Summer job packet</span>
+          </div>
+          <div class="price">
+            <strong>$75</strong>
+            <span>Apply-ready sprint</span>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section>
+          <h2>Before You Apply</h2>
+          <div class="grid">
+            <div class="mini">
+              <h3>1. Know Your Constraints</h3>
+              <ul>
+                <li>Location radius and transportation.</li>
+                <li>Days and hours available.</li>
+                <li>Earliest start date and last summer availability date.</li>
+                <li>Limits around lifting, standing, outdoor work, weekends, or commute.</li>
+              </ul>
+            </div>
+
+            <div class="mini">
+              <h3>2. Pick Role Categories</h3>
+              <ul>
+                <li>Camp, recreation, youth sports, or activity assistant.</li>
+                <li>Retail, food service, cafe, host, cashier, or server.</li>
+                <li>Front desk, office assistant, tutoring, event staff, or customer service.</li>
+              </ul>
+            </div>
+
+            <div class="mini">
+              <h3>3. Build A Simple Resume</h3>
+              <ul>
+                <li>Use school, jobs, volunteering, clubs, sports, projects, or family responsibilities.</li>
+                <li>Write bullets around responsibility, reliability, service, teamwork, and follow-through.</li>
+                <li>Avoid fake experience, inflated titles, or skills you cannot discuss.</li>
+              </ul>
+            </div>
+
+            <div class="mini">
+              <h3>4. Apply In Batches</h3>
+              <ul>
+                <li>Start with 8-12 applications.</li>
+                <li>Mix quick applications with better-fit roles.</li>
+                <li>Track date applied, company, role, and follow-up date.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h2 style="margin-top: 22px">Interview Prep</h2>
+          <ul>
+            <li>Prepare a short answer for: "Tell me about yourself."</li>
+            <li>Know your real availability before the interview.</li>
+            <li>Have one story about responsibility, conflict, teamwork, or a busy situation.</li>
+            <li>Ask about pay, training, schedule, supervision, and start date before accepting.</li>
+          </ul>
+
+          <h2 style="margin-top: 22px">Safety And Privacy</h2>
+          <div class="note">
+            Do not send strangers Social Security numbers, bank details, ID photos, payroll
+            forms, or passwords. For minors, involve a parent or guardian.
+          </div>
+        </section>
+
+        <aside>
+          <h2>Need Help?</h2>
+          <p>I am testing a local Summer Job Hunt Packet for students who want help getting apply-ready.</p>
+          <ul>
+            <li>One-page resume cleanup.</li>
+            <li>5-8 current role targets or job categories.</li>
+            <li>Application notes for what to emphasize.</li>
+            <li>Quick interview prep.</li>
+          </ul>
+
+          <h3>Contact</h3>
+          <div class="contact-box">
+            <p><strong>Email:</strong> <a href="mailto:nadeemskamel@gmail.com?subject=Summer%20Job%20Hunt%20Packet">nadeemskamel@gmail.com</a></p>
+            <p>
+              <strong>Structured request:</strong>
+              <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=summer-job-packet.yml">open a packet request</a>
+            </p>
+            <p class="small">
+              Email is easiest. The structured request form is public, so keep details high-level.
+            </p>
+          </div>
+
+          <h3>Boundaries</h3>
+          <ul>
+            <li>Real experience only.</li>
+            <li>No fake claims.</li>
+            <li>No application submission on anyone's behalf.</li>
+            <li>No sensitive info handled.</li>
+          </ul>
+        </aside>
+      </main>
+
+      <footer>
+        This is a local student service experiment, not an official UCSD or employer service.
+      </footer>
+    </div>
+  </body>
+</html>

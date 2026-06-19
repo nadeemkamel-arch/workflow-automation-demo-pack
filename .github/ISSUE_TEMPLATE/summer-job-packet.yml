@@ -1,0 +1,67 @@
+name: Student summer job packet inquiry
+description: Ask about a small student resume and summer job-search packet.
+title: "[Summer job packet] "
+labels:
+  - summer-job-packet
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking about the Summer Job Hunt Packet.
+
+        Please do not include Social Security numbers, ID photos, bank details, payroll forms, passwords, private school records, or anything you would not want public. Keep details high-level. If a student is a minor, a parent or guardian should be involved before any paid work starts.
+  - type: dropdown
+    id: requester
+    attributes:
+      label: Who is requesting help?
+      options:
+        - Student
+        - Parent or guardian
+        - Other family member
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Best-fit package
+      description: This can change after review.
+      options:
+        - $25 Resume Tune-Up
+        - $45 Summer Job Packet
+        - $75 Apply-Ready Sprint
+        - Not sure yet
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What kind of summer, seasonal, or part-time work are you looking for?
+      placeholder: "Example: part-time retail or front desk work near La Jolla, 15-20 hrs/week, available weekends."
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: High-level background
+      description: Use general details only. Do not paste a full resume here.
+      placeholder: "Example: college student, customer service from volunteer work, club leadership, comfortable with Excel and Canva."
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Location, transportation, schedule, start/end dates, or role types to avoid.
+      placeholder: "Example: needs bus-accessible roles within 8 miles, no late nights, available until September 1."
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact route
+      description: Email is best. Do not include phone numbers unless you are comfortable with the issue being public.
+      placeholder: "email@example.com"
+    validations:
+      required: true
