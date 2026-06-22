@@ -8,13 +8,17 @@
       name="description"
       content="A free first-resume starter sheet with worked examples for high school and college students, plus optional focused resume help."
     />
-    <meta property="og:title" content="Your first resume starts with what you already do" />
+    <meta property="og:title" content="Your first resume can start before your first job" />
     <meta
       property="og:description"
-      content="See how school, activities, volunteering, and family responsibilities can become honest resume material."
+      content="A free one-page starter sheet made locally by a UCSD student, with optional hands-on resume help."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/summer-job/" />
+    <meta
+      property="og:image"
+      content="https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/summer-job/assets/first-resume-starter-sheet-preview.png"
+    />
     <style>
       :root {
         color-scheme: light;
@@ -63,6 +67,11 @@
         text-transform: uppercase;
       }
 
+      .local-eyebrow {
+        font-size: 14px;
+        text-transform: none;
+      }
+
       h1,
       h2,
       h3,
@@ -100,8 +109,8 @@
 
       .hero {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 275px;
-        gap: 48px;
+        grid-template-columns: minmax(0, 1fr) 310px;
+        gap: 42px;
         align-items: start;
         padding-bottom: 44px;
       }
@@ -113,6 +122,39 @@
 
       .download h2 {
         font-size: 21px;
+      }
+
+      .resource-preview {
+        display: block;
+        margin: 20px 0 0;
+        color: var(--muted);
+        font-size: 12px;
+        text-decoration: none;
+      }
+
+      .resource-preview img {
+        width: 100%;
+        height: 210px;
+        display: block;
+        margin-bottom: 7px;
+        border: 1px solid var(--line);
+        border-radius: 4px;
+        object-fit: cover;
+        object-position: top;
+      }
+
+      .paid-note {
+        margin: 18px 0 0;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .paid-note strong {
+        display: block;
+        margin-bottom: 4px;
+        color: var(--navy);
       }
 
       .button {
@@ -320,6 +362,10 @@
           border-left: 0;
         }
 
+        .resource-preview img {
+          height: 250px;
+        }
+
         .example {
           grid-template-columns: 1fr;
           padding: 18px 0;
@@ -347,21 +393,38 @@
   </head>
   <body>
     <main class="page">
-      <p class="eyebrow">Local student resource | Summer 2026</p>
+      <p class="eyebrow local-eyebrow">Made locally by Nadeem, a UCSD student</p>
 
       <header class="hero">
         <div>
-          <h1>Your first resume starts with what you already do.</h1>
+          <h1>Your first resume can start before your first job.</h1>
           <p class="intro">
-            School projects, clubs, sports, volunteering, caregiving, and family responsibilities can become clear,
-            honest resume material.
+            School projects, clubs, sports, volunteering, helping at home, and odd jobs can all count. This free
+            starter sheet helps you find one real example and put it into words.
           </p>
         </div>
 
         <div class="download">
-          <h2>Free starter sheet</h2>
-          <p class="small">One worked example, experience prompts, and space to draft your first bullet. No sign-in.</p>
-          <a class="button" href="student-summer-job-checklist.pdf" download>Download the starter sheet</a>
+          <h2>Free one-page starter sheet</h2>
+          <p class="small">
+            Prompts, a before-and-after example, and space to draft your first bullet. No email or sign-in.
+          </p>
+          <a class="button" href="student-summer-job-checklist.pdf" download>Download the free sheet</a>
+          <a
+            class="resource-preview"
+            href="student-summer-job-checklist.pdf"
+            aria-label="Open a preview of the free starter sheet"
+          >
+            <img
+              src="assets/first-resume-starter-sheet-preview.png"
+              alt="Preview of the free first resume starter sheet"
+            />
+            Preview of the free one-page starter sheet
+          </a>
+          <p class="paid-note">
+            <strong>Want help with the finished resume?</strong>
+            I also offer a $45 one-page resume build. <a href="#resume-build">See what is included.</a>
+          </p>
         </div>
       </header>
 
@@ -427,7 +490,7 @@
       </section>
 
       <section id="resume-build">
-        <p class="eyebrow">Focused paid help</p>
+        <p class="eyebrow">Want hands-on help?</p>
         <div class="offer-head">
           <h2>First-Job Resume Build</h2>
           <div class="price">$45</div>
@@ -474,7 +537,7 @@
           <a
             class="button"
             href="mailto:nadeemskamel@gmail.com?subject=First-Job%20Resume%20Build&body=Hi%20Nadeem%2C%0A%0AI%20am%20interested%20in%20the%20First-Job%20Resume%20Build.%20The%20student%20is%20in%20%5Bschool%20year%5D%20and%20is%20targeting%20%5Bjob%20type%5D.%0A"
-            >Ask about the resume build</a
+            >Ask about the $45 resume build</a
           >
           <span class="small">A verified payment route will be provided only after fit and scope are confirmed.</span>
         </div>
@@ -483,10 +546,10 @@
       <section class="trust">
         <div>
           <p class="eyebrow">Who is helping</p>
-          <h2>Focused peer support</h2>
+          <h2>Hi, I'm Nadeem.</h2>
           <p>
-            I am Nadeem, a UCSD student offering focused first-resume help for high school and college students. This is
-            an independent local service, not career counseling, job placement, or a school program.
+            I put together the free sheet and the paid resume build for students who need a clear place to start. This
+            is independent local help, not career counseling, job placement, or a school program.
           </p>
           <p class="small">Real experience only. The student approves every claim and submits applications themselves.</p>
         </div>
