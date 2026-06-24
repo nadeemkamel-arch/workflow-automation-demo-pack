@@ -12,6 +12,14 @@ Pilot inquiry form:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-pilot.yml
 
+AI-Built App Rescue:
+
+https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/code-rescue/
+
+Code rescue inquiry form:
+
+https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=code-rescue.yml
+
 Sandbox handoff checklist:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/handoff_template.md
@@ -20,6 +28,7 @@ https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/hand
 
 Good starter projects are intentionally small:
 
+- **AI-Built App Rescue**: diagnose and fix one reproducible bug in a small React, TypeScript, JavaScript, or Python project, with a focused test and handoff. Fixed starter scope: $75.
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.

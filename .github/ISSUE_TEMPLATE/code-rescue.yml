@@ -1,0 +1,49 @@
+name: Code rescue inquiry
+description: Ask about one reproducible bug in a small JavaScript, TypeScript, React, or Python project.
+title: "[Code rescue] "
+labels:
+  - code-rescue-inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share only public-safe details here. Do not paste source code, credentials, private repository links, customer records, or production logs.
+  - type: dropdown
+    id: stack
+    attributes:
+      label: Primary stack
+      options:
+        - React / TypeScript
+        - JavaScript / Node.js
+        - Python
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happens instead? Remove secrets and private data.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Public-safe reproduction steps
+      description: List the smallest set of steps that triggers the problem.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I have not included credentials, private source code, customer data, or production logs.
+          required: true
