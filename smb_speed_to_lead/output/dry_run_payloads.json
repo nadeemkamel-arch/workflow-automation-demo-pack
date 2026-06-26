@@ -1,0 +1,194 @@
+[
+  {
+    "status": "dry_run_only",
+    "method": "POST",
+    "endpoint": "/client-adapter/send-or-route",
+    "headers": {
+      "Idempotency-Key": "speed-to-lead:SL-1001:2026-06-24T15:03:00",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "recordId": "SL-1001",
+      "workflow": "speed_to_lead",
+      "contactName": "Avery Chen",
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "crmAdapter": "native:n8n-nodes-base.goHighLevel",
+      "route": "book_or_owner_alert",
+      "stopOn": [
+        "reply_detected",
+        "opt_out",
+        "booking_created",
+        "manual_owner_stop"
+      ],
+      "retryPolicy": {
+        "maxAttempts": 3,
+        "backoffSeconds": [
+          30,
+          120,
+          300
+        ]
+      }
+    }
+  },
+  {
+    "status": "dry_run_only",
+    "method": "POST",
+    "endpoint": "/client-adapter/send-or-route",
+    "headers": {
+      "Idempotency-Key": "speed-to-lead:SL-1002:2026-06-24T15:08:00",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "recordId": "SL-1002",
+      "workflow": "speed_to_lead",
+      "contactName": "Morgan Patel",
+      "channels": [
+        "email"
+      ],
+      "crmAdapter": "http_webhook:generic_adapter",
+      "route": "qualify_reply",
+      "stopOn": [
+        "reply_detected",
+        "opt_out",
+        "booking_created",
+        "manual_owner_stop"
+      ],
+      "retryPolicy": {
+        "maxAttempts": 3,
+        "backoffSeconds": [
+          30,
+          120,
+          300
+        ]
+      }
+    }
+  },
+  {
+    "status": "blocked_before_outbound",
+    "record_id": "SL-1003",
+    "workflow": "speed_to_lead",
+    "route": "manual_review_only",
+    "reason": "no_outbound_consent",
+    "idempotency_key": "speed-to-lead:SL-1003:2026-06-24T15:12:00"
+  },
+  {
+    "status": "dry_run_only",
+    "method": "POST",
+    "endpoint": "/client-adapter/send-or-route",
+    "headers": {
+      "Idempotency-Key": "speed-to-lead:SL-1004:2026-06-24T15:16:00",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "recordId": "SL-1004",
+      "workflow": "speed_to_lead",
+      "contactName": "Riley Moss",
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "crmAdapter": "http_webhook:generic_adapter",
+      "route": "book_or_owner_alert",
+      "stopOn": [
+        "reply_detected",
+        "opt_out",
+        "booking_created",
+        "manual_owner_stop"
+      ],
+      "retryPolicy": {
+        "maxAttempts": 3,
+        "backoffSeconds": [
+          30,
+          120,
+          300
+        ]
+      }
+    }
+  },
+  {
+    "status": "dry_run_only",
+    "method": "POST",
+    "endpoint": "/client-adapter/send-or-route",
+    "headers": {
+      "Idempotency-Key": "reactivation:DR-2001:121",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "recordId": "DR-2001",
+      "workflow": "database_reactivation",
+      "contactName": "Taylor Brooks",
+      "channels": [
+        "email",
+        "sms"
+      ],
+      "crmAdapter": "native:n8n-nodes-base.goHighLevel",
+      "route": "reactivation_sequence",
+      "stopOn": [
+        "reply_detected",
+        "opt_out",
+        "booking_created",
+        "manual_owner_stop"
+      ],
+      "retryPolicy": {
+        "maxAttempts": 3,
+        "backoffSeconds": [
+          30,
+          120,
+          300
+        ]
+      }
+    }
+  },
+  {
+    "status": "dry_run_only",
+    "method": "POST",
+    "endpoint": "/client-adapter/send-or-route",
+    "headers": {
+      "Idempotency-Key": "reactivation:DR-2002:210",
+      "X-Dry-Run": "true"
+    },
+    "body": {
+      "recordId": "DR-2002",
+      "workflow": "database_reactivation",
+      "contactName": "Sam Rivera",
+      "channels": [
+        "email"
+      ],
+      "crmAdapter": "http_webhook:generic_adapter",
+      "route": "reactivation_sequence",
+      "stopOn": [
+        "reply_detected",
+        "opt_out",
+        "booking_created",
+        "manual_owner_stop"
+      ],
+      "retryPolicy": {
+        "maxAttempts": 3,
+        "backoffSeconds": [
+          30,
+          120,
+          300
+        ]
+      }
+    }
+  },
+  {
+    "status": "blocked_before_outbound",
+    "record_id": "DR-2003",
+    "workflow": "database_reactivation",
+    "route": "suppress_all_outbound",
+    "reason": "opt_out",
+    "idempotency_key": "reactivation:DR-2003:98"
+  },
+  {
+    "status": "blocked_before_outbound",
+    "record_id": "DR-2004",
+    "workflow": "database_reactivation",
+    "route": "wait_until_dormant_window",
+    "reason": "not_dormant_yet",
+    "idempotency_key": "reactivation:DR-2004:45"
+  }
+]

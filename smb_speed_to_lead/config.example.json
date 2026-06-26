@@ -1,0 +1,37 @@
+{
+  "client_slug": "demo_smb",
+  "dry_run": true,
+  "crm_adapters": {
+    "GoHighLevel": {
+      "mode": "native_node",
+      "node": "n8n-nodes-base.goHighLevel",
+      "credential_env": "GHL_CREDENTIAL_ID"
+    },
+    "HubSpot": {
+      "mode": "native_node",
+      "node": "n8n-nodes-base.hubspot",
+      "credential_env": "HUBSPOT_CREDENTIAL_ID"
+    },
+    "Generic CRM": {
+      "mode": "http_webhook",
+      "endpoint_env": "GENERIC_CRM_WEBHOOK_URL",
+      "auth_env": "GENERIC_CRM_API_KEY"
+    },
+    "Custom Scheduler API": {
+      "mode": "http_webhook",
+      "endpoint_env": "SCHEDULER_API_URL",
+      "auth_env": "SCHEDULER_API_KEY"
+    }
+  },
+  "retry_policy": {
+    "max_attempts": 3,
+    "backoff_seconds": [30, 120, 300],
+    "dead_letter_route": "owner_review"
+  },
+  "stop_rules": {
+    "no_consent": "manual_review_only",
+    "opt_out": "suppress_all_outbound",
+    "reply_detected": "stop_sequence_and_route_owner",
+    "booking_created": "stop_sequence_and_write_crm_status"
+  }
+}

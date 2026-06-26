@@ -1,0 +1,5 @@
+record_id,workflow,contact_name,crm_type,crm_adapter,route,allowed_channels,stop_reason,idempotency_key
+SL-1001,speed_to_lead,Avery Chen,GoHighLevel,native:n8n-nodes-base.goHighLevel,book_or_owner_alert,"email,sms",high_intent,speed-to-lead:SL-1001:2026-06-24T15:03:00
+SL-1002,speed_to_lead,Morgan Patel,Generic CRM,http_webhook:generic_adapter,qualify_reply,email,needs_qualification,speed-to-lead:SL-1002:2026-06-24T15:08:00
+SL-1003,speed_to_lead,Jordan Lee,HubSpot,native:n8n-nodes-base.hubspot,manual_review_only,none,no_outbound_consent,speed-to-lead:SL-1003:2026-06-24T15:12:00
+SL-1004,speed_to_lead,Riley Moss,Custom Scheduler API,http_webhook:generic_adapter,book_or_owner_alert,"email,sms",high_intent,speed-to-lead:SL-1004:2026-06-24T15:16:00

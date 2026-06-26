@@ -32,6 +32,7 @@ Good starter projects are intentionally small:
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
+- **SMB Speed-to-Lead Sprint**: turn new-lead and dormant-contact samples into reusable n8n-style workflow templates with CRM adapters, consent/opt-out stop gates, dry-run payloads, and config docs.
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
@@ -216,6 +217,26 @@ Run:
 cd property_ops_triage
 python3 property_ops_triage.py --input input/property_messages.csv --out output
 python3 -m pytest test_property_ops_triage.py
+```
+
+### SMB Speed-to-Lead Template
+
+Path: `smb_speed_to_lead/`
+
+Shows a reusable small-business automation pattern that turns fictional new leads and dormant contacts into:
+
+- speed-to-lead and database-reactivation routing queues,
+- native CRM or generic HTTP webhook adapter choices,
+- consent and opt-out stop gates,
+- dry-run SMS/email/CRM payloads with idempotency keys,
+- config docs for swapping client credentials and endpoints.
+
+Run:
+
+```bash
+cd smb_speed_to_lead
+python3 smb_speed_to_lead.py --new-leads input/new_leads.csv --dormant-contacts input/dormant_contacts.csv --out output
+python3 -m pytest test_smb_speed_to_lead.py
 ```
 
 ### Workflow Reliability Monitor

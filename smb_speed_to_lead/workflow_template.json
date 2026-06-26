@@ -1,0 +1,87 @@
+{
+  "name": "SMB Speed-to-Lead and Database Reactivation Template",
+  "version": "public-safe-demo-1",
+  "notes": "Importable-shape n8n workflow plan. Replace env vars and credentials before any live client run.",
+  "dryRunDefault": true,
+  "clientConfig": {
+    "clientSlug": "={{$env.CLIENT_SLUG}}",
+    "crmMode": "native_node_or_http_webhook",
+    "genericCrmWebhookUrl": "={{$env.GENERIC_CRM_WEBHOOK_URL}}",
+    "smsProviderCredential": "={{$env.SMS_PROVIDER_CREDENTIAL_ID}}",
+    "emailProviderCredential": "={{$env.EMAIL_PROVIDER_CREDENTIAL_ID}}"
+  },
+  "subWorkflows": [
+    {
+      "name": "normalize-client-config",
+      "purpose": "Load CRM adapter, channel permissions, retry policy, offer copy, and stop rules from config."
+    },
+    {
+      "name": "stop-gate",
+      "purpose": "Block outbound if no consent, opt-out exists, reply already arrived, or owner paused sequence."
+    },
+    {
+      "name": "generic-crm-http-adapter",
+      "purpose": "Use HTTP Request node for systems with no native n8n node. Includes auth header placeholder, idempotency key, and dry-run flag."
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Webhook - New Lead",
+      "type": "n8n-nodes-base.webhook",
+      "output": "lead payload"
+    },
+    {
+      "name": "Read Dormant Contact Batch",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "output": "contact batch"
+    },
+    {
+      "name": "Normalize Client Config",
+      "type": "subworkflow:normalize-client-config"
+    },
+    {
+      "name": "AI Qualifier Draft",
+      "type": "llm-provider-placeholder",
+      "guardrail": "Return structured JSON only; no live send."
+    },
+    {
+      "name": "Consent and Stop Gate",
+      "type": "subworkflow:stop-gate",
+      "stopRules": [
+        "no_consent",
+        "opt_out",
+        "reply_detected",
+        "booking_created",
+        "manual_owner_stop"
+      ]
+    },
+    {
+      "name": "CRM Writeback Adapter",
+      "type": "switch:native-node-or-http-webhook",
+      "nativeExamples": ["GoHighLevel", "HubSpot"],
+      "fallback": "subworkflow:generic-crm-http-adapter"
+    },
+    {
+      "name": "SMS/Email Draft Payloads",
+      "type": "dry-run-send-adapter",
+      "requiredHeaders": ["Idempotency-Key", "X-Dry-Run"]
+    },
+    {
+      "name": "Owner Review Digest",
+      "type": "n8n-nodes-base.slack",
+      "mode": "dry_run_until_launch"
+    }
+  ],
+  "retryPolicy": {
+    "maxAttempts": 3,
+    "backoffSeconds": [30, 120, 300],
+    "deadLetterRoute": "owner_review"
+  },
+  "handoffChecklist": [
+    "Run sample records with dryRun=true.",
+    "Confirm client-specific consent language.",
+    "Confirm reply and opt-out detection before enabling sends.",
+    "Verify CRM writeback using sandbox credentials.",
+    "Switch one client at a time from dry-run to live."
+  ]
+}

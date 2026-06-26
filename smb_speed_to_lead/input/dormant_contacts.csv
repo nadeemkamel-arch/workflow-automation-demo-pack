@@ -1,0 +1,5 @@
+contact_id,contact_name,email,phone,crm_type,last_engaged_days,consent_email,consent_sms,opt_out,last_offer,notes
+DR-2001,Taylor Brooks,taylor@example.test,+15550202001,GoHighLevel,121,yes,yes,no,spring tune-up,Past customer with seasonal service history.
+DR-2002,Sam Rivera,sam@example.test,+15550202002,Generic CRM,210,yes,no,no,free inspection,Email-only reactivation.
+DR-2003,Casey Nguyen,casey@example.test,+15550202003,HubSpot,98,yes,yes,yes,maintenance plan,Explicit opt-out should suppress all outreach.
+DR-2004,Alex Kim,alex@example.test,+15550202004,Custom Scheduler API,45,yes,yes,no,follow-up estimate,Too recent for dormant sequence.

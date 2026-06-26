@@ -1,0 +1,5 @@
+record_id,workflow,contact_name,crm_type,crm_adapter,route,allowed_channels,stop_reason,idempotency_key
+DR-2001,database_reactivation,Taylor Brooks,GoHighLevel,native:n8n-nodes-base.goHighLevel,reactivation_sequence,"email,sms",dormant_contact,reactivation:DR-2001:121
+DR-2002,database_reactivation,Sam Rivera,Generic CRM,http_webhook:generic_adapter,reactivation_sequence,email,dormant_contact,reactivation:DR-2002:210
+DR-2003,database_reactivation,Casey Nguyen,HubSpot,native:n8n-nodes-base.hubspot,suppress_all_outbound,"email,sms",opt_out,reactivation:DR-2003:98
+DR-2004,database_reactivation,Alex Kim,Custom Scheduler API,http_webhook:generic_adapter,wait_until_dormant_window,"email,sms",not_dormant_yet,reactivation:DR-2004:45

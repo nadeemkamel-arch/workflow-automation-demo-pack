@@ -1,0 +1,5 @@
+lead_id,source,contact_name,email,phone,created_at,crm_type,interest,consent_email,consent_sms,notes
+SL-1001,website_form,Avery Chen,avery@example.test,+15550101001,2026-06-24T15:03:00,GoHighLevel,quote for AC repair this week,yes,yes,Asked for earliest appointment and pricing.
+SL-1002,facebook_ad,Morgan Patel,morgan@example.test,+15550101002,2026-06-24T15:08:00,Generic CRM,roofing estimate next month,yes,no,Needs email only because SMS consent was not provided.
+SL-1003,referral,Jordan Lee,jordan@example.test,+15550101003,2026-06-24T15:12:00,HubSpot,just browsing options,no,no,No outbound consent; route to manual review only.
+SL-1004,landing_page,Riley Moss,riley@example.test,+15550101004,2026-06-24T15:16:00,Custom Scheduler API,book consult tomorrow,yes,yes,High intent and no native CRM node; use HTTP webhook adapter.

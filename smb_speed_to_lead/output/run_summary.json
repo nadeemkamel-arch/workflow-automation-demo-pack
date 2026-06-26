@@ -1,0 +1,8 @@
+{
+  "speed_to_lead_records": 4,
+  "reactivation_records": 4,
+  "dry_run_payloads": 8,
+  "blocked_before_outbound": 3,
+  "http_webhook_adapter_records": 4,
+  "live_actions": 0
+}
