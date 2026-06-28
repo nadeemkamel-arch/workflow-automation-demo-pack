@@ -43,6 +43,20 @@ Most first milestones should use fictional, redacted, or sandbox data and stay i
 
 ## Demos
 
+### FPGA Determinant Accelerator
+
+Path: `eda_determinant_accelerator/`
+
+Shows a small EDA/digital-design portfolio sample:
+
+- SystemVerilog RTL determinant accelerator.
+- Ready/valid row-major input stream.
+- Signed arithmetic and shared iterative divider.
+- ARM64/C golden model.
+- Verilator C++ simulation harness.
+- Directed and randomized verification with 108/108 RTL cases passing.
+- Yosys latency and resource-report excerpts.
+
 ### n8n AI Ops Triage
 
 Path: `n8n_ai_ops_triage/`
