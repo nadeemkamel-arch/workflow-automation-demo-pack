@@ -1,6 +1,6 @@
 # Agentic Workflow Automation Demo Pack
 
-Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, travel-ops email routing, reproducible outputs, tests, and handoff notes.
+Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
 
 These examples use fictional data so the code, outputs, and runbooks can be inspected publicly. The same delivery shape can connect to approved client systems such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, LLM calls, or n8n/Make/Zapier workflows once the data source, credentials, cost controls, and launch gate are agreed.
 
@@ -24,6 +24,10 @@ Sandbox handoff checklist:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/handoff_template.md
 
+Delivery notes:
+
+https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/DELIVERY_NOTES.md
+
 ## Paid Pilot Menu
 
 Good starter projects are intentionally small:
@@ -33,6 +37,7 @@ Good starter projects are intentionally small:
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
 - **SMB Speed-to-Lead Sprint**: turn new-lead and dormant-contact samples into reusable n8n-style workflow templates with CRM adapters, consent/opt-out stop gates, dry-run payloads, and config docs.
+- **Telecom OSS Correlation PoC**: correlate OSS tickets, RFMS alarms, and GIS equipment mapping into a review-ready queue with no live ticket updates.
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
@@ -170,6 +175,26 @@ Run:
 cd statement_email_workflow
 python3 statement_email_workflow.py --input input/session_records.csv --out output
 python3 -m pytest test_statement_email_workflow.py
+```
+
+### Telecom OSS Correlation PoC
+
+Path: `telecom_oss_correlation_poc/`
+
+Shows a telecom operations automation pattern that turns fictional OSS power-dip tickets, RFMS alarms, and GIS equipment mapping into:
+
+- matched ticket/alarm correlations,
+- confidence scoring,
+- unmatched-ticket and unmatched-alarm queues,
+- an operator digest,
+- a JSON run summary with zero live ticket updates.
+
+Run:
+
+```bash
+cd telecom_oss_correlation_poc
+python3 telecom_oss_correlation_poc.py --tickets input/power_dip_tickets.csv --alarms input/rfms_alarms.csv --gis input/gis_sections.csv --out output
+python3 -m unittest test_telecom_oss_correlation_poc.py
 ```
 
 ### Travel Ops Email Hub

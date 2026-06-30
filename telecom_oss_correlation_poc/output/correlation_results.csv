@@ -1,0 +1,3 @@
+correlation_id,ticket_id,alarm_id,section_id,site_name,area,ticket_opened_at,alarm_raised_at,delta_minutes,alarm_type,severity,confidence,recommended_action
+TT-1007_RF-8821,TT-1007,RF-8821,SEC-A12,Alpha Hub,North Ridge,2026-06-29T09:14,2026-06-29T09:19,5,rectifier_voltage_low,critical,high,prepare linked-ticket note for owner approval
+TT-1018_RF-8834,TT-1018,RF-8834,SEC-C09,Charlie Node,Harbor East,2026-06-29T11:41,2026-06-29T11:33,8,rectifier_voltage_low,critical,high,prepare linked-ticket note for owner approval

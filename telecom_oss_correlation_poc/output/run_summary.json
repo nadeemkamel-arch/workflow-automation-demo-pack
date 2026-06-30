@@ -1,0 +1,17 @@
+{
+  "tickets_seen": 4,
+  "alarms_seen": 4,
+  "correlations_found": 2,
+  "high_confidence": 2,
+  "medium_confidence": 0,
+  "unmatched_tickets": [
+    "TT-1011",
+    "TT-1020"
+  ],
+  "unmatched_alarms": [
+    "RF-8827",
+    "RF-8842"
+  ],
+  "live_ticket_updates": 0,
+  "window_minutes": 20
+}

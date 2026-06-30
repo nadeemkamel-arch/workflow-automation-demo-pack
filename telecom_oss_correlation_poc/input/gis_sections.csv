@@ -1,0 +1,6 @@
+equipment_id,section_id,area,site_name
+EQ-ALPHA-03,SEC-A12,North Ridge,Alpha Hub
+EQ-BRAVO-11,SEC-B04,West Loop,Bravo Junction
+EQ-CHARLIE-08,SEC-C09,Harbor East,Charlie Node
+EQ-DELTA-14,SEC-D02,South Line,Delta Repeater
+EQ-ECHO-05,SEC-E16,Airport Spur,Echo Shelter

@@ -1,0 +1,5 @@
+ticket_id,section_hint,opened_at,voltage_drop_pct,status
+TT-1007,SEC-A12,2026-06-29T09:14:00,37,open
+TT-1011,SEC-B04,2026-06-29T10:02:00,22,open
+TT-1018,SEC-C09,2026-06-29T11:41:00,45,open
+TT-1020,SEC-D02,2026-06-29T12:18:00,18,watch

@@ -1,0 +1,5 @@
+alarm_id,equipment_id,alarm_type,raised_at,severity
+RF-8821,EQ-ALPHA-03,rectifier_voltage_low,2026-06-29T09:19:00,critical
+RF-8827,EQ-BRAVO-11,battery_discharge,2026-06-29T10:31:00,major
+RF-8834,EQ-CHARLIE-08,rectifier_voltage_low,2026-06-29T11:33:00,critical
+RF-8842,EQ-ECHO-05,generator_fault,2026-06-29T12:22:00,major
