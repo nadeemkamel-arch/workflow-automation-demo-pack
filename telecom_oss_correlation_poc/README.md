@@ -22,7 +22,7 @@ The demo mirrors a practical first PoC scope for n8n/Python/PostgreSQL-style aut
 
 ```bash
 python3 telecom_oss_correlation_poc.py --tickets input/power_dip_tickets.csv --alarms input/rfms_alarms.csv --gis input/gis_sections.csv --out output
-python3 -m pytest test_telecom_oss_correlation_poc.py
+python3 -m unittest test_telecom_oss_correlation_poc.py
 ```
 
 ## Client Handoff Notes
