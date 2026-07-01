@@ -1,0 +1,27 @@
+{
+  "client_name": "Harbor Lane Ops",
+  "client_type": "fictional local services operator",
+  "primary_user": "operations manager",
+  "goals": [
+    "turn scattered emails and notes into a daily action queue",
+    "draft weekly client recaps",
+    "prepare CRM follow-up payloads for human review"
+  ],
+  "approved_sample_sources": [
+    "redacted inbox export",
+    "fictional meeting notes",
+    "sample CRM rows"
+  ],
+  "not_allowed_without_approval": [
+    "send customer messages",
+    "write to CRM",
+    "change calendar events",
+    "change Drive sharing",
+    "delete or archive records"
+  ],
+  "training_workflows": [
+    "daily intake scan",
+    "weekly client recap",
+    "CRM follow-up draft"
+  ]
+}

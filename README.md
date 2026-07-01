@@ -41,6 +41,7 @@ Good starter projects are intentionally small:
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
+- **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
 
@@ -78,6 +79,25 @@ Run the contract test:
 ```bash
 cd n8n_ai_ops_triage
 python3 -m pytest test_workflow_contract.py
+```
+
+### Agentic Workspace Install Kit
+
+Path: `agentic_workspace_install_kit/`
+
+Shows an implementation-lead install pattern for a fictional operator:
+
+- client-specific `CLAUDE.md`,
+- reusable slash commands,
+- MCP-style integration manifest,
+- explicit approval gates,
+- install, training, and 30-day support checklist.
+
+Inspect:
+
+```bash
+cd agentic_workspace_install_kit
+find . -maxdepth 3 -type f | sort
 ```
 
 ### AI Ops Triage

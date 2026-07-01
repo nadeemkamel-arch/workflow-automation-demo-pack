@@ -1,0 +1,40 @@
+{
+  "workspace": "Harbor Lane Ops - fictional demo",
+  "purpose": "Client-safe AI workspace install example",
+  "integrations": [
+    {
+      "name": "gmail",
+      "status": "optional",
+      "allowed_actions": ["search", "read", "draft"],
+      "blocked_actions": ["send", "delete", "change_labels_without_approval"],
+      "approval_gate": "operator must approve every outbound send"
+    },
+    {
+      "name": "google_drive",
+      "status": "optional",
+      "allowed_actions": ["read_approved_files", "create_local_drafts"],
+      "blocked_actions": ["change_sharing", "delete_files", "publish_documents"],
+      "approval_gate": "client confirms folder and file scope"
+    },
+    {
+      "name": "clickup",
+      "status": "placeholder",
+      "allowed_actions": ["prepare_task_payloads"],
+      "blocked_actions": ["create_or_update_live_tasks"],
+      "approval_gate": "operator reviews dry-run task payloads first"
+    },
+    {
+      "name": "slack",
+      "status": "placeholder",
+      "allowed_actions": ["draft_channel_updates"],
+      "blocked_actions": ["post_messages", "invite_users", "change_channels"],
+      "approval_gate": "operator approves exact text and destination"
+    }
+  ],
+  "data_boundaries": {
+    "sample_data_first": true,
+    "no_credentials_in_repo": true,
+    "no_customer_financial_or_health_data": true,
+    "production_writes_require_approval": true
+  }
+}
