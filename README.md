@@ -41,6 +41,7 @@ Good starter projects are intentionally small:
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
+- **Personal Risk Surface Audit**: turn approved public-risk observations into a ranked remediation queue, dry-run review packets, and account-owner launch gates.
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
@@ -316,6 +317,26 @@ Run:
 cd workflow_reliability_monitor
 python3 workflow_reliability_monitor.py --input input/flow_runs.csv --out output
 python3 -m pytest test_workflow_reliability_monitor.py
+```
+
+### Personal Risk Surface Audit
+
+Path: `personal_risk_surface_audit/`
+
+Shows a privacy/security-adjacent review workflow that turns fictional web-risk observations into:
+
+- severity, route, and next-action classification,
+- data-broker, impersonation, credential, stale-profile, and weak-match handling,
+- dry-run analyst review packets,
+- owner-readable launch gates,
+- run-summary metrics for handoff.
+
+Run:
+
+```bash
+cd personal_risk_surface_audit
+python3 personal_risk_surface_audit.py --input input/observations.csv --out output
+python3 -m pytest test_personal_risk_surface_audit.py
 ```
 
 ## Good First Project

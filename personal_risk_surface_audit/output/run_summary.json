@@ -1,0 +1,24 @@
+{
+  "finding_count": 5,
+  "review_packet_count": 4,
+  "severity_counts": {
+    "critical": 1,
+    "high": 2,
+    "medium": 1,
+    "low": 1
+  },
+  "route_counts": {
+    "account_security_review": 1,
+    "impersonation_review": 1,
+    "removal_request_review": 1,
+    "profile_cleanup_review": 1,
+    "monitor": 1
+  },
+  "source_type_counts": {
+    "code_paste": 1,
+    "social_profile": 1,
+    "data_broker": 1,
+    "professional_profile": 1,
+    "forum_mention": 1
+  }
+}

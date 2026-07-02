@@ -1,0 +1,78 @@
+[
+  {
+    "packet_id": "review:OBS-1003",
+    "status": "dry_run_only",
+    "route": "account_security_review",
+    "severity": "critical",
+    "source": {
+      "type": "code_paste",
+      "name": "SnippetBin Example",
+      "url": "https://example.invalid/paste/abc"
+    },
+    "evidence": {
+      "signal": "api_key_like_string",
+      "type": "credential_signal",
+      "finding": "Old public paste contains a token-shaped string and personal email",
+      "confidence": 0.77
+    },
+    "recommended_next_action": "verify_and_rotate_secret_with_owner",
+    "requires_owner_approval": true
+  },
+  {
+    "packet_id": "review:OBS-1002",
+    "status": "dry_run_only",
+    "route": "impersonation_review",
+    "severity": "high",
+    "source": {
+      "type": "social_profile",
+      "name": "PhotoShare Example",
+      "url": "https://example.invalid/photos/nk"
+    },
+    "evidence": {
+      "signal": "profile_photo",
+      "type": "impersonation_signal",
+      "finding": "Profile uses the person's name and photo but links to an unknown contact address",
+      "confidence": 0.86
+    },
+    "recommended_next_action": "confirm_account_ownership_before_report",
+    "requires_owner_approval": true
+  },
+  {
+    "packet_id": "review:OBS-1001",
+    "status": "dry_run_only",
+    "route": "removal_request_review",
+    "severity": "high",
+    "source": {
+      "type": "data_broker",
+      "name": "PeopleLookup Example",
+      "url": "https://example.invalid/people/nk"
+    },
+    "evidence": {
+      "signal": "home_address",
+      "type": "public_listing",
+      "finding": "Home address and prior phone number listed in a broker profile",
+      "confidence": 0.92
+    },
+    "recommended_next_action": "prepare_data_broker_removal_packet",
+    "requires_owner_approval": true
+  },
+  {
+    "packet_id": "review:OBS-1004",
+    "status": "dry_run_only",
+    "route": "profile_cleanup_review",
+    "severity": "medium",
+    "source": {
+      "type": "professional_profile",
+      "name": "Old Portfolio Mirror",
+      "url": "https://example.invalid/profile/nk"
+    },
+    "evidence": {
+      "signal": "employment_history",
+      "type": "stale_profile",
+      "finding": "Outdated title and abandoned website link still appear in search result",
+      "confidence": 0.71
+    },
+    "recommended_next_action": "prepare_profile_update_checklist",
+    "requires_owner_approval": true
+  }
+]
