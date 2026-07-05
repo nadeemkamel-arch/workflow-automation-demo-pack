@@ -1,0 +1,24 @@
+{
+  "endpoint_count": 6,
+  "target_rps": 500,
+  "peak_total_rps": 545.0,
+  "target_met": true,
+  "alert_payload_count": 5,
+  "severity_counts": {
+    "critical": 2,
+    "ok": 1,
+    "warning": 3
+  },
+  "route_counts": {
+    "capacity_plan": 3,
+    "launch_blocker": 2,
+    "ready": 1
+  },
+  "owner_counts": {
+    "creator_tools": 1,
+    "frontend": 1,
+    "growth": 1,
+    "platform": 2,
+    "product": 1
+  }
+}

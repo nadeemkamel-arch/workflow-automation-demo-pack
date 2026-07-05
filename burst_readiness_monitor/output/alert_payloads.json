@@ -1,0 +1,97 @@
+[
+  {
+    "method": "POST",
+    "endpoint": "/ops/burst-readiness/alerts",
+    "headers": {
+      "X-Dry-Run": "true",
+      "Idempotency-Key": "burst-alert:artist_dashboard:capacity_plan"
+    },
+    "body": {
+      "endpoint": "artist_dashboard",
+      "owner": "creator_tools",
+      "severity": "warning",
+      "route": "capacity_plan",
+      "dependency": "postgres",
+      "p95Ms": 350,
+      "errorRate5xx": 0.0011,
+      "action": "add_owner_alert_and_retune_before_public_burst"
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/ops/burst-readiness/alerts",
+    "headers": {
+      "X-Dry-Run": "true",
+      "Idempotency-Key": "burst-alert:event_discovery:capacity_plan"
+    },
+    "body": {
+      "endpoint": "event_discovery",
+      "owner": "product",
+      "severity": "warning",
+      "route": "capacity_plan",
+      "dependency": "postgres",
+      "p95Ms": 420,
+      "errorRate5xx": 0.0012,
+      "action": "add_owner_alert_and_retune_before_public_burst"
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/ops/burst-readiness/alerts",
+    "headers": {
+      "X-Dry-Run": "true",
+      "Idempotency-Key": "burst-alert:media_upload:launch_blocker"
+    },
+    "body": {
+      "endpoint": "media_upload",
+      "owner": "platform",
+      "severity": "critical",
+      "route": "launch_blocker",
+      "dependency": "object_storage",
+      "p95Ms": 960,
+      "errorRate5xx": 0.005,
+      "action": "pause_scale_up_and_fix_capacity_or_error_source"
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/ops/burst-readiness/alerts",
+    "headers": {
+      "X-Dry-Run": "true",
+      "Idempotency-Key": "burst-alert:notifications:capacity_plan"
+    },
+    "body": {
+      "endpoint": "notifications",
+      "owner": "platform",
+      "severity": "warning",
+      "route": "capacity_plan",
+      "dependency": "worker_queue",
+      "p95Ms": 500,
+      "errorRate5xx": 0.0008,
+      "action": "add_owner_alert_and_retune_before_public_burst"
+    },
+    "status": "dry_run_only"
+  },
+  {
+    "method": "POST",
+    "endpoint": "/ops/burst-readiness/alerts",
+    "headers": {
+      "X-Dry-Run": "true",
+      "Idempotency-Key": "burst-alert:ticket_waitlist:launch_blocker"
+    },
+    "body": {
+      "endpoint": "ticket_waitlist",
+      "owner": "growth",
+      "severity": "critical",
+      "route": "launch_blocker",
+      "dependency": "postgres",
+      "p95Ms": 810,
+      "errorRate5xx": 0.0172,
+      "action": "pause_scale_up_and_fix_capacity_or_error_source"
+    },
+    "status": "dry_run_only"
+  }
+]

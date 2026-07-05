@@ -41,6 +41,7 @@ Good starter projects are intentionally small:
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
+- **Burst Readiness Sprint**: turn load-test samples and traffic logs into endpoint risk rankings, alert payloads, cost flags, and launch gates before a beta or campaign spike.
 - **Startup Finance Context Layer**: turn messy finance records into cited context packets, dry-run task/accounting payloads, and review gates before any money movement.
 - **Personal Risk Surface Audit**: turn approved public-risk observations into a ranked remediation queue, dry-run review packets, and account-owner launch gates.
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
@@ -318,6 +319,26 @@ Run:
 cd workflow_reliability_monitor
 python3 workflow_reliability_monitor.py --input input/flow_runs.csv --out output
 python3 -m pytest test_workflow_reliability_monitor.py
+```
+
+### Burst Readiness Monitor
+
+Path: `burst_readiness_monitor/`
+
+Shows a load-test and monitoring readiness layer that turns fictional traffic windows into:
+
+- endpoint-level severity and owner routing,
+- peak RPS and target-readiness summary,
+- latency, error-rate, cache, and cost flags,
+- dry-run alert payloads with idempotency keys,
+- launch gates before a beta, event, or campaign spike.
+
+Run:
+
+```bash
+cd burst_readiness_monitor
+python3 burst_readiness_monitor.py --input input/traffic_windows.csv --out output --target-rps 500
+python3 -m pytest test_burst_readiness_monitor.py
 ```
 
 ### Personal Risk Surface Audit

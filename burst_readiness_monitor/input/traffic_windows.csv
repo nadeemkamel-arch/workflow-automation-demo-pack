@@ -1,0 +1,7 @@
+window_start,endpoint,requests,p50_ms,p95_ms,p99_ms,errors_5xx,errors_4xx,db_cpu_pct,app_cpu_pct,cache_hit_pct,estimated_cost_usd,owner,dependency
+2026-07-04T20:00:00Z,homepage,9000,82,210,360,4,22,38,52,92,0.32,frontend,cdn
+2026-07-04T20:00:00Z,event_discovery,7800,160,420,760,9,44,72,70,80,0.62,product,postgres
+2026-07-04T20:00:00Z,ticket_waitlist,7200,310,810,1300,124,53,91,84,66,0.94,growth,postgres
+2026-07-04T20:00:00Z,media_upload,3600,420,960,1700,18,31,64,88,54,1.10,platform,object_storage
+2026-07-04T20:00:00Z,artist_dashboard,2700,140,350,620,3,17,55,64,78,0.26,creator_tools,postgres
+2026-07-04T20:00:00Z,notifications,2400,190,500,880,2,14,35,44,40,0.20,platform,worker_queue

@@ -1,0 +1,7 @@
+endpoint,owner,dependency,total_requests,peak_rps,weighted_p95_ms,worst_p99_ms,error_rate_5xx,max_db_cpu_pct,max_app_cpu_pct,min_cache_hit_pct,cost_per_1k_requests_usd,severity,route,recommended_action
+artist_dashboard,creator_tools,postgres,2700,45.0,350,620,0.0011,55,64,78,0.096,warning,capacity_plan,add_owner_alert_and_retune_before_public_burst
+event_discovery,product,postgres,7800,130.0,420,760,0.0012,72,70,80,0.079,warning,capacity_plan,add_owner_alert_and_retune_before_public_burst
+homepage,frontend,cdn,9000,150.0,210,360,0.0004,38,52,92,0.036,ok,ready,none
+media_upload,platform,object_storage,3600,60.0,960,1700,0.005,64,88,54,0.306,critical,launch_blocker,pause_scale_up_and_fix_capacity_or_error_source
+notifications,platform,worker_queue,2400,40.0,500,880,0.0008,35,44,40,0.083,warning,capacity_plan,add_owner_alert_and_retune_before_public_burst
+ticket_waitlist,growth,postgres,7200,120.0,810,1300,0.0172,91,84,66,0.131,critical,launch_blocker,pause_scale_up_and_fix_capacity_or_error_source
