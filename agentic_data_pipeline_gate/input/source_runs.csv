@@ -1,0 +1,8 @@
+source_id,dataset,source_type,extractor_version,expected_rows,observed_rows,observed_fields,primary_key,duplicate_key_count,null_rate,citation_coverage,http_status,content_hash_changed,last_success_hours,owner,external_write
+FIN-NEWS-001,public_company_signals,html_table,v14,1250,1247,"company|ticker|filing_date|signal|source_url|captured_at",company:filing_date,0,0.018,0.98,200,false,2,research,false
+FIN-PDF-002,public_company_signals,pdf,v7,900,688,"company|ticker|signal|source_url|captured_at",company:filing_date,8,0.041,0.72,200,true,20,research,false
+SLED-RFP-003,public_sector_opportunities,html_list,v11,400,405,"agency|title|deadline|state|url|captured_at",agency:title,1,0.012,0.94,200,false,3,growth,false
+SLED-RFP-004,public_sector_opportunities,portal,v6,320,0,"agency|title|deadline|state|url|captured_at",agency:title,0,1.0,0.0,403,true,38,growth,false
+VENDOR-005,vendor_directory,spreadsheet,v3,1800,1802,"vendor|category|country|website|captured_at",vendor:website,42,0.064,0.88,200,false,1,ops,false
+CRM-SYNC-006,lead_enrichment_api,api,v5,750,750,"lead_id|company|domain|employee_count|source_url|captured_at",lead_id,0,0.006,0.96,200,false,4,sales,true
+CRM-SYNC-007,lead_enrichment_api,api,v5,750,750,"lead_id|company|domain|score|source_url|captured_at",lead_id,0,0.007,0.97,200,false,4,sales,true

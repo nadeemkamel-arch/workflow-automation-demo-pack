@@ -46,6 +46,7 @@ Good starter projects are intentionally small:
 - **Personal Risk Surface Audit**: turn approved public-risk observations into a ranked remediation queue, dry-run review packets, and account-owner launch gates.
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
 - **Generated App Release Gate**: review an AI-generated app manifest for auth, payment, webhook, schema, env, and deployment blockers before production launch.
+- **Agentic Data Pipeline Gate**: validate agent-generated extraction/RAG/data pipelines for schema drift, source evidence, row-volume shifts, duplicate keys, stale runs, and write-safety before publish.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
 
@@ -121,6 +122,26 @@ Run:
 cd generated_app_release_gate
 python3 generated_app_release_gate.py --manifest input/generated_app_manifest.json --out output
 python3 -m pytest test_generated_app_release_gate.py
+```
+
+### Agentic Data Pipeline Gate
+
+Path: `agentic_data_pipeline_gate/`
+
+Shows a quality gate for generated or agent-repaired data pipelines:
+
+- schema and primary-key contract checks,
+- source citation/evidence coverage,
+- row-volume, duplicate, null-rate, and freshness checks,
+- dry-run repair payloads with idempotency keys,
+- owner-readable validation report and publish gate.
+
+Run:
+
+```bash
+cd agentic_data_pipeline_gate
+python3 agentic_data_pipeline_gate.py --runs input/source_runs.csv --contract input/schema_contract.json --out output
+python3 -m pytest test_agentic_data_pipeline_gate.py
 ```
 
 ### AI Ops Triage

@@ -1,0 +1,19 @@
+severity,dataset,source_id,area,problem,recommendation,owner
+blocker,lead_enrichment_api,CRM-SYNC-007,schema,Missing required fields: employee_count.,"Regenerate or patch the extractor, then run schema tests before publishing the dataset.",sales
+blocker,public_company_signals,FIN-PDF-002,schema,Missing required fields: filing_date.,"Regenerate or patch the extractor, then run schema tests before publishing the dataset.",research
+blocker,public_sector_opportunities,SLED-RFP-004,access,"Source returned HTTP 403, so the latest run cannot be trusted.","Pause downstream refresh, verify allowed access, and rerun from a sanctioned source export or approved connector.",growth
+blocker,public_sector_opportunities,SLED-RFP-004,volume,Observed row count changed by 100.0% versus expected 320.,"Compare source markup/API shape, sample rejected rows, and keep downstream consumers on the last accepted run.",growth
+high,public_company_signals,FIN-PDF-002,drift,Source content changed and row volume moved materially in the same run.,Open an extractor-repair task with before/after samples and require a human review before auto-healing.,research
+high,public_company_signals,FIN-PDF-002,evidence,Citation/source coverage 72.0% is below required 95.0%.,"Do not let agent-generated values into review queues without source URLs, row evidence, or document offsets.",research
+high,public_company_signals,FIN-PDF-002,quality,Null rate 4.1% exceeds limit 3.0%.,Trace nulls by field and source section; rerun only after the extraction rule or fallback is fixed.,research
+high,public_company_signals,FIN-PDF-002,volume,Observed row count changed by 23.6% versus expected 900.,"Compare source markup/API shape, sample rejected rows, and keep downstream consumers on the last accepted run.",research
+high,public_sector_opportunities,SLED-RFP-004,drift,Source content changed and row volume moved materially in the same run.,Open an extractor-repair task with before/after samples and require a human review before auto-healing.,growth
+high,public_sector_opportunities,SLED-RFP-004,evidence,Citation/source coverage 0.0% is below required 92.0%.,"Do not let agent-generated values into review queues without source URLs, row evidence, or document offsets.",growth
+high,public_sector_opportunities,SLED-RFP-004,quality,Null rate 100.0% exceeds limit 4.0%.,Trace nulls by field and source section; rerun only after the extraction rule or fallback is fixed.,growth
+high,vendor_directory,VENDOR-005,dedupe,Found 42 duplicate primary keys.,Add deterministic dedupe and provider/source timestamps before any upsert or customer-visible export.,ops
+high,vendor_directory,VENDOR-005,evidence,Citation/source coverage 88.0% is below required 90.0%.,"Do not let agent-generated values into review queues without source URLs, row evidence, or document offsets.",ops
+high,vendor_directory,VENDOR-005,quality,Null rate 6.4% exceeds limit 5.0%.,Trace nulls by field and source section; rerun only after the extraction rule or fallback is fixed.,ops
+medium,lead_enrichment_api,CRM-SYNC-007,schema,Observed unexpected fields: score.,Quarantine new fields until they are mapped to the contract or intentionally ignored.,sales
+medium,public_company_signals,FIN-PDF-002,dedupe,Found 8 duplicate primary keys.,Add deterministic dedupe and provider/source timestamps before any upsert or customer-visible export.,research
+medium,public_sector_opportunities,SLED-RFP-003,dedupe,Found 1 duplicate primary keys.,Add deterministic dedupe and provider/source timestamps before any upsert or customer-visible export.,growth
+medium,public_sector_opportunities,SLED-RFP-004,freshness,Last accepted run is 38 hours old.,Mark the dataset stale and notify the owner if the next repair attempt fails.,growth

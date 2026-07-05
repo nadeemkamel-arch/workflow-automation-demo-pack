@@ -1,0 +1,27 @@
+{
+  "decision": "pause_affected_datasets",
+  "source_count": 7,
+  "finding_count": 18,
+  "counts_by_severity": {
+    "blocker": 4,
+    "high": 10,
+    "medium": 4,
+    "low": 0
+  },
+  "counts_by_dataset": {
+    "lead_enrichment_api": 2,
+    "public_company_signals": 6,
+    "public_sector_opportunities": 7,
+    "vendor_directory": 3
+  },
+  "counts_by_area": {
+    "access": 1,
+    "dedupe": 3,
+    "drift": 2,
+    "evidence": 3,
+    "freshness": 1,
+    "quality": 3,
+    "schema": 3,
+    "volume": 2
+  }
+}

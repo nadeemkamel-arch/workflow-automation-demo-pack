@@ -1,0 +1,156 @@
+[
+  {
+    "idempotency_key": "97a9784118b096b0",
+    "source_id": "CRM-SYNC-007",
+    "dataset": "lead_enrichment_api",
+    "owner": "sales",
+    "severity": "blocker",
+    "area": "schema",
+    "agent_task": "Regenerate or patch the extractor, then run schema tests before publishing the dataset.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "7e4e3bb6151eada6",
+    "source_id": "FIN-PDF-002",
+    "dataset": "public_company_signals",
+    "owner": "research",
+    "severity": "blocker",
+    "area": "schema",
+    "agent_task": "Regenerate or patch the extractor, then run schema tests before publishing the dataset.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "6d794c33edb0dc99",
+    "source_id": "SLED-RFP-004",
+    "dataset": "public_sector_opportunities",
+    "owner": "growth",
+    "severity": "blocker",
+    "area": "access",
+    "agent_task": "Pause downstream refresh, verify allowed access, and rerun from a sanctioned source export or approved connector.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "0e640f0575aa5517",
+    "source_id": "SLED-RFP-004",
+    "dataset": "public_sector_opportunities",
+    "owner": "growth",
+    "severity": "blocker",
+    "area": "volume",
+    "agent_task": "Compare source markup/API shape, sample rejected rows, and keep downstream consumers on the last accepted run.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "95daa923323ffebc",
+    "source_id": "FIN-PDF-002",
+    "dataset": "public_company_signals",
+    "owner": "research",
+    "severity": "high",
+    "area": "drift",
+    "agent_task": "Open an extractor-repair task with before/after samples and require a human review before auto-healing.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "86f7d2f8433ff975",
+    "source_id": "FIN-PDF-002",
+    "dataset": "public_company_signals",
+    "owner": "research",
+    "severity": "high",
+    "area": "evidence",
+    "agent_task": "Do not let agent-generated values into review queues without source URLs, row evidence, or document offsets.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "20820de3890bdfbe",
+    "source_id": "FIN-PDF-002",
+    "dataset": "public_company_signals",
+    "owner": "research",
+    "severity": "high",
+    "area": "quality",
+    "agent_task": "Trace nulls by field and source section; rerun only after the extraction rule or fallback is fixed.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "6b562833bae39b7a",
+    "source_id": "FIN-PDF-002",
+    "dataset": "public_company_signals",
+    "owner": "research",
+    "severity": "high",
+    "area": "volume",
+    "agent_task": "Compare source markup/API shape, sample rejected rows, and keep downstream consumers on the last accepted run.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "259f42f2b35f74d8",
+    "source_id": "SLED-RFP-004",
+    "dataset": "public_sector_opportunities",
+    "owner": "growth",
+    "severity": "high",
+    "area": "drift",
+    "agent_task": "Open an extractor-repair task with before/after samples and require a human review before auto-healing.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "b0c27d8f34035902",
+    "source_id": "SLED-RFP-004",
+    "dataset": "public_sector_opportunities",
+    "owner": "growth",
+    "severity": "high",
+    "area": "evidence",
+    "agent_task": "Do not let agent-generated values into review queues without source URLs, row evidence, or document offsets.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "5f90b93eb65dd467",
+    "source_id": "SLED-RFP-004",
+    "dataset": "public_sector_opportunities",
+    "owner": "growth",
+    "severity": "high",
+    "area": "quality",
+    "agent_task": "Trace nulls by field and source section; rerun only after the extraction rule or fallback is fixed.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "0cbfbaf738b52f9a",
+    "source_id": "VENDOR-005",
+    "dataset": "vendor_directory",
+    "owner": "ops",
+    "severity": "high",
+    "area": "dedupe",
+    "agent_task": "Add deterministic dedupe and provider/source timestamps before any upsert or customer-visible export.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "f97fdc63d127f88b",
+    "source_id": "VENDOR-005",
+    "dataset": "vendor_directory",
+    "owner": "ops",
+    "severity": "high",
+    "area": "evidence",
+    "agent_task": "Do not let agent-generated values into review queues without source URLs, row evidence, or document offsets.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  },
+  {
+    "idempotency_key": "3de543598d6d0f17",
+    "source_id": "VENDOR-005",
+    "dataset": "vendor_directory",
+    "owner": "ops",
+    "severity": "high",
+    "area": "quality",
+    "agent_task": "Trace nulls by field and source section; rerun only after the extraction rule or fallback is fixed.",
+    "allowed_mode": "dry_run_patch_or_sample_diff",
+    "requires_human_review": true
+  }
+]

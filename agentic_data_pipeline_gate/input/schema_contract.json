@@ -1,0 +1,34 @@
+{
+  "public_company_signals": {
+    "required_fields": ["company", "ticker", "filing_date", "signal", "source_url", "captured_at"],
+    "primary_key": "company:filing_date",
+    "max_null_rate": 0.03,
+    "min_citation_coverage": 0.95,
+    "max_row_delta_ratio": 0.08,
+    "external_write_allowed": false
+  },
+  "public_sector_opportunities": {
+    "required_fields": ["agency", "title", "deadline", "state", "url", "captured_at"],
+    "primary_key": "agency:title",
+    "max_null_rate": 0.04,
+    "min_citation_coverage": 0.92,
+    "max_row_delta_ratio": 0.1,
+    "external_write_allowed": false
+  },
+  "vendor_directory": {
+    "required_fields": ["vendor", "category", "country", "website", "captured_at"],
+    "primary_key": "vendor:website",
+    "max_null_rate": 0.05,
+    "min_citation_coverage": 0.9,
+    "max_row_delta_ratio": 0.05,
+    "external_write_allowed": false
+  },
+  "lead_enrichment_api": {
+    "required_fields": ["lead_id", "company", "domain", "employee_count", "source_url", "captured_at"],
+    "primary_key": "lead_id",
+    "max_null_rate": 0.02,
+    "min_citation_coverage": 0.95,
+    "max_row_delta_ratio": 0.03,
+    "external_write_allowed": true
+  }
+}
