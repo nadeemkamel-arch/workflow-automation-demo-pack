@@ -1,0 +1,5 @@
+request_id,client,requested_action,route,next_action,live_action_allowed,tool,source_ids
+REQ-2001,Acme Robotics,answer_question,ready_for_analyst_review,draft_answer_from_cited_sources,false,finance_ops_digest,SRC-1003;SRC-1001
+REQ-2002,Acme Robotics,pay_vendor,restricted_action_review,review_sources_before_payment_decision,false,bank_review,SRC-1002;SRC-1001
+REQ-2003,Acme Robotics,create_task,sensitive_context_review,finance_owner_review_required,false,task_manager,SRC-1005;SRC-1006
+REQ-2004,Acme Robotics,answer_question,needs_more_context,ask_for_missing_records,false,finance_ops_digest,

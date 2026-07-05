@@ -1,0 +1,5 @@
+request_id,client,question,required_source_types,requested_action
+REQ-2001,Acme Robotics,Why did HelioCloud spend increase and what should we tell the founder?,invoice;slack_update,answer_question
+REQ-2002,Acme Robotics,Can we release the HelioCloud payment today?,invoice;bank_note,pay_vendor
+REQ-2003,Acme Robotics,What should be on the June close checklist for contractors?,payroll_export;task_history,create_task
+REQ-2004,Acme Robotics,Why did LabWorks shipping fees increase?,invoice,answer_question

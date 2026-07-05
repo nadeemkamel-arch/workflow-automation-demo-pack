@@ -1,0 +1,14 @@
+{
+  "request_count": 4,
+  "route_counts": {
+    "ready_for_analyst_review": 1,
+    "restricted_action_review": 1,
+    "sensitive_context_review": 1,
+    "needs_more_context": 1
+  },
+  "action_counts": {
+    "answer_question": 2,
+    "pay_vendor": 1,
+    "create_task": 1
+  }
+}

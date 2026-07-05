@@ -1,0 +1,138 @@
+[
+  {
+    "request_id": "REQ-2001",
+    "client": "Acme Robotics",
+    "question": "Why did HelioCloud spend increase and what should we tell the founder?",
+    "requested_action": "answer_question",
+    "route": "ready_for_analyst_review",
+    "next_action": "draft_answer_from_cited_sources",
+    "live_action_allowed": false,
+    "cited_sources": [
+      {
+        "source_id": "SRC-1003",
+        "source_type": "slack_update",
+        "title": "Founder note on GPU spend",
+        "sensitivity": "medium",
+        "approved_tool": "slack_task"
+      },
+      {
+        "source_id": "SRC-1001",
+        "source_type": "invoice",
+        "title": "HelioCloud invoice June",
+        "sensitivity": "medium",
+        "approved_tool": "quickbooks_bill_review"
+      }
+    ],
+    "missing_source_types": [],
+    "dry_run_payload": {
+      "status": "dry_run_only",
+      "tool": "finance_ops_digest",
+      "client": "Acme Robotics",
+      "request_id": "REQ-2001",
+      "requested_action": "answer_question",
+      "source_ids": [
+        "SRC-1003",
+        "SRC-1001"
+      ],
+      "requires_owner_approval": true
+    }
+  },
+  {
+    "request_id": "REQ-2002",
+    "client": "Acme Robotics",
+    "question": "Can we release the HelioCloud payment today?",
+    "requested_action": "pay_vendor",
+    "route": "restricted_action_review",
+    "next_action": "review_sources_before_payment_decision",
+    "live_action_allowed": false,
+    "cited_sources": [
+      {
+        "source_id": "SRC-1002",
+        "source_type": "bank_note",
+        "title": "HelioCloud ACH note",
+        "sensitivity": "high",
+        "approved_tool": "bank_review"
+      },
+      {
+        "source_id": "SRC-1001",
+        "source_type": "invoice",
+        "title": "HelioCloud invoice June",
+        "sensitivity": "medium",
+        "approved_tool": "quickbooks_bill_review"
+      }
+    ],
+    "missing_source_types": [],
+    "dry_run_payload": {
+      "status": "dry_run_only",
+      "tool": "bank_review",
+      "client": "Acme Robotics",
+      "request_id": "REQ-2002",
+      "requested_action": "pay_vendor",
+      "source_ids": [
+        "SRC-1002",
+        "SRC-1001"
+      ],
+      "requires_owner_approval": true
+    }
+  },
+  {
+    "request_id": "REQ-2003",
+    "client": "Acme Robotics",
+    "question": "What should be on the June close checklist for contractors?",
+    "requested_action": "create_task",
+    "route": "sensitive_context_review",
+    "next_action": "finance_owner_review_required",
+    "live_action_allowed": false,
+    "cited_sources": [
+      {
+        "source_id": "SRC-1005",
+        "source_type": "payroll_export",
+        "title": "June contractor payroll",
+        "sensitivity": "high",
+        "approved_tool": "payroll_review"
+      },
+      {
+        "source_id": "SRC-1006",
+        "source_type": "task_history",
+        "title": "May close checklist",
+        "sensitivity": "low",
+        "approved_tool": "task_manager"
+      }
+    ],
+    "missing_source_types": [],
+    "dry_run_payload": {
+      "status": "dry_run_only",
+      "tool": "task_manager",
+      "client": "Acme Robotics",
+      "request_id": "REQ-2003",
+      "requested_action": "create_task",
+      "source_ids": [
+        "SRC-1005",
+        "SRC-1006"
+      ],
+      "requires_owner_approval": true
+    }
+  },
+  {
+    "request_id": "REQ-2004",
+    "client": "Acme Robotics",
+    "question": "Why did LabWorks shipping fees increase?",
+    "requested_action": "answer_question",
+    "route": "needs_more_context",
+    "next_action": "ask_for_missing_records",
+    "live_action_allowed": false,
+    "cited_sources": [],
+    "missing_source_types": [
+      "invoice"
+    ],
+    "dry_run_payload": {
+      "status": "dry_run_only",
+      "tool": "finance_ops_digest",
+      "client": "Acme Robotics",
+      "request_id": "REQ-2004",
+      "requested_action": "answer_question",
+      "source_ids": [],
+      "requires_owner_approval": true
+    }
+  }
+]

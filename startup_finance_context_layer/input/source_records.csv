@@ -1,0 +1,7 @@
+source_id,client,period,source_type,title,content,sensitivity,approved_tool
+SRC-1001,Acme Robotics,2026-06,invoice,HelioCloud invoice June,HelioCloud invoice rose from 2400 to 3900 because GPU inference line item increased after the prototype demo,medium,quickbooks_bill_review
+SRC-1002,Acme Robotics,2026-06,bank_note,HelioCloud ACH note,ACH payment for HelioCloud is scheduled for July 8 but not released,high,bank_review
+SRC-1003,Acme Robotics,2026-06,slack_update,Founder note on GPU spend,Founder approved extra GPU spend for customer demo but asked finance to flag if July run-rate exceeds 4200,medium,slack_task
+SRC-1004,Northstar Bio,2026-06,invoice,LabWorks invoice June,LabWorks added expedited shipping fees after a late reagent order,medium,quickbooks_bill_review
+SRC-1005,Acme Robotics,2026-06,payroll_export,June contractor payroll,Two contractors changed from hourly to fixed retainer and need classification review,high,payroll_review
+SRC-1006,Acme Robotics,2026-05,task_history,May close checklist,May close was delayed by missing HelioCloud receipt and uncategorized contractor payment,low,task_manager

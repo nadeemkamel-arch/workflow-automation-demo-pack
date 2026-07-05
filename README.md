@@ -41,6 +41,7 @@ Good starter projects are intentionally small:
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
+- **Startup Finance Context Layer**: turn messy finance records into cited context packets, dry-run task/accounting payloads, and review gates before any money movement.
 - **Personal Risk Surface Audit**: turn approved public-risk observations into a ranked remediation queue, dry-run review packets, and account-owner launch gates.
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
@@ -337,6 +338,26 @@ Run:
 cd personal_risk_surface_audit
 python3 personal_risk_surface_audit.py --input input/observations.csv --out output
 python3 -m pytest test_personal_risk_surface_audit.py
+```
+
+### Startup Finance Context Layer
+
+Path: `startup_finance_context_layer/`
+
+Shows an accounting/finance operator context layer that turns fictional source records and operator requests into:
+
+- cited context packets,
+- dry-run task/accounting payloads,
+- payment and sensitive-record review gates,
+- missing-context routing,
+- run-summary metrics for handoff.
+
+Run:
+
+```bash
+cd startup_finance_context_layer
+python3 finance_context_layer.py --records input/source_records.csv --requests input/operator_requests.csv --out output
+python3 -m pytest test_finance_context_layer.py
 ```
 
 ## Good First Project
