@@ -45,6 +45,7 @@ Good starter projects are intentionally small:
 - **Startup Finance Context Layer**: turn messy finance records into cited context packets, dry-run task/accounting payloads, and review gates before any money movement.
 - **Personal Risk Surface Audit**: turn approved public-risk observations into a ranked remediation queue, dry-run review packets, and account-owner launch gates.
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
+- **Generated App Release Gate**: review an AI-generated app manifest for auth, payment, webhook, schema, env, and deployment blockers before production launch.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
 
@@ -101,6 +102,25 @@ Inspect:
 ```bash
 cd agentic_workspace_install_kit
 find . -maxdepth 3 -type f | sort
+```
+
+### Generated App Release Gate
+
+Path: `generated_app_release_gate/`
+
+Shows an AI-app-builder quality gate that turns a generated app manifest into:
+
+- auth, payment, webhook, schema, env, and deploy findings,
+- a launch/no-launch decision,
+- a spreadsheet-friendly issue queue,
+- a short release brief for owner review.
+
+Run:
+
+```bash
+cd generated_app_release_gate
+python3 generated_app_release_gate.py --manifest input/generated_app_manifest.json --out output
+python3 -m pytest test_generated_app_release_gate.py
 ```
 
 ### AI Ops Triage

@@ -1,0 +1,150 @@
+{
+  "app_name": "Neighborhood Studio Scheduler",
+  "environment": "preview",
+  "routes": [
+    {
+      "path": "/",
+      "method": "GET",
+      "owner": "marketing",
+      "auth_required": false,
+      "tables_read": [],
+      "tables_write": [],
+      "integrations": []
+    },
+    {
+      "path": "/dashboard",
+      "method": "GET",
+      "owner": "app",
+      "auth_required": true,
+      "tables_read": ["profiles", "appointments", "subscriptions"],
+      "tables_write": [],
+      "integrations": []
+    },
+    {
+      "path": "/api/appointments",
+      "method": "POST",
+      "owner": "booking",
+      "auth_required": true,
+      "csrf_protected": true,
+      "tables_read": ["appointments"],
+      "tables_write": ["appointments"],
+      "integrations": ["email"]
+    },
+    {
+      "path": "/api/subscriptions/checkout",
+      "method": "POST",
+      "owner": "billing",
+      "auth_required": true,
+      "csrf_protected": false,
+      "tables_read": ["subscriptions"],
+      "tables_write": ["subscriptions", "payments"],
+      "integrations": ["stripe"]
+    },
+    {
+      "path": "/api/webhooks/stripe",
+      "method": "POST",
+      "owner": "billing",
+      "auth_required": false,
+      "webhook": true,
+      "signature_verified": true,
+      "idempotent": false,
+      "tables_read": ["payments"],
+      "tables_write": ["payments", "subscriptions"],
+      "integrations": ["stripe"]
+    },
+    {
+      "path": "/api/admin/users",
+      "method": "DELETE",
+      "owner": "admin",
+      "auth_required": true,
+      "role_required": "admin",
+      "csrf_protected": true,
+      "tables_read": ["profiles"],
+      "tables_write": ["profiles"],
+      "integrations": []
+    },
+    {
+      "path": "/api/lead-summary",
+      "method": "POST",
+      "owner": "ai",
+      "auth_required": true,
+      "csrf_protected": true,
+      "tables_read": ["leads"],
+      "tables_write": ["lead_summaries"],
+      "integrations": ["openai"]
+    }
+  ],
+  "tables": [
+    {
+      "name": "profiles",
+      "has_owner_id": true,
+      "has_created_at": true,
+      "has_updated_at": true,
+      "has_soft_delete": false
+    },
+    {
+      "name": "appointments",
+      "has_owner_id": true,
+      "has_created_at": true,
+      "has_updated_at": true,
+      "has_soft_delete": true
+    },
+    {
+      "name": "subscriptions",
+      "has_owner_id": true,
+      "has_created_at": true,
+      "has_updated_at": true,
+      "has_soft_delete": false
+    },
+    {
+      "name": "payments",
+      "has_owner_id": true,
+      "has_created_at": true,
+      "has_updated_at": false,
+      "has_soft_delete": false
+    },
+    {
+      "name": "lead_summaries",
+      "has_owner_id": true,
+      "has_created_at": true,
+      "has_updated_at": true,
+      "has_soft_delete": false
+    }
+  ],
+  "integrations": [
+    {
+      "name": "stripe",
+      "required_env": ["STRIPE_SECRET_KEY", "STRIPE_WEBHOOK_SECRET"],
+      "test_mode": true,
+      "writes_external_state": true
+    },
+    {
+      "name": "email",
+      "required_env": ["RESEND_API_KEY"],
+      "test_mode": false,
+      "writes_external_state": true
+    },
+    {
+      "name": "openai",
+      "required_env": ["OPENAI_API_KEY"],
+      "test_mode": true,
+      "writes_external_state": false
+    }
+  ],
+  "env_declared": [
+    "DATABASE_URL",
+    "NEXTAUTH_SECRET",
+    "STRIPE_SECRET_KEY",
+    "OPENAI_API_KEY"
+  ],
+  "deployment": {
+    "preview_url": "https://preview.example.invalid",
+    "healthcheck_path": "",
+    "migration_strategy": "manual",
+    "rollback_plan": "",
+    "structured_logs": true,
+    "error_boundary": false,
+    "seed_data": true,
+    "custom_domain_ready": false
+  }
+}

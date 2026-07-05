@@ -1,0 +1,93 @@
+[
+  {
+    "severity": "blocker",
+    "area": "schema",
+    "item": "/api/lead-summary",
+    "problem": "Route references undeclared tables: leads.",
+    "recommendation": "Regenerate the schema contract or remove stale route references."
+  },
+  {
+    "severity": "high",
+    "area": "auth",
+    "item": "/api/subscriptions/checkout",
+    "problem": "Mutating browser-facing route does not declare CSRF protection.",
+    "recommendation": "Add CSRF/session-origin protection before exposing this route outside preview."
+  },
+  {
+    "severity": "high",
+    "area": "deployment",
+    "item": "healthcheck_path",
+    "problem": "Deployment has no healthcheck path.",
+    "recommendation": "Add a cheap health route and wire it into preview and production checks."
+  },
+  {
+    "severity": "high",
+    "area": "deployment",
+    "item": "rollback_plan",
+    "problem": "Deployment has no rollback plan.",
+    "recommendation": "Document the rollback command, previous build ID, and migration fallback."
+  },
+  {
+    "severity": "high",
+    "area": "integration",
+    "item": "email",
+    "problem": "Required environment variables are not declared: RESEND_API_KEY.",
+    "recommendation": "Declare env vars in the generated app template and preview deployment docs."
+  },
+  {
+    "severity": "high",
+    "area": "integration",
+    "item": "email",
+    "problem": "External-write integration is not marked as test/sandbox mode.",
+    "recommendation": "Keep email, payment, CRM, and other side-effecting integrations in sandbox mode until launch approval."
+  },
+  {
+    "severity": "high",
+    "area": "integration",
+    "item": "stripe",
+    "problem": "Required environment variables are not declared: STRIPE_WEBHOOK_SECRET.",
+    "recommendation": "Declare env vars in the generated app template and preview deployment docs."
+  },
+  {
+    "severity": "high",
+    "area": "payments",
+    "item": "/api/webhooks/stripe",
+    "problem": "Payment webhook can duplicate payment writes.",
+    "recommendation": "Use event IDs, unique payment provider IDs, and replay tests."
+  },
+  {
+    "severity": "high",
+    "area": "webhook",
+    "item": "/api/webhooks/stripe",
+    "problem": "Webhook route writes state without an idempotency guarantee.",
+    "recommendation": "Store provider event IDs and make repeated webhook delivery a no-op."
+  },
+  {
+    "severity": "medium",
+    "area": "deployment",
+    "item": "error_boundary",
+    "problem": "App shell has no error boundary.",
+    "recommendation": "Add a generated error boundary so broken pages fail with useful diagnostics."
+  },
+  {
+    "severity": "medium",
+    "area": "deployment",
+    "item": "migration_strategy",
+    "problem": "Migrations are manual, which is fragile for generated preview apps.",
+    "recommendation": "Generate a migration command and a dry-run migration check in the deploy pipeline."
+  },
+  {
+    "severity": "medium",
+    "area": "schema",
+    "item": "payments",
+    "problem": "Table does not declare an updated_at timestamp.",
+    "recommendation": "Add updated_at so generated admin screens and support audits have context."
+  },
+  {
+    "severity": "low",
+    "area": "deployment",
+    "item": "custom_domain_ready",
+    "problem": "Custom-domain readiness is not confirmed.",
+    "recommendation": "Confirm DNS, HTTPS, and route base URLs before custom-domain launch."
+  }
+]

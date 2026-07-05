@@ -1,0 +1,18 @@
+{
+  "decision": "do_not_launch",
+  "finding_count": 13,
+  "counts_by_severity": {
+    "blocker": 1,
+    "high": 8,
+    "medium": 3,
+    "low": 1
+  },
+  "counts_by_area": {
+    "auth": 1,
+    "deployment": 5,
+    "integration": 3,
+    "payments": 1,
+    "schema": 2,
+    "webhook": 1
+  }
+}

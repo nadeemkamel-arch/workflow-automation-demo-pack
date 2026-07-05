@@ -1,0 +1,14 @@
+severity,area,item,problem,recommendation
+blocker,schema,/api/lead-summary,Route references undeclared tables: leads.,Regenerate the schema contract or remove stale route references.
+high,auth,/api/subscriptions/checkout,Mutating browser-facing route does not declare CSRF protection.,Add CSRF/session-origin protection before exposing this route outside preview.
+high,deployment,healthcheck_path,Deployment has no healthcheck path.,Add a cheap health route and wire it into preview and production checks.
+high,deployment,rollback_plan,Deployment has no rollback plan.,"Document the rollback command, previous build ID, and migration fallback."
+high,integration,email,Required environment variables are not declared: RESEND_API_KEY.,Declare env vars in the generated app template and preview deployment docs.
+high,integration,email,External-write integration is not marked as test/sandbox mode.,"Keep email, payment, CRM, and other side-effecting integrations in sandbox mode until launch approval."
+high,integration,stripe,Required environment variables are not declared: STRIPE_WEBHOOK_SECRET.,Declare env vars in the generated app template and preview deployment docs.
+high,payments,/api/webhooks/stripe,Payment webhook can duplicate payment writes.,"Use event IDs, unique payment provider IDs, and replay tests."
+high,webhook,/api/webhooks/stripe,Webhook route writes state without an idempotency guarantee.,Store provider event IDs and make repeated webhook delivery a no-op.
+medium,deployment,error_boundary,App shell has no error boundary.,Add a generated error boundary so broken pages fail with useful diagnostics.
+medium,deployment,migration_strategy,"Migrations are manual, which is fragile for generated preview apps.",Generate a migration command and a dry-run migration check in the deploy pipeline.
+medium,schema,payments,Table does not declare an updated_at timestamp.,Add updated_at so generated admin screens and support audits have context.
+low,deployment,custom_domain_ready,Custom-domain readiness is not confirmed.,"Confirm DNS, HTTPS, and route base URLs before custom-domain launch."
