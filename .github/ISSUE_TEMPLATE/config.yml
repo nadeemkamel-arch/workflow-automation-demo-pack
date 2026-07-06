@@ -3,6 +3,9 @@ contact_links:
   - name: Portfolio page
     url: https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/
     about: View proof artifacts, contact email, and workflow examples.
+  - name: Quick digital help
+    url: https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/digital-help/
+    about: Small local help for resumes, flyers, spreadsheets, websites, QR sheets, and app/page feedback.
   - name: Technical demo repo
     url: https://github.com/nadeemkamel-arch/workflow-automation-demo-pack
     about: Inspect the n8n workflow, Python demos, sample data, and tests.

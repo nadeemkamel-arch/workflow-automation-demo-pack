@@ -1,0 +1,60 @@
+name: Quick digital help note
+description: Ask about a small resume, flyer, spreadsheet, website, QR, or app/page feedback task.
+title: "[Digital help] "
+labels:
+  - digital-help
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking. Please keep this public-safe: do not include passwords, private records, payment details, IDs, medical/legal details, or anything confidential.
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: What kind of help do you need?
+      options:
+        - Resume or one-page document cleanup
+        - Flyer, QR sheet, menu, or contact page
+        - Spreadsheet cleanup
+        - Small website or landing page polish
+        - App, signup page, or form feedback
+        - Light automation or repeatable task cleanup
+        - Not sure yet
+    validations:
+      required: true
+  - type: textarea
+    id: current_state
+    attributes:
+      label: What exists now?
+      description: Describe the rough version. Use public links or redacted details only.
+      placeholder: "Example: I have a Google Sheet with messy names/dates, or a small website that feels confusing."
+    validations:
+      required: true
+  - type: textarea
+    id: desired_result
+    attributes:
+      label: What would feel useful when done?
+      placeholder: "Example: a clean PDF, fixed spreadsheet columns, clearer homepage copy, or a short list of first fixes."
+    validations:
+      required: true
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Rough first-pass budget
+      options:
+        - Quick pointer / not sure
+        - $25-$50
+        - $50-$100
+        - $100-$150
+        - Needs discussion
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact route
+      description: Email is best. Do not include a phone number unless you are comfortable with it being public.
+      placeholder: "email@example.com"
+    validations:
+      required: false
+
