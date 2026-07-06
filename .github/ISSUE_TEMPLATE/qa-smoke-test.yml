@@ -1,0 +1,68 @@
+name: Prelaunch QA smoke test
+description: Ask about a small app, signup flow, landing page, or beta-build QA pass.
+title: "[QA smoke test] "
+labels:
+  - qa-smoke-test
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please keep this public-safe. Do not include passwords, private user records, payment details, medical/legal data, or confidential production information. Redacted screenshots, public URLs, fictional examples, and sandbox/test accounts are best.
+  - type: dropdown
+    id: target_type
+    attributes:
+      label: What should be tested?
+      options:
+        - Public website or landing page
+        - Signup or onboarding flow
+        - Small web app
+        - Mobile web flow
+        - Beta build or prototype
+        - Not sure yet
+    validations:
+      required: true
+  - type: checkboxes
+    id: platforms
+    attributes:
+      label: Platforms you care about
+      options:
+        - label: Desktop Chrome or Safari
+        - label: Mobile Safari / iPhone
+        - label: Android Chrome
+        - label: Tablet
+        - label: Accessibility or large-text behavior
+        - label: Other
+  - type: textarea
+    id: current_state
+    attributes:
+      label: What exists now?
+      description: Use public links or redacted details only.
+      placeholder: "Example: We have a landing page and signup flow ready for a small beta, but we want someone to find obvious bugs and confusing steps first."
+    validations:
+      required: true
+  - type: textarea
+    id: risk_areas
+    attributes:
+      label: What are you most worried about?
+      placeholder: "Example: signup bugs, confusing copy, mobile layout, forms, empty/error states, or whether the page feels trustworthy."
+    validations:
+      required: true
+  - type: dropdown
+    id: budget
+    attributes:
+      label: Rough first-pass budget
+      options:
+        - $50-$100
+        - $100-$150
+        - $150-$300
+        - Needs discussion
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact route
+      description: Email is best. Do not include a phone number unless you are comfortable with it being public.
+      placeholder: "email@example.com"
+    validations:
+      required: false

@@ -12,6 +12,10 @@ Pilot inquiry form:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-pilot.yml
 
+QA smoke-test inquiry form:
+
+https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=qa-smoke-test.yml
+
 AI-Built App Rescue:
 
 https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/code-rescue/
