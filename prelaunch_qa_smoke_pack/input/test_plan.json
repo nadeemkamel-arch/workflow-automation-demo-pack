@@ -1,0 +1,23 @@
+{
+  "product_name": "Harbor Habit",
+  "build": "0.8.3-beta",
+  "release_goal": "Decide whether a small habit-tracking app is ready for a 100-person beta invite.",
+  "review_owner": "founder",
+  "minimum_coverage": [
+    "Signup",
+    "First habit",
+    "Reminder setup",
+    "Settings",
+    "Offline mode",
+    "Account deletion"
+  ],
+  "launch_rules": {
+    "blocker_max": 0,
+    "high_max": 2,
+    "required_platforms": [
+      "iOS Safari",
+      "Android Chrome",
+      "Desktop Chrome"
+    ]
+  }
+}

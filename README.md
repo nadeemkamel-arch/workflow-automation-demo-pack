@@ -1,6 +1,6 @@
 # Agentic Workflow Automation Demo Pack
 
-Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, product launch clarity audits, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
+Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, product launch clarity audits, prelaunch QA smoke tests, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
 
 These examples use fictional data so the code, outputs, and runbooks can be inspected publicly. The same delivery shape can connect to approved client systems such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, LLM calls, or n8n/Make/Zapier workflows once the data source, credentials, cost controls, and launch gate are agreed.
 
@@ -34,6 +34,7 @@ Good starter projects are intentionally small:
 
 - **AI-Built App Rescue**: diagnose and fix one reproducible bug in a small React, TypeScript, JavaScript, or Python project, with a focused test and handoff. Fixed starter scope: $75.
 - **Product Launch Clarity Audit**: turn a small app, landing page, or prototype into a ranked issue queue, three quick wins, message tests, and a readiness report.
+- **Prelaunch QA Smoke Test**: test a small app, signup flow, or beta build and return a bug report, UX notes, retest checklist, and launch gate.
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **WhatsApp/Gmail Handoff Sprint**: turn inbound messages into AI draft approvals, human-handoff packets, pause/resume state, and no-auto-send logs.
@@ -144,6 +145,26 @@ Run:
 cd product_launch_clarity_audit
 python3 product_launch_clarity_audit.py --input input/fictional_travel_app.json --out output
 python3 -m pytest test_product_launch_clarity_audit.py
+```
+
+### Prelaunch QA Smoke Pack
+
+Path: `prelaunch_qa_smoke_pack/`
+
+Shows a small beta-test pass for a fictional habit app:
+
+- mobile and desktop test-session intake,
+- severity-ranked bug report,
+- practical UX feedback,
+- retest checklist,
+- readiness score and beta launch gate.
+
+Run:
+
+```bash
+cd prelaunch_qa_smoke_pack
+python3 prelaunch_qa_smoke_pack.py --sessions input/test_sessions.csv --plan input/test_plan.json --out output
+python3 -m pytest test_prelaunch_qa_smoke_pack.py
 ```
 
 ### Agentic Data Pipeline Gate

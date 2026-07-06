@@ -1,0 +1,20 @@
+{
+  "product_name": "Harbor Habit",
+  "build": "0.8.3-beta",
+  "sessions_reviewed": 10,
+  "findings_found": 8,
+  "severity_counts": {
+    "blocker": 2,
+    "high": 4,
+    "medium": 2,
+    "low": 0
+  },
+  "coverage_gaps": [
+    "Account deletion"
+  ],
+  "missing_platforms": [],
+  "readiness_score": 4,
+  "release_decision": "not ready for beta; fix blocker paths and retest before inviting users",
+  "auto_changes_made": 0,
+  "launch_gate": "owner_review_required_before_beta_invites"
+}
