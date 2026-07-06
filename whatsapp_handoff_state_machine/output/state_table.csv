@@ -1,0 +1,6 @@
+contact_id,contact_name,channel,mode,last_route,urgency
+c-101,Acme Fasteners,whatsapp,ai,draft_for_approval,normal
+c-102,Harbor Hotel Guest,whatsapp,human,human_handoff,high
+c-103,Northside Clinic,gmail,human,ai_paused,normal
+c-104,Acme Fasteners,gmail,ai,draft_for_approval,normal
+c-105,Warehouse Buyer,whatsapp,human,human_handoff,high

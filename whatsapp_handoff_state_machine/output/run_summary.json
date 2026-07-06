@@ -1,0 +1,9 @@
+{
+  "business_name": "Fictional Service Desk",
+  "messages_processed": 5,
+  "drafts_waiting_for_approval": 2,
+  "human_handoffs": 2,
+  "ai_paused_threads": 1,
+  "auto_sends": 0,
+  "launch_gate": "review_required_before_any_customer_message"
+}

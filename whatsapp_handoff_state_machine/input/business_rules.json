@@ -1,0 +1,33 @@
+{
+  "business_name": "Fictional Service Desk",
+  "resume_after_hours": 24,
+  "approval_base_url": "https://example.invalid/approve",
+  "human_handoff_keywords": [
+    "person",
+    "human",
+    "secretary",
+    "manager",
+    "urgent",
+    "not working",
+    "wrong parts",
+    "refund",
+    "cancel"
+  ],
+  "high_risk_keywords": [
+    "upset",
+    "angry",
+    "refund",
+    "wrong parts",
+    "not working",
+    "medical",
+    "insurance"
+  ],
+  "quote_keywords": [
+    "quote",
+    "pricing",
+    "price",
+    "delivery",
+    "pieces",
+    "order"
+  ]
+}

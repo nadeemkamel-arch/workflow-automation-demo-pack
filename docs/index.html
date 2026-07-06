@@ -344,7 +344,7 @@
           <p class="lede">
             Public-safe examples for n8n orchestration, agentic workspace installs, document-processing agents,
             REST API handoffs, Python data workflows, telecom OSS correlation, conversation QA, property ops triage,
-            travel-ops email routing, dry-run email automation, and client-ready documentation.
+            travel-ops email routing, WhatsApp/Gmail human handoff, dry-run email automation, and client-ready documentation.
           </p>
           <div class="actions">
             <a class="button" href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack">
@@ -420,6 +420,13 @@
             <p>
               SMS-style conversation test matrix with intent classification, opt-out handling,
               service-recovery routes, pricing guardrails, and human review gates.
+            </p>
+          </article>
+          <article class="card">
+            <h3>WhatsApp Handoff State Machine</h3>
+            <p>
+              WhatsApp/Gmail approval-loop demo with AI mode, human mode, handoff packets,
+              inactivity resume rules, and zero automatic customer sends.
             </p>
           </article>
           <article class="card">
@@ -533,6 +540,15 @@
               <span>Conversation-rule QA for appointment-based customer messaging.</span>
             </div>
             <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/tree/main/conversation_flow_qa">
+              Open
+            </a>
+          </div>
+          <div class="repo-row">
+            <div>
+              <strong>whatsapp_handoff_state_machine/whatsapp_handoff_state_machine.py</strong>
+              <span>WhatsApp/Gmail AI draft approvals, human handoff packets, and pause/resume state.</span>
+            </div>
+            <a href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/tree/main/whatsapp_handoff_state_machine">
               Open
             </a>
           </div>
@@ -679,6 +695,14 @@
             <p class="muted" style="margin-top: 10px">Typical starter scope: $150-$250.</p>
           </article>
           <article class="card">
+            <h3>WhatsApp/Gmail Handoff Sprint</h3>
+            <p>
+              Inbound service messages become AI draft approvals, human handoff packets, state
+              tables, pause/resume rules, and a no-auto-send launch gate.
+            </p>
+            <p class="muted" style="margin-top: 10px">Typical starter scope: $150-$300.</p>
+          </article>
+          <article class="card">
             <h3>Telegram Lead MVP</h3>
             <p>
               A 7-10 question bot intake becomes scored leads, referral tracking, AI summary
@@ -795,6 +819,7 @@
   ai_ops_triage/test_triage.py \
   event_quote_triage/test_event_quote_triage.py \
   conversation_flow_qa/test_conversation_flow_qa.py \
+  whatsapp_handoff_state_machine/test_whatsapp_handoff_state_machine.py \
   document_intake_agent/test_document_intake_agent.py \
   statement_email_workflow/test_statement_email_workflow.py \
   travel_ops_email_hub/test_travel_ops_email_hub.py \
@@ -810,7 +835,7 @@
           <p>
             Best fit: small async pilots for n8n workflows, Python/API automation,
             document intake, agent-style task routing, structured data cleanup,
-            Telegram lead intake, travel email routing, reliability monitoring, reporting,
+            WhatsApp/Gmail handoff, Telegram lead intake, travel email routing, reliability monitoring, reporting,
             and handoff-ready internal tools.
           </p>
           <p class="muted" style="margin-top: 12px">

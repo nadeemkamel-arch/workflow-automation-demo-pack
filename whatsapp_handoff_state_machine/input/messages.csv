@@ -1,0 +1,6 @@
+timestamp,contact_id,contact_name,channel,current_mode,last_contact_hours_ago,message
+2026-07-06T09:15:00Z,c-101,Acme Fasteners,whatsapp,ai,1,"Can you quote M8 stainless hex bolts, 500 pieces, delivery to Austin?"
+2026-07-06T09:18:00Z,c-102,Harbor Hotel Guest,whatsapp,ai,0,"The room code is not working and I need a person to help now."
+2026-07-06T09:22:00Z,c-103,Northside Clinic,gmail,human,4,"Following up on the insurance question from earlier."
+2026-07-06T09:30:00Z,c-104,Acme Fasteners,gmail,human,27,"Thanks, that answered my question. Can you send the formal quote?"
+2026-07-06T09:41:00Z,c-105,Warehouse Buyer,whatsapp,ai,2,"Cancel the previous order. The wrong parts shipped and my customer is upset."

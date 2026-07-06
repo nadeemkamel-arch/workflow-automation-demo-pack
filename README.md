@@ -35,6 +35,7 @@ Good starter projects are intentionally small:
 - **AI-Built App Rescue**: diagnose and fix one reproducible bug in a small React, TypeScript, JavaScript, or Python project, with a focused test and handoff. Fixed starter scope: $75.
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
+- **WhatsApp/Gmail Handoff Sprint**: turn inbound messages into AI draft approvals, human-handoff packets, pause/resume state, and no-auto-send logs.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
 - **SMB Speed-to-Lead Sprint**: turn new-lead and dormant-contact samples into reusable n8n-style workflow templates with CRM adapters, consent/opt-out stop gates, dry-run payloads, and config docs.
 - **Telecom OSS Correlation PoC**: correlate OSS tickets, RFMS alarms, and GIS equipment mapping into a review-ready queue with no live ticket updates.
@@ -199,6 +200,27 @@ Run:
 cd conversation_flow_qa
 python3 conversation_flow_qa.py --input input/customer_messages.csv --out output
 python3 -m pytest test_conversation_flow_qa.py
+```
+
+### WhatsApp Handoff State Machine
+
+Path: `whatsapp_handoff_state_machine/`
+
+Shows a small service-business approval loop for WhatsApp or Gmail messages:
+
+- AI mode vs. human mode per contact,
+- risky-message and handoff keyword routing,
+- AI-drafted replies held for owner approval,
+- human handoff packets for a secretary or manager,
+- auto-resume after an inactivity window,
+- zero automatic customer sends.
+
+Run:
+
+```bash
+cd whatsapp_handoff_state_machine
+python3 whatsapp_handoff_state_machine.py --messages input/messages.csv --rules input/business_rules.json --out output
+python3 -m pytest test_whatsapp_handoff_state_machine.py
 ```
 
 ### Document Intake Agent
