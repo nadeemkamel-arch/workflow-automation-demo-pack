@@ -1,0 +1,71 @@
+{
+  "product_name": "TripNest Lite",
+  "category": "travel planning web app",
+  "stage": "private beta landing page plus clickable prototype",
+  "audience": "busy solo travelers planning two-to-five day city trips",
+  "business_goal": "collect ten qualified beta users without confusing first-time visitors",
+  "review_goal": "decide what to fix before sharing the app in a community post",
+  "constraints": [
+    "No payment flow is live yet",
+    "Owner has one weekend to make changes",
+    "Owner wants practical product feedback, not a full redesign"
+  ],
+  "screens": [
+    {
+      "name": "Landing page hero",
+      "primary_action": "Join beta",
+      "user_question": "What does this do for me in the next five minutes?",
+      "friction_points": [
+        "Headline says smarter travel planning but does not name the output",
+        "No example itinerary appears above the fold",
+        "Primary action and secondary action compete visually"
+      ],
+      "evidence": "Three test readers described the app as a generic travel blog."
+    },
+    {
+      "name": "Trip preference form",
+      "primary_action": "Generate itinerary",
+      "user_question": "How much work is required before I see value?",
+      "friction_points": [
+        "Form asks for twelve fields before showing an example",
+        "Budget options are vague",
+        "No privacy note explains what happens to travel preferences"
+      ],
+      "evidence": "Prototype testers paused at the budget field and asked what data was saved."
+    },
+    {
+      "name": "Generated itinerary screen",
+      "primary_action": "Save plan",
+      "user_question": "Can I trust and edit this plan?",
+      "friction_points": [
+        "Restaurants and activities have no source links",
+        "No warning when an activity may be closed on selected dates",
+        "Edit controls are hidden below the generated plan"
+      ],
+      "evidence": "Testers liked the plan but asked how to verify hours and swap activities."
+    }
+  ],
+  "readiness_checks": [
+    {
+      "criterion": "Visitor can understand the product in one sentence",
+      "status": "weak",
+      "notes": "Value prop is abstract and does not show the generated artifact."
+    },
+    {
+      "criterion": "Visitor sees proof before being asked to commit",
+      "status": "missing",
+      "notes": "No itinerary preview, before/after, or example route appears early."
+    },
+    {
+      "criterion": "User can trust generated output",
+      "status": "weak",
+      "notes": "Sources, date checks, and edit controls need to be visible."
+    },
+    {
+      "criterion": "Owner has a small next experiment",
+      "status": "ready",
+      "notes": "A 10-person beta with a clearer landing page is reasonable."
+    }
+  ]
+}
+

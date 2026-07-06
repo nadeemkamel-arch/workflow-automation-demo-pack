@@ -1,0 +1,10 @@
+{
+  "product_name": "TripNest Lite",
+  "issues_found": 9,
+  "high_severity": 5,
+  "medium_severity": 4,
+  "readiness_score": 47,
+  "decision": "not ready for broad launch; ready for a small private test after quick wins",
+  "auto_changes_made": 0,
+  "launch_gate": "owner_review_required_before_public_launch"
+}

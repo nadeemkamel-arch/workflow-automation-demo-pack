@@ -1,6 +1,6 @@
 # Agentic Workflow Automation Demo Pack
 
-Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
+Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, product launch clarity audits, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
 
 These examples use fictional data so the code, outputs, and runbooks can be inspected publicly. The same delivery shape can connect to approved client systems such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, LLM calls, or n8n/Make/Zapier workflows once the data source, credentials, cost controls, and launch gate are agreed.
 
@@ -33,6 +33,7 @@ https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/DELI
 Good starter projects are intentionally small:
 
 - **AI-Built App Rescue**: diagnose and fix one reproducible bug in a small React, TypeScript, JavaScript, or Python project, with a focused test and handoff. Fixed starter scope: $75.
+- **Product Launch Clarity Audit**: turn a small app, landing page, or prototype into a ranked issue queue, three quick wins, message tests, and a readiness report.
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **WhatsApp/Gmail Handoff Sprint**: turn inbound messages into AI draft approvals, human-handoff packets, pause/resume state, and no-auto-send logs.
@@ -123,6 +124,26 @@ Run:
 cd generated_app_release_gate
 python3 generated_app_release_gate.py --manifest input/generated_app_manifest.json --out output
 python3 -m pytest test_generated_app_release_gate.py
+```
+
+### Product Launch Clarity Audit
+
+Path: `product_launch_clarity_audit/`
+
+Shows a practical pre-launch review for a small app or landing page:
+
+- ranked UX/product issue queue,
+- three concrete quick wins,
+- homepage/message test options,
+- readiness score and launch decision,
+- owner review gate before broad launch.
+
+Run:
+
+```bash
+cd product_launch_clarity_audit
+python3 product_launch_clarity_audit.py --input input/fictional_travel_app.json --out output
+python3 -m pytest test_product_launch_clarity_audit.py
 ```
 
 ### Agentic Data Pipeline Gate
