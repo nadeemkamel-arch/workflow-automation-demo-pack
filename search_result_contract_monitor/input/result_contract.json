@@ -1,0 +1,28 @@
+{
+  "required_top_level": [
+    "search_information",
+    "organic_results"
+  ],
+  "organic_required_fields": [
+    "position",
+    "title",
+    "link",
+    "snippet"
+  ],
+  "minimum_organic_results": 3,
+  "allowed_top_level": [
+    "api_version",
+    "captured_at",
+    "customer_ticket",
+    "engine",
+    "http_status",
+    "organic_results",
+    "provider",
+    "query",
+    "search_information",
+    "serpapi_pagination"
+  ],
+  "max_duplicate_links": 0,
+  "max_empty_snippet_ratio": 0.25,
+  "external_write_allowed": false
+}

@@ -1,0 +1,83 @@
+[
+  {
+    "severity": "blocker",
+    "ticket_id": "TCK-1055",
+    "engine": "google_light",
+    "query": "hotel deals near airport",
+    "area": "access",
+    "problem": "Snapshot returned HTTP 403; response quality cannot be trusted.",
+    "recommendation": "Keep the last known-good response active, verify sanctioned access, and rerun before updating customer-facing output."
+  },
+  {
+    "severity": "blocker",
+    "ticket_id": "TCK-1055",
+    "engine": "google_light",
+    "query": "hotel deals near airport",
+    "area": "coverage",
+    "problem": "Only 0 organic result(s) returned; contract expects at least 3.",
+    "recommendation": "Compare fixture HTML/API samples against the parser and keep this query in the regression suite."
+  },
+  {
+    "severity": "blocker",
+    "ticket_id": "TCK-1061",
+    "engine": "apple_app_store",
+    "query": "habit tracker",
+    "area": "shape",
+    "problem": "Missing required top-level block(s): organic_results.",
+    "recommendation": "Patch the parser mapping or route this engine through a documented engine-specific contract before release."
+  },
+  {
+    "severity": "high",
+    "ticket_id": "TCK-1049",
+    "engine": "google_light",
+    "query": "local pottery classes",
+    "area": "dedupe",
+    "problem": "Found 1 duplicate organic link(s).",
+    "recommendation": "Dedupe by canonical URL before returning results and add duplicate-link fixtures."
+  },
+  {
+    "severity": "high",
+    "ticket_id": "TCK-1049",
+    "engine": "google_light",
+    "query": "local pottery classes",
+    "area": "shape",
+    "problem": "Organic result #3 is missing field(s): snippet.",
+    "recommendation": "Patch extraction and add a fixture asserting all documented fields exist."
+  },
+  {
+    "severity": "medium",
+    "ticket_id": "TCK-1049",
+    "engine": "google_light",
+    "query": "local pottery classes",
+    "area": "content",
+    "problem": "Empty snippet ratio is 100%.",
+    "recommendation": "Repair snippet extraction or document why this engine/query cannot provide snippets."
+  },
+  {
+    "severity": "medium",
+    "ticket_id": "TCK-1049",
+    "engine": "google_light",
+    "query": "local pottery classes",
+    "area": "ranking",
+    "problem": "Organic result positions are [1, 1, 4], not a contiguous 1..N sequence.",
+    "recommendation": "Check whether ads, related blocks, or parser skips are leaking into organic ranking."
+  },
+  {
+    "severity": "low",
+    "ticket_id": "TCK-1049",
+    "engine": "google_light",
+    "query": "local pottery classes",
+    "area": "shape",
+    "problem": "Observed undocumented top-level block(s): inline_related_searches.",
+    "recommendation": "Decide whether the new block belongs in public docs, an engine-specific schema, or an ignored internal field."
+  },
+  {
+    "severity": "low",
+    "ticket_id": "TCK-1061",
+    "engine": "apple_app_store",
+    "query": "habit tracker",
+    "area": "shape",
+    "problem": "Observed undocumented top-level block(s): app_results.",
+    "recommendation": "Decide whether the new block belongs in public docs, an engine-specific schema, or an ignored internal field."
+  }
+]

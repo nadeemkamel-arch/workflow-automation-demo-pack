@@ -1,0 +1,10 @@
+severity,ticket_id,engine,query,area,problem,recommendation
+blocker,TCK-1055,google_light,hotel deals near airport,access,Snapshot returned HTTP 403; response quality cannot be trusted.,"Keep the last known-good response active, verify sanctioned access, and rerun before updating customer-facing output."
+blocker,TCK-1055,google_light,hotel deals near airport,coverage,Only 0 organic result(s) returned; contract expects at least 3.,Compare fixture HTML/API samples against the parser and keep this query in the regression suite.
+blocker,TCK-1061,apple_app_store,habit tracker,shape,Missing required top-level block(s): organic_results.,Patch the parser mapping or route this engine through a documented engine-specific contract before release.
+high,TCK-1049,google_light,local pottery classes,dedupe,Found 1 duplicate organic link(s).,Dedupe by canonical URL before returning results and add duplicate-link fixtures.
+high,TCK-1049,google_light,local pottery classes,shape,Organic result #3 is missing field(s): snippet.,Patch extraction and add a fixture asserting all documented fields exist.
+medium,TCK-1049,google_light,local pottery classes,content,Empty snippet ratio is 100%.,Repair snippet extraction or document why this engine/query cannot provide snippets.
+medium,TCK-1049,google_light,local pottery classes,ranking,"Organic result positions are [1, 1, 4], not a contiguous 1..N sequence.","Check whether ads, related blocks, or parser skips are leaking into organic ranking."
+low,TCK-1049,google_light,local pottery classes,shape,Observed undocumented top-level block(s): inline_related_searches.,"Decide whether the new block belongs in public docs, an engine-specific schema, or an ignored internal field."
+low,TCK-1061,apple_app_store,habit tracker,shape,Observed undocumented top-level block(s): app_results.,"Decide whether the new block belongs in public docs, an engine-specific schema, or an ignored internal field."

@@ -1,0 +1,118 @@
+[
+  {
+    "provider": "FictionSearch",
+    "engine": "google_light",
+    "api_version": "2026-07-07",
+    "captured_at": "2026-07-07T17:20:00Z",
+    "http_status": 200,
+    "query": "wireless earbuds warranty",
+    "customer_ticket": {
+      "id": "TCK-1042",
+      "summary": "Customer says a scraper repair removed organic results from warranty queries."
+    },
+    "search_information": {
+      "total_results": 15500000,
+      "time_taken_displayed": 0.41
+    },
+    "organic_results": [
+      {
+        "position": 1,
+        "title": "Earbud Warranty Guide",
+        "link": "https://example.test/warranty-guide",
+        "snippet": "A plain-language overview of common warranty terms."
+      },
+      {
+        "position": 2,
+        "title": "Replacement Policy",
+        "link": "https://example.test/replacement-policy",
+        "snippet": "How to request a replacement for defective earbuds."
+      },
+      {
+        "position": 3,
+        "title": "Support Center",
+        "link": "https://support.example.test/earbuds",
+        "snippet": "Contact support, check status, and download manuals."
+      }
+    ]
+  },
+  {
+    "provider": "FictionSearch",
+    "engine": "google_light",
+    "api_version": "2026-07-07",
+    "captured_at": "2026-07-07T17:23:00Z",
+    "http_status": 200,
+    "query": "local pottery classes",
+    "customer_ticket": {
+      "id": "TCK-1049",
+      "summary": "Customer reports duplicated results and missing snippets after a page-layout change."
+    },
+    "search_information": {
+      "total_results": 712000,
+      "time_taken_displayed": 0.39
+    },
+    "organic_results": [
+      {
+        "position": 1,
+        "title": "Beginner Pottery Studio",
+        "link": "https://example.test/pottery",
+        "snippet": ""
+      },
+      {
+        "position": 1,
+        "title": "Beginner Pottery Studio - Classes",
+        "link": "https://example.test/pottery",
+        "snippet": ""
+      },
+      {
+        "position": 4,
+        "title": "Community Clay Calendar",
+        "link": "https://calendar.example.test/clay"
+      }
+    ],
+    "inline_related_searches": [
+      "wheel throwing class",
+      "ceramics workshop"
+    ]
+  },
+  {
+    "provider": "FictionSearch",
+    "engine": "google_light",
+    "api_version": "2026-07-07",
+    "captured_at": "2026-07-07T17:26:00Z",
+    "http_status": 403,
+    "query": "hotel deals near airport",
+    "customer_ticket": {
+      "id": "TCK-1055",
+      "summary": "Customer dashboard shows an empty result set for travel searches."
+    },
+    "search_information": {
+      "total_results": 0,
+      "time_taken_displayed": 0.0
+    },
+    "organic_results": []
+  },
+  {
+    "provider": "FictionSearch",
+    "engine": "apple_app_store",
+    "api_version": "2026-07-07",
+    "captured_at": "2026-07-07T17:29:00Z",
+    "http_status": 200,
+    "query": "habit tracker",
+    "customer_ticket": {
+      "id": "TCK-1061",
+      "summary": "New app-store parser returned a response without the standard organic block."
+    },
+    "search_information": {
+      "total_results": 48,
+      "time_taken_displayed": 0.22
+    },
+    "app_results": [
+      {
+        "position": 1,
+        "title": "Habit Loop",
+        "link": "https://apps.example.test/habit-loop",
+        "snippet": "Track daily habits and weekly streaks."
+      }
+    ]
+  }
+]

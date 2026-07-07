@@ -1,0 +1,23 @@
+{
+  "decision": "hold_release",
+  "snapshots_reviewed": 4,
+  "tickets_with_findings": [
+    "TCK-1049",
+    "TCK-1055",
+    "TCK-1061"
+  ],
+  "counts_by_severity": {
+    "blocker": 3,
+    "high": 2,
+    "medium": 2,
+    "low": 2
+  },
+  "counts_by_area": {
+    "access": 1,
+    "coverage": 1,
+    "shape": 4,
+    "dedupe": 1,
+    "content": 1,
+    "ranking": 1
+  }
+}

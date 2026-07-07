@@ -1,6 +1,6 @@
 # Agentic Workflow Automation Demo Pack
 
-Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, product launch clarity audits, prelaunch QA smoke tests, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
+Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, product launch clarity audits, prelaunch QA smoke tests, search API response checks, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
 
 These examples use fictional data so the code, outputs, and runbooks can be inspected publicly. The same delivery shape can connect to approved client systems such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, LLM calls, or n8n/Make/Zapier workflows once the data source, credentials, cost controls, and launch gate are agreed.
 
@@ -54,6 +54,7 @@ Good starter projects are intentionally small:
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
 - **Generated App Release Gate**: review an AI-generated app manifest for auth, payment, webhook, schema, env, and deployment blockers before production launch.
 - **Agentic Data Pipeline Gate**: validate agent-generated extraction/RAG/data pipelines for schema drift, source evidence, row-volume shifts, duplicate keys, stale runs, and write-safety before publish.
+- **Search Result Contract Monitor**: check search API response snapshots for missing documented blocks, duplicate links, ranking gaps, empty snippets, access failures, and support-ready release decisions.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.
 
@@ -189,6 +190,25 @@ Run:
 cd agentic_data_pipeline_gate
 python3 agentic_data_pipeline_gate.py --runs input/source_runs.csv --contract input/schema_contract.json --out output
 python3 -m pytest test_agentic_data_pipeline_gate.py
+```
+
+### Search Result Contract Monitor
+
+Path: `search_result_contract_monitor/`
+
+Shows a search API response QA gate that turns fictional customer-ticket snapshots into:
+
+- missing documented block and field findings,
+- duplicate link, ranking, snippet, and access checks,
+- a release/repair/hold decision,
+- a support-ready handoff note.
+
+Run:
+
+```bash
+cd search_result_contract_monitor
+python3 search_result_contract_monitor.py --snapshots input/search_snapshots.json --contract input/result_contract.json --out output
+python3 -m pytest test_search_result_contract_monitor.py
 ```
 
 ### AI Ops Triage
