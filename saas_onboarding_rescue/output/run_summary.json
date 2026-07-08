@@ -1,0 +1,13 @@
+{
+  "dry_run_payloads": 4,
+  "live_actions": 0,
+  "review_required": true,
+  "suppressed": 1,
+  "top_segments": {
+    "blocked-after-start": 1,
+    "cold-trial": 1,
+    "high-intent": 1,
+    "setup-missing": 1
+  },
+  "users_scored": 5
+}

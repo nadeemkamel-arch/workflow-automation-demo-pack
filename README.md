@@ -44,6 +44,7 @@ Good starter projects are intentionally small:
 - **WhatsApp/Gmail Handoff Sprint**: turn inbound messages into AI draft approvals, human-handoff packets, pause/resume state, and no-auto-send logs.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.
 - **SMB Speed-to-Lead Sprint**: turn new-lead and dormant-contact samples into reusable n8n-style workflow templates with CRM adapters, consent/opt-out stop gates, dry-run payloads, and config docs.
+- **SaaS Onboarding Rescue Sprint**: turn a trial-user export into a ranked follow-up queue, plain-text activation emails, dry-run CRM/email payloads, and a founder review checklist.
 - **Telecom OSS Correlation PoC**: correlate OSS tickets, RFMS alarms, and GIS equipment mapping into a review-ready queue with no live ticket updates.
 - **Property Ops Triage Sprint**: turn sample tenant/vendor inbox messages into maintenance routes, invoice review packets, dry-run task payloads, and owner digests.
 - **Travel Ops Email Hub Sprint**: turn sample travel-agency emails into Sheets status rows, Slack urgent alerts, draft auto-replies, booking API payloads, and launch gates.
@@ -112,6 +113,26 @@ Inspect:
 ```bash
 cd agentic_workspace_install_kit
 find . -maxdepth 3 -type f | sort
+```
+
+### SaaS Onboarding Rescue Sprint
+
+Path: `saas_onboarding_rescue/`
+
+Shows a 7-day rescue packet for early-stage SaaS teams whose trial users sign up, go quiet, and end up in manual spreadsheet follow-up.
+
+- synthetic trial-user CSV,
+- ranked activation follow-up queue,
+- plain-text email sequence,
+- dry-run CRM/email payloads,
+- founder launch checklist and no-live-send summary.
+
+Run:
+
+```bash
+cd saas_onboarding_rescue
+python3 saas_onboarding_rescue.py --users input/trial_users.csv --rules input/email_rules.json --out output
+python3 test_saas_onboarding_rescue.py
 ```
 
 ### Generated App Release Gate

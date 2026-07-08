@@ -1,0 +1,6 @@
+user_id,company,segment,risk_score,email_key,reason,owner_action,send_window_hours,suppressed
+u_1001,Northstar Ops,setup-missing,95,setup_nudge,User signed up but has not created the first project.,Point to the first setup action and offer a tiny sample.,24,false
+u_1004,QuietBeta,cold-trial,95,last_chance_checkin,Trial is stale before reaching the first valuable action.,"Send one useful final check-in, then stop unless they reply.",12,false
+u_1002,SketchLedger,blocked-after-start,63,human_unblocker,User started setup but has not reached a first successful send.,Ask one question and offer to unblock the exact next step.,24,false
+u_1003,FounderDesk,high-intent,25,demo_invite,High-intent user has already shown reply or demo signal.,Offer a short guided walkthrough with one concrete agenda.,12,false
+u_1005,OptOut Labs,suppressed,0,suppress,User is marked do-not-contact.,Confirm consent status before any outreach.,0,true

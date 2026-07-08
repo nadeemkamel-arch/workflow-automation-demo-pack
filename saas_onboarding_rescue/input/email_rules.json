@@ -1,0 +1,14 @@
+{
+  "sprint_days": 7,
+  "quiet_hours": 24,
+  "stale_hours": 72,
+  "review_required": true,
+  "email_keys": {
+    "setup_nudge": "Help the user reach the first valuable action.",
+    "human_unblocker": "Ask one human question and offer a quick unblock.",
+    "demo_invite": "Invite a high-intent user to a short guided walkthrough.",
+    "last_chance_checkin": "Send one useful final prompt before the trial goes cold.",
+    "suppress": "Do not contact without owner review."
+  }
+}
+

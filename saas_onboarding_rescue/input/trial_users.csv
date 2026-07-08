@@ -1,0 +1,7 @@
+user_id,name,email,company,signup_days_ago,first_project_created,invited_team,sent_first_message,last_seen_hours_ago,plan_intent,reply_signal,blocker_note,do_not_contact
+u_1001,Maya Chen,maya@example.invalid,Northstar Ops,1,false,false,false,36,high,,Needs help importing a CSV,false
+u_1002,Luis Ortega,luis@example.invalid,SketchLedger,3,true,false,false,54,medium,asked pricing,Not sure what to send first,false
+u_1003,Priya Shah,priya@example.invalid,FounderDesk,2,true,true,true,4,high,asked for demo,,false
+u_1004,Sam Lee,sam@example.invalid,QuietBeta,6,false,false,false,96,low,,No activity after signup,false
+u_1005,Robin Park,robin@example.invalid,OptOut Labs,4,true,false,false,12,medium,,Asked to pause outreach,true
+

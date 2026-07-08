@@ -1,0 +1,66 @@
+[
+  {
+    "idempotency_key": "dryrun_ceecd67d0dbd7713",
+    "dry_run": true,
+    "channel": "email",
+    "to": "maya@example.invalid",
+    "template": "setup_nudge",
+    "crm_update": {
+      "user_id": "u_1001",
+      "segment": "setup-missing",
+      "risk_score": 95,
+      "next_owner_action": "Point to the first setup action and offer a tiny sample."
+    },
+    "headers": {
+      "X-Dry-Run": "true"
+    }
+  },
+  {
+    "idempotency_key": "dryrun_2980ca04de5ed324",
+    "dry_run": true,
+    "channel": "email",
+    "to": "sam@example.invalid",
+    "template": "last_chance_checkin",
+    "crm_update": {
+      "user_id": "u_1004",
+      "segment": "cold-trial",
+      "risk_score": 95,
+      "next_owner_action": "Send one useful final check-in, then stop unless they reply."
+    },
+    "headers": {
+      "X-Dry-Run": "true"
+    }
+  },
+  {
+    "idempotency_key": "dryrun_f05188a1965a5d52",
+    "dry_run": true,
+    "channel": "email",
+    "to": "luis@example.invalid",
+    "template": "human_unblocker",
+    "crm_update": {
+      "user_id": "u_1002",
+      "segment": "blocked-after-start",
+      "risk_score": 63,
+      "next_owner_action": "Ask one question and offer to unblock the exact next step."
+    },
+    "headers": {
+      "X-Dry-Run": "true"
+    }
+  },
+  {
+    "idempotency_key": "dryrun_99fc85e0752a936f",
+    "dry_run": true,
+    "channel": "email",
+    "to": "priya@example.invalid",
+    "template": "demo_invite",
+    "crm_update": {
+      "user_id": "u_1003",
+      "segment": "high-intent",
+      "risk_score": 25,
+      "next_owner_action": "Offer a short guided walkthrough with one concrete agenda."
+    },
+    "headers": {
+      "X-Dry-Run": "true"
+    }
+  }
+]
