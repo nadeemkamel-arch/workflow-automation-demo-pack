@@ -8,7 +8,11 @@ Portfolio page:
 
 https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/
 
-Pilot inquiry form:
+Free workflow fit check:
+
+https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-fit-check.yml
+
+Paid sprint inquiry form:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-pilot.yml
 
@@ -33,6 +37,10 @@ Delivery notes:
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/DELIVERY_NOTES.md
 
 ## Featured Offer: $95 Workflow Rescue Sprint
+
+Start with the free fit check: share one fictional, redacted, or high-level example.
+Within one business day, the response will say whether it fits the fixed sprint, needs
+a different scope, or is not a fit. There is no charge and no obligation to continue.
 
 Send one broken or manual workflow. The fixed starter scope covers one input, one
 output, one main failure path, and delivery within three business days.

@@ -160,6 +160,14 @@
         flex-wrap: wrap;
       }
 
+      .fit-note {
+        max-width: 680px;
+        margin-top: 18px;
+        padding-left: 14px;
+        border-left: 4px solid var(--green);
+        color: var(--muted);
+      }
+
       .button {
         min-height: 42px;
         padding: 10px 14px;
@@ -327,6 +335,7 @@
         </div>
         <nav aria-label="Portfolio navigation">
           <a href="#rescue">The Sprint</a>
+          <a href="#fit-check">Free Fit Check</a>
           <a href="#proof">Proof</a>
           <a href="#handoff">Handoff</a>
           <a href="#contact">Contact</a>
@@ -340,21 +349,26 @@
         <div>
           <h1 id="title">Workflow Rescue Sprint</h1>
           <p class="lede">
-            Send one broken or manual workflow. For a fixed $95 starter scope, I will return a
-            working first fix or prototype, a focused test, and plain-language handoff notes within
-            three business days.
+            Show me one recurring manual step or broken workflow. I will first tell you whether it
+            fits a small fixed-price rescue. If it does, the $95 starter sprint delivers a working
+            first fix or prototype, a focused test, and plain-language handoff notes.
           </p>
           <div class="actions">
             <a
               class="button"
-              href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-pilot.yml"
+              href="https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-fit-check.yml"
             >
-              Describe Your Workflow
+              Get a Free Fit Check
             </a>
             <a class="button secondary" href="#proof">
               See Working Proof
             </a>
           </div>
+          <p class="fit-note">
+            Send one fictional or redacted example. Within one business day, you will get a clear
+            answer: fits the $95 sprint, needs a different scope, or is not a fit. No charge and no
+            obligation.
+          </p>
         </div>
         <figure class="preview">
           <img
@@ -363,6 +377,33 @@
           />
           <figcaption>A real sample output: prioritized work, review gates, and a reproducible run.</figcaption>
         </figure>
+      </section>
+
+      <section id="fit-check" aria-labelledby="fit-check-title">
+        <h2 id="fit-check-title">Start With the Problem, Not a Purchase</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Share One Example</h3>
+            <p>
+              A short description or one fictional, redacted example is enough. You do not need to
+              choose the tool or design the solution.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Get a Straight Answer</h3>
+            <p>
+              I will tell you whether the problem fits the fixed sprint, needs a different scope,
+              or is not something I should take on.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Decide Afterward</h3>
+            <p>
+              The fit check is free. If the $95 sprint fits, you can review the exact boundary
+              before deciding whether to continue.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section id="rescue" aria-labelledby="rescue-title">

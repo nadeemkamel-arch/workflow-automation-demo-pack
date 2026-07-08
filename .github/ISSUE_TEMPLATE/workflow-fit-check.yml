@@ -1,0 +1,60 @@
+name: Free Workflow Fit Check
+description: Share one redacted example and find out whether the $95 rescue sprint fits.
+title: "[Fit check] "
+labels:
+  - pilot-inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Not sure whether your workflow is a fit? Share one fictional, redacted, or
+        high-level example. Within one business day, you will get one clear answer:
+
+        - it fits the fixed $95 rescue sprint,
+        - it needs a different scope, or
+        - it is not a fit.
+
+        There is no charge for the fit check and no obligation to continue.
+
+        Do not include production credentials, API keys, private customer records,
+        regulated data, payment details, or confidential business data.
+  - type: textarea
+    id: current_state
+    attributes:
+      label: What happens now?
+      description: Describe the manual step, recurring annoyance, or failure in plain language.
+      placeholder: "Example: form responses are copied into a spreadsheet by hand, and incomplete rows are easy to miss."
+    validations:
+      required: true
+  - type: textarea
+    id: desired_state
+    attributes:
+      label: What should happen instead?
+      description: Describe the useful result. You do not need to know which tool or technical solution would be best.
+      placeholder: "Example: validate each response, add a clean row, and flag anything that needs review."
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: One redacted example
+      description: A fictional or redacted input and expected result is enough. Do not include private data or secrets.
+      placeholder: "Example input: name present, email missing. Expected result: add to a review list instead of failing silently."
+    validations:
+      required: false
+  - type: input
+    id: systems
+    attributes:
+      label: Tools involved
+      description: Optional. List tool names only.
+      placeholder: "Google Sheets, Airtable, Gmail, Slack, n8n, Make, Zapier, Python..."
+    validations:
+      required: false
+  - type: input
+    id: contact
+    attributes:
+      label: Preferred contact route
+      description: Optional. If omitted, the answer will be posted on this public issue.
+      placeholder: "Email or preferred public contact route"
+    validations:
+      required: false
