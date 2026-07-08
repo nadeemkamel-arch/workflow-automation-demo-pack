@@ -1,0 +1,32 @@
+{
+  "organization": "Bright Harbor Happiness Research",
+  "snapshot_date": "2026-07-07",
+  "payout_count": 3,
+  "transaction_count": 4,
+  "reconciliation_row_count": 4,
+  "journal_line_count": 12,
+  "exception_count": 2,
+  "exceptions_by_code": {
+    "missing_account_rule": 1,
+    "payout_net_mismatch": 1
+  },
+  "totals_by_payout": {
+    "po_usd_clean_0710": {
+      "expected_net_amount_cents": 82450,
+      "computed_net_amount_cents": 82450,
+      "delta_cents": 0
+    },
+    "po_gbp_unmapped_0711": {
+      "expected_net_amount_cents": 19820,
+      "computed_net_amount_cents": 19820,
+      "delta_cents": 0
+    },
+    "po_usd_mismatch_0712": {
+      "expected_net_amount_cents": 29000,
+      "computed_net_amount_cents": 29120,
+      "delta_cents": 120
+    }
+  },
+  "live_writes_allowed": false,
+  "launch_decision": "review_required"
+}

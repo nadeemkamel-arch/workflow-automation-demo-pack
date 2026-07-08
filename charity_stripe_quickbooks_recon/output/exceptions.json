@@ -1,0 +1,18 @@
+[
+  {
+    "payout_id": "po_gbp_unmapped_0711",
+    "transaction_id": "txn_2001",
+    "severity": "high",
+    "code": "missing_account_rule",
+    "message": "No account rule for charity NEW_FUND in GBP.",
+    "recommended_action": "Add a bookkeeper-approved donation income, fee expense, clearing account, and class mapping."
+  },
+  {
+    "payout_id": "po_usd_mismatch_0712",
+    "transaction_id": "-",
+    "severity": "high",
+    "code": "payout_net_mismatch",
+    "message": "Computed transaction net 291.20 does not match payout net 290.00.",
+    "recommended_action": "Review Stripe payout export for missing refunds, disputes, adjustments, or excluded balance transactions."
+  }
+]

@@ -1,0 +1,5 @@
+payout_id,transaction_id,charity_code,donor_label,currency,gross_amount,fee_amount,net_amount,donation_income_account,fee_expense_account,clearing_account,quickbooks_class,review_status
+po_usd_clean_0710,txn_1001,JOY_LAB,Donor A,USD,500.00,14.80,485.20,4100 Donations - Joy Lab,6150 Stripe Fees - Joy Lab,1205 Stripe Clearing - Joy Lab,Joy Lab,ready_for_bookkeeper_review
+po_usd_clean_0710,txn_1002,KIND_SCHOOLS,Donor B,USD,350.00,10.70,339.30,4110 Donations - Kind Schools,6160 Stripe Fees - Kind Schools,1210 Stripe Clearing - Kind Schools,Kind Schools,ready_for_bookkeeper_review
+po_gbp_unmapped_0711,txn_2001,NEW_FUND,Donor C,GBP,200.00,1.80,198.20,,,,,blocked_missing_account_rule
+po_usd_mismatch_0712,txn_3001,JOY_LAB,Donor D,USD,300.00,8.80,291.20,4100 Donations - Joy Lab,6150 Stripe Fees - Joy Lab,1205 Stripe Clearing - Joy Lab,Joy Lab,ready_for_bookkeeper_review

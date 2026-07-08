@@ -1,0 +1,71 @@
+{
+  "snapshot_date": "2026-07-07",
+  "organization": "Bright Harbor Happiness Research",
+  "data_note": "Fictional public-safe sample. No real donors, accounts, Stripe IDs, or QuickBooks IDs.",
+  "payouts": [
+    {
+      "payout_id": "po_usd_clean_0710",
+      "currency": "USD",
+      "arrival_date": "2026-07-10",
+      "net_amount_cents": 82450,
+      "transactions": [
+        {
+          "balance_transaction_id": "txn_1001",
+          "donor_label": "Donor A",
+          "charity_code": "JOY_LAB",
+          "currency": "USD",
+          "gross_amount_cents": 50000,
+          "fee_amount_cents": 1480,
+          "status": "available",
+          "transaction_type": "donation"
+        },
+        {
+          "balance_transaction_id": "txn_1002",
+          "donor_label": "Donor B",
+          "charity_code": "KIND_SCHOOLS",
+          "currency": "USD",
+          "gross_amount_cents": 35000,
+          "fee_amount_cents": 1070,
+          "status": "available",
+          "transaction_type": "donation"
+        }
+      ]
+    },
+    {
+      "payout_id": "po_gbp_unmapped_0711",
+      "currency": "GBP",
+      "arrival_date": "2026-07-11",
+      "net_amount_cents": 19820,
+      "transactions": [
+        {
+          "balance_transaction_id": "txn_2001",
+          "donor_label": "Donor C",
+          "charity_code": "NEW_FUND",
+          "currency": "GBP",
+          "gross_amount_cents": 20000,
+          "fee_amount_cents": 180,
+          "status": "available",
+          "transaction_type": "donation"
+        }
+      ]
+    },
+    {
+      "payout_id": "po_usd_mismatch_0712",
+      "currency": "USD",
+      "arrival_date": "2026-07-12",
+      "net_amount_cents": 29000,
+      "transactions": [
+        {
+          "balance_transaction_id": "txn_3001",
+          "donor_label": "Donor D",
+          "charity_code": "JOY_LAB",
+          "currency": "USD",
+          "gross_amount_cents": 30000,
+          "fee_amount_cents": 880,
+          "status": "available",
+          "transaction_type": "donation"
+        }
+      ]
+    }
+  ]
+}

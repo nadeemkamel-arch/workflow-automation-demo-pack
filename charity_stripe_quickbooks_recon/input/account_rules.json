@@ -1,0 +1,29 @@
+{
+  "default_clearing_account": "Stripe Clearing - Review",
+  "rules": [
+    {
+      "charity_code": "JOY_LAB",
+      "currency": "USD",
+      "donation_income_account": "4100 Donations - Joy Lab",
+      "fee_expense_account": "6150 Stripe Fees - Joy Lab",
+      "clearing_account": "1205 Stripe Clearing - Joy Lab",
+      "quickbooks_class": "Joy Lab"
+    },
+    {
+      "charity_code": "KIND_SCHOOLS",
+      "currency": "USD",
+      "donation_income_account": "4110 Donations - Kind Schools",
+      "fee_expense_account": "6160 Stripe Fees - Kind Schools",
+      "clearing_account": "1210 Stripe Clearing - Kind Schools",
+      "quickbooks_class": "Kind Schools"
+    },
+    {
+      "charity_code": "JOY_LAB",
+      "currency": "GBP",
+      "donation_income_account": "4105 Donations - Joy Lab GBP",
+      "fee_expense_account": "6155 Stripe Fees - Joy Lab GBP",
+      "clearing_account": "1206 Stripe Clearing - Joy Lab GBP",
+      "quickbooks_class": "Joy Lab"
+    }
+  ]
+}

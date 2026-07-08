@@ -1,0 +1,13 @@
+payout_id,transaction_id,line_type,account,quickbooks_class,debit,credit,memo
+po_usd_clean_0710,txn_1001,gross_donation_to_clearing,1205 Stripe Clearing - Joy Lab,Joy Lab,500.00,0,Donor A / JOY_LAB / txn_1001: gross donation held in Stripe clearing
+po_usd_clean_0710,txn_1001,donation_income,4100 Donations - Joy Lab,Joy Lab,0,500.00,Donor A / JOY_LAB / txn_1001: donation income classification
+po_usd_clean_0710,txn_1001,stripe_fee_expense,6150 Stripe Fees - Joy Lab,Joy Lab,14.80,0,Donor A / JOY_LAB / txn_1001: Stripe processing fee
+po_usd_clean_0710,txn_1001,fee_reduces_clearing,1205 Stripe Clearing - Joy Lab,Joy Lab,0,14.80,Donor A / JOY_LAB / txn_1001: fee netted out of Stripe clearing
+po_usd_clean_0710,txn_1002,gross_donation_to_clearing,1210 Stripe Clearing - Kind Schools,Kind Schools,350.00,0,Donor B / KIND_SCHOOLS / txn_1002: gross donation held in Stripe clearing
+po_usd_clean_0710,txn_1002,donation_income,4110 Donations - Kind Schools,Kind Schools,0,350.00,Donor B / KIND_SCHOOLS / txn_1002: donation income classification
+po_usd_clean_0710,txn_1002,stripe_fee_expense,6160 Stripe Fees - Kind Schools,Kind Schools,10.70,0,Donor B / KIND_SCHOOLS / txn_1002: Stripe processing fee
+po_usd_clean_0710,txn_1002,fee_reduces_clearing,1210 Stripe Clearing - Kind Schools,Kind Schools,0,10.70,Donor B / KIND_SCHOOLS / txn_1002: fee netted out of Stripe clearing
+po_usd_mismatch_0712,txn_3001,gross_donation_to_clearing,1205 Stripe Clearing - Joy Lab,Joy Lab,300.00,0,Donor D / JOY_LAB / txn_3001: gross donation held in Stripe clearing
+po_usd_mismatch_0712,txn_3001,donation_income,4100 Donations - Joy Lab,Joy Lab,0,300.00,Donor D / JOY_LAB / txn_3001: donation income classification
+po_usd_mismatch_0712,txn_3001,stripe_fee_expense,6150 Stripe Fees - Joy Lab,Joy Lab,8.80,0,Donor D / JOY_LAB / txn_3001: Stripe processing fee
+po_usd_mismatch_0712,txn_3001,fee_reduces_clearing,1205 Stripe Clearing - Joy Lab,Joy Lab,0,8.80,Donor D / JOY_LAB / txn_3001: fee netted out of Stripe clearing

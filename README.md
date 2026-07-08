@@ -1,6 +1,6 @@
 # Agentic Workflow Automation Demo Pack
 
-Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, product launch clarity audits, prelaunch QA smoke tests, search API response checks, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
+Public-safe demos for scoped automation work: n8n workflow JSON, Python scripts, API handoff payloads, document-processing flows, finance reconciliation packets, product launch clarity audits, prelaunch QA smoke tests, search API response checks, telecom OSS correlation, travel-ops email routing, reproducible outputs, tests, and handoff notes.
 
 These examples use fictional data so the code, outputs, and runbooks can be inspected publicly. The same delivery shape can connect to approved client systems such as Google Sheets exports, CRM CSVs, webhooks, REST APIs, LLM calls, or n8n/Make/Zapier workflows once the data source, credentials, cost controls, and launch gate are agreed.
 
@@ -50,6 +50,7 @@ Good starter projects are intentionally small:
 - **Workflow Reliability Sprint**: add run logs, retry rules, idempotency checks, incident routes, and a client-ready operations digest.
 - **Burst Readiness Sprint**: turn load-test samples and traffic logs into endpoint risk rankings, alert payloads, cost flags, and launch gates before a beta or campaign spike.
 - **Startup Finance Context Layer**: turn messy finance records into cited context packets, dry-run task/accounting payloads, and review gates before any money movement.
+- **Charity Stripe to QuickBooks Reconciliation**: turn consolidated Stripe payout exports into transaction-level donation, fee, clearing-account, exception, and bookkeeper-review packets.
 - **Personal Risk Surface Audit**: turn approved public-risk observations into a ranked remediation queue, dry-run review packets, and account-owner launch gates.
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
 - **Generated App Release Gate**: review an AI-generated app manifest for auth, payment, webhook, schema, env, and deployment blockers before production launch.
@@ -209,6 +210,27 @@ Run:
 cd search_result_contract_monitor
 python3 search_result_contract_monitor.py --snapshots input/search_snapshots.json --contract input/result_contract.json --out output
 python3 -m pytest test_search_result_contract_monitor.py
+```
+
+### Charity Stripe to QuickBooks Reconciliation
+
+Path: `charity_stripe_quickbooks_recon/`
+
+Shows a dry-run finance-ops reconciliation for a fictional charity:
+
+- Stripe payout snapshot intake,
+- account/class mapping rules,
+- transaction-level donation and fee breakdown,
+- QuickBooks-style journal preview rows,
+- exception queue for missing rules and payout mismatches,
+- owner/bookkeeper review gate before any accounting-system write.
+
+Run:
+
+```bash
+cd charity_stripe_quickbooks_recon
+python3 charity_stripe_quickbooks_recon.py --payouts input/stripe_payout_snapshot.json --rules input/account_rules.json --out output
+python3 -m pytest test_charity_stripe_quickbooks_recon.py
 ```
 
 ### AI Ops Triage
