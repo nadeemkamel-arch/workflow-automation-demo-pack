@@ -1,33 +1,34 @@
-name: Workflow automation pilot inquiry
-description: Ask about a small paid workflow automation pilot.
-title: "[Pilot] "
+name: $95 Workflow Rescue Sprint
+description: Describe one broken or manual workflow for a fixed starter rescue.
+title: "[Workflow rescue] "
 labels:
   - pilot-inquiry
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for opening a pilot inquiry.
+        This form is for a fixed $95 starter sprint: one input, one output, one main
+        failure path, and delivery within three business days.
 
         Please do not include production credentials, API keys, private customer records, regulated data, payment details, or confidential business data. Use fictional, redacted, or high-level examples only.
   - type: textarea
     id: workflow
     attributes:
-      label: Workflow to automate
-      description: Describe the manual process or broken automation in a few sentences.
+      label: What is broken or still manual?
+      description: Describe the workflow and the specific point where it fails or consumes time.
       placeholder: "Example: inbound form submissions need to be validated, scored, and routed to a spreadsheet plus Slack alert."
     validations:
       required: true
   - type: dropdown
     id: pilot_type
     attributes:
-      label: Best-fit pilot
-      description: Pick the closest starter package. This can change after review.
+      label: Best-fit rescue
+      description: Pick the closest starting point.
       options:
-        - Document/API Intake Sprint
-        - Conversation Flow QA Sprint
-        - n8n/Python Workflow Rescue Sprint
-        - Data Extraction and Report Pack
+        - Broken workflow repair
+        - Manual workflow prototype
+        - Data extraction or cleanup
+        - Small app or script bug
         - Not sure yet
     validations:
       required: true
@@ -58,18 +59,14 @@ body:
         - Not sure yet
     validations:
       required: true
-  - type: dropdown
-    id: starter_budget
+  - type: textarea
+    id: examples
     attributes:
-      label: Target first milestone budget
-      description: Optional guide for scoping the first small pilot.
-      options:
-        - $75-$150
-        - $150-$300
-        - $300-$600
-        - Needs discussion
+      label: Up to three failing examples
+      description: Use fictional, redacted, or high-level examples. Do not include secrets or private records.
+      placeholder: "Example 1: a duplicate form submission creates two rows. Example 2: a missing email crashes the run."
     validations:
-      required: false
+      required: true
   - type: textarea
     id: systems
     attributes:

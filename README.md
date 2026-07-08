@@ -32,7 +32,27 @@ Delivery notes:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/blob/main/DELIVERY_NOTES.md
 
-## Paid Pilot Menu
+## Featured Offer: $95 Workflow Rescue Sprint
+
+Send one broken or manual workflow. The fixed starter scope covers one input, one
+output, one main failure path, and delivery within three business days.
+
+Delivery includes:
+
+- a working first fix or prototype,
+- a focused test or validation command,
+- setup and handoff notes,
+- a plain-language list of what changed.
+
+Start with a fictional, redacted, or sandbox example. No production credentials are
+needed. If the workflow is larger than the starter scope, that is identified before
+work begins.
+
+Inquiry form:
+
+https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-pilot.yml
+
+## Other Proofed Capabilities
 
 Good starter projects are intentionally small:
 
