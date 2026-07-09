@@ -1,0 +1,10 @@
+scenario_id,capability,scenario,expected_outcome,actual_outcome,passed,confidence,tool_status,citation_coverage,trace_fields,handoff_triggered,user_feedback,latency_ms
+REQ-001,requirements_retrieval,Find load-bearing design constraint from project notes,returns cited constraint,returns cited constraint,true,0.91,ok,1.0,scenario_id|retrieval_set|decision_reason|tool_status,false,positive,1180
+REQ-002,requirements_retrieval,Find latest client revision for beam spacing,returns latest revision with source,returns outdated revision,false,0.63,ok,0.55,scenario_id|decision_reason|tool_status,false,negative,1420
+REQ-003,requirements_retrieval,Clarify missing spec in ambiguous request,hands off for missing spec,gives unsupported answer,false,0.42,ok,0.25,scenario_id|retrieval_set|decision_reason,false,negative,980
+SIM-001,simulation_orchestration,Run accepted simulation template with valid inputs,stages tool payload,stages tool payload,true,0.88,ok,0.92,scenario_id|tool_status|fallback_path|decision_reason,false,positive,2210
+SIM-002,simulation_orchestration,Handle simulator timeout without losing state,hands off with retry packet,keeps retrying tool,false,0.58,error,0.8,scenario_id|tool_status|decision_reason,false,negative,5810
+SIM-003,simulation_orchestration,Reject out-of-range load value,blocks tool call and explains,blocks tool call and explains,true,0.86,ok,0.95,scenario_id|tool_status|fallback_path|decision_reason,true,neutral,1670
+QA-001,qa_report_writer,Draft concise engineering QA summary from cited checks,produces review-ready summary,produces review-ready summary,true,0.89,ok,0.95,scenario_id|retrieval_set|decision_reason|human_review_state,true,positive,1940
+QA-002,qa_report_writer,Flag contradictory test results in report,hands off for human review,buries contradiction,false,0.66,ok,0.62,scenario_id|decision_reason|human_review_state,false,negative,2060
+QA-003,qa_report_writer,Write status update after all checks pass,produces short status note,produces short status note,true,0.94,ok,1.0,scenario_id|retrieval_set|decision_reason|human_review_state,false,positive,1010

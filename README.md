@@ -84,6 +84,7 @@ Good starter projects are intentionally small:
 - **Agentic Workspace Install**: set up a Claude Code / Codex-style workspace with `CLAUDE.md`, slash commands, MCP-style integration notes, approval gates, training steps, and support handoff.
 - **Generated App Release Gate**: review an AI-generated app manifest for auth, payment, webhook, schema, env, and deployment blockers before production launch.
 - **Agentic Data Pipeline Gate**: validate agent-generated extraction/RAG/data pipelines for schema drift, source evidence, row-volume shifts, duplicate keys, stale runs, and write-safety before publish.
+- **Agent Capability Eval Loop**: turn capability-agent telemetry into eval findings, monitoring summaries, iteration tasks, and a handoff brief before a limited pilot.
 - **Search Result Contract Monitor**: check search API response snapshots for missing documented blocks, duplicate links, ranking gaps, empty snippets, access failures, and support-ready release decisions.
 - **n8n/Python Workflow Rescue Sprint**: fix or prototype one trigger-to-output workflow with sample data, validation, and setup docs.
 - **Data Extraction and Report Pack**: convert PDFs, CSVs, spreadsheets, emails, or public pages into a clean report plus a reproducible script.

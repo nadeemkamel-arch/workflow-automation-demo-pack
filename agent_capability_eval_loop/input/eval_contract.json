@@ -1,0 +1,23 @@
+{
+  "global": {
+    "min_pass_rate": 0.8,
+    "max_tool_error_rate": 0.15,
+    "min_trace_coverage": 0.95,
+    "min_citation_coverage": 0.9,
+    "max_negative_feedback_rate": 0.25
+  },
+  "capabilities": {
+    "requirements_retrieval": {
+      "min_pass_rate": 0.85,
+      "must_have_trace_fields": ["scenario_id", "retrieval_set", "decision_reason", "tool_status"]
+    },
+    "simulation_orchestration": {
+      "min_pass_rate": 0.75,
+      "must_have_trace_fields": ["scenario_id", "tool_status", "fallback_path", "decision_reason"]
+    },
+    "qa_report_writer": {
+      "min_pass_rate": 0.8,
+      "must_have_trace_fields": ["scenario_id", "retrieval_set", "decision_reason", "human_review_state"]
+    }
+  }
+}

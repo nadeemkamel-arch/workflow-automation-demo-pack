@@ -1,0 +1,21 @@
+{
+  "decision": "block_pilot",
+  "total_runs": 9,
+  "pass_rate": 0.556,
+  "tool_error_rate": 0.111,
+  "trace_coverage": 0.556,
+  "negative_feedback_rate": 0.444,
+  "counts_by_severity": {
+    "blocker": 4,
+    "high": 12,
+    "medium": 4
+  },
+  "counts_by_area": {
+    "audit_trace": 4,
+    "eval_failure": 4,
+    "retrieval_evidence": 4,
+    "capability_health": 3,
+    "tool_reliability": 1,
+    "handoff_policy": 4
+  }
+}

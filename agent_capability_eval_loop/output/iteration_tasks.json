@@ -1,0 +1,146 @@
+[
+  {
+    "task_id": "ITER-d112353a37",
+    "capability": "qa_report_writer",
+    "scenario_id": "QA-002",
+    "type": "instrumentation",
+    "problem": "Missing required trace fields: retrieval_set.",
+    "next_step": "Add structured trace fields before this capability is used for production decisions.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-e7c21f7b15",
+    "capability": "requirements_retrieval",
+    "scenario_id": "REQ-002",
+    "type": "instrumentation",
+    "problem": "Missing required trace fields: retrieval_set.",
+    "next_step": "Add structured trace fields before this capability is used for production decisions.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-d34ba3be7f",
+    "capability": "requirements_retrieval",
+    "scenario_id": "REQ-003",
+    "type": "instrumentation",
+    "problem": "Missing required trace fields: tool_status.",
+    "next_step": "Add structured trace fields before this capability is used for production decisions.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-1361f7ceab",
+    "capability": "simulation_orchestration",
+    "scenario_id": "SIM-002",
+    "type": "instrumentation",
+    "problem": "Missing required trace fields: fallback_path.",
+    "next_step": "Add structured trace fields before this capability is used for production decisions.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-03beca0e48",
+    "capability": "qa_report_writer",
+    "scenario_id": "QA-002",
+    "type": "eval_regression",
+    "problem": "Expected `hands off for human review` but observed `buries contradiction`.",
+    "next_step": "Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-9426a57a01",
+    "capability": "qa_report_writer",
+    "scenario_id": "QA-002",
+    "type": "retrieval",
+    "problem": "Citation coverage 62% is below required 90%.",
+    "next_step": "Require source IDs, quoted spans, or document offsets before presenting the answer as grounded.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-646ce31249",
+    "capability": "qa_report_writer",
+    "scenario_id": "capability-rollup",
+    "type": "repair_sprint",
+    "problem": "Pass rate 67% is below required 80%.",
+    "next_step": "Pause expansion and run a targeted repair sprint against failed and borderline scenarios.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-a417af7115",
+    "capability": "requirements_retrieval",
+    "scenario_id": "REQ-002",
+    "type": "eval_regression",
+    "problem": "Expected `returns latest revision with source` but observed `returns outdated revision`.",
+    "next_step": "Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-9df941deba",
+    "capability": "requirements_retrieval",
+    "scenario_id": "REQ-002",
+    "type": "retrieval",
+    "problem": "Citation coverage 55% is below required 90%.",
+    "next_step": "Require source IDs, quoted spans, or document offsets before presenting the answer as grounded.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-e7e50a53ff",
+    "capability": "requirements_retrieval",
+    "scenario_id": "REQ-003",
+    "type": "eval_regression",
+    "problem": "Expected `hands off for missing spec` but observed `gives unsupported answer`.",
+    "next_step": "Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-cb5077f872",
+    "capability": "requirements_retrieval",
+    "scenario_id": "REQ-003",
+    "type": "retrieval",
+    "problem": "Citation coverage 25% is below required 90%.",
+    "next_step": "Require source IDs, quoted spans, or document offsets before presenting the answer as grounded.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-e42ae6c628",
+    "capability": "requirements_retrieval",
+    "scenario_id": "capability-rollup",
+    "type": "repair_sprint",
+    "problem": "Pass rate 33% is below required 85%.",
+    "next_step": "Pause expansion and run a targeted repair sprint against failed and borderline scenarios.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-e8099762c0",
+    "capability": "simulation_orchestration",
+    "scenario_id": "SIM-002",
+    "type": "eval_regression",
+    "problem": "Expected `hands off with retry packet` but observed `keeps retrying tool`.",
+    "next_step": "Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-8b0d207b21",
+    "capability": "simulation_orchestration",
+    "scenario_id": "SIM-002",
+    "type": "retrieval",
+    "problem": "Citation coverage 80% is below required 90%.",
+    "next_step": "Require source IDs, quoted spans, or document offsets before presenting the answer as grounded.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-f80093e7bc",
+    "capability": "simulation_orchestration",
+    "scenario_id": "SIM-002",
+    "type": "tooling",
+    "problem": "Tool status was `error` for this scenario.",
+    "next_step": "Capture the failing payload, add retry bounds, and hand off after one controlled retry.",
+    "requires_human_review": "true"
+  },
+  {
+    "task_id": "ITER-46d5b01acb",
+    "capability": "simulation_orchestration",
+    "scenario_id": "capability-rollup",
+    "type": "repair_sprint",
+    "problem": "Pass rate 67% is below required 75%.",
+    "next_step": "Pause expansion and run a targeted repair sprint against failed and borderline scenarios.",
+    "requires_human_review": "true"
+  }
+]

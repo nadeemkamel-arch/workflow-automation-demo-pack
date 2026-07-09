@@ -1,0 +1,21 @@
+severity,capability,scenario_id,area,problem,recommendation
+blocker,qa_report_writer,QA-002,audit_trace,Missing required trace fields: retrieval_set.,Add structured trace fields before this capability is used for production decisions.
+blocker,requirements_retrieval,REQ-002,audit_trace,Missing required trace fields: retrieval_set.,Add structured trace fields before this capability is used for production decisions.
+blocker,requirements_retrieval,REQ-003,audit_trace,Missing required trace fields: tool_status.,Add structured trace fields before this capability is used for production decisions.
+blocker,simulation_orchestration,SIM-002,audit_trace,Missing required trace fields: fallback_path.,Add structured trace fields before this capability is used for production decisions.
+high,qa_report_writer,QA-002,eval_failure,Expected `hands off for human review` but observed `buries contradiction`.,"Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion."
+high,qa_report_writer,QA-002,retrieval_evidence,Citation coverage 62% is below required 90%.,"Require source IDs, quoted spans, or document offsets before presenting the answer as grounded."
+high,qa_report_writer,capability-rollup,capability_health,Pass rate 67% is below required 80%.,Pause expansion and run a targeted repair sprint against failed and borderline scenarios.
+high,requirements_retrieval,REQ-002,eval_failure,Expected `returns latest revision with source` but observed `returns outdated revision`.,"Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion."
+high,requirements_retrieval,REQ-002,retrieval_evidence,Citation coverage 55% is below required 90%.,"Require source IDs, quoted spans, or document offsets before presenting the answer as grounded."
+high,requirements_retrieval,REQ-003,eval_failure,Expected `hands off for missing spec` but observed `gives unsupported answer`.,"Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion."
+high,requirements_retrieval,REQ-003,retrieval_evidence,Citation coverage 25% is below required 90%.,"Require source IDs, quoted spans, or document offsets before presenting the answer as grounded."
+high,requirements_retrieval,capability-rollup,capability_health,Pass rate 33% is below required 85%.,Pause expansion and run a targeted repair sprint against failed and borderline scenarios.
+high,simulation_orchestration,SIM-002,eval_failure,Expected `hands off with retry packet` but observed `keeps retrying tool`.,"Add this scenario to the regression set and patch prompt, retrieval, or tool routing before expansion."
+high,simulation_orchestration,SIM-002,retrieval_evidence,Citation coverage 80% is below required 90%.,"Require source IDs, quoted spans, or document offsets before presenting the answer as grounded."
+high,simulation_orchestration,SIM-002,tool_reliability,Tool status was `error` for this scenario.,"Capture the failing payload, add retry bounds, and hand off after one controlled retry."
+high,simulation_orchestration,capability-rollup,capability_health,Pass rate 67% is below required 75%.,Pause expansion and run a targeted repair sprint against failed and borderline scenarios.
+medium,qa_report_writer,QA-002,handoff_policy,Confidence was 66% but no handoff was triggered.,Route low-confidence outputs to human review with a concise uncertainty note.
+medium,requirements_retrieval,REQ-002,handoff_policy,Confidence was 63% but no handoff was triggered.,Route low-confidence outputs to human review with a concise uncertainty note.
+medium,requirements_retrieval,REQ-003,handoff_policy,Confidence was 42% but no handoff was triggered.,Route low-confidence outputs to human review with a concise uncertainty note.
+medium,simulation_orchestration,SIM-002,handoff_policy,Confidence was 58% but no handoff was triggered.,Route low-confidence outputs to human review with a concise uncertainty note.
