@@ -8,6 +8,10 @@ Portfolio page:
 
 https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/
 
+Student resume and application starter page:
+
+https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/summer-job/
+
 Free workflow fit check:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-fit-check.yml
