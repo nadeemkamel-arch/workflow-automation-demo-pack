@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neighborhood Listing Helper | Nadeem Kamel</title>
+    <meta
+      name="description"
+      content="Small local help turning rough item photos and notes into clean sale listings, price ranges, and a simple tracker."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f3ed;
+        --ink: #17212b;
+        --muted: #58626b;
+        --panel: #ffffff;
+        --line: #d8d0c4;
+        --green: #286f5a;
+        --blue: #225c78;
+        --gold: #a86d23;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.5;
+      }
+
+      a { color: var(--blue); }
+
+      .wrap {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        background: var(--panel);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbar {
+        min-height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand { font-weight: 850; }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        font-size: 14px;
+      }
+
+      nav a { text-decoration: none; }
+
+      .hero {
+        padding: 58px 0 44px;
+        min-height: min(680px, calc(100vh - 70px));
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+        gap: 34px;
+        align-items: center;
+      }
+
+      h1, h2, h3, p { margin-top: 0; }
+
+      h1 {
+        margin-bottom: 18px;
+        max-width: 760px;
+        font-size: clamp(40px, 7vw, 72px);
+        line-height: 0.98;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-size: 30px;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+
+      .kicker {
+        margin: 0 0 14px;
+        color: var(--green);
+        font-size: 14px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .lede {
+        max-width: 700px;
+        color: var(--muted);
+        font-size: 19px;
+      }
+
+      .actions {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        min-height: 44px;
+        padding: 10px 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--ink);
+        border-radius: 6px;
+        background: var(--ink);
+        color: #ffffff;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: transparent;
+        color: var(--ink);
+      }
+
+      .sample {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 18px 34px rgba(23, 33, 43, 0.1);
+        overflow: hidden;
+      }
+
+      .sample-head {
+        padding: 13px 16px;
+        background: var(--green);
+        color: #ffffff;
+        font-weight: 900;
+      }
+
+      .sample-body { padding: 18px; }
+
+      .listing {
+        padding-bottom: 14px;
+        margin-bottom: 14px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .listing:last-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .price {
+        color: var(--gold);
+        font-weight: 900;
+      }
+
+      section {
+        padding: 52px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      section.white { background: var(--panel); }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .card {
+        min-height: 100%;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .card p,
+      .muted { color: var(--muted); }
+
+      .note {
+        padding-left: 18px;
+        border-left: 5px solid var(--gold);
+      }
+
+      footer {
+        padding: 34px 0 44px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 780px) {
+        .topbar,
+        .hero { display: block; }
+
+        nav { margin-top: 8px; }
+
+        .hero { padding-top: 42px; }
+
+        .sample { margin-top: 28px; }
+
+        .grid { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar wrap">
+        <div class="brand">Nadeem Kamel</div>
+        <nav aria-label="Primary">
+          <a href="../">Workflow Help</a>
+          <a href="../summer-job/">Student Help</a>
+          <a href="mailto:nadeemskamel@gmail.com?subject=Listing%20helper">Email</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero wrap">
+        <div>
+          <p class="kicker">Small Local Help</p>
+          <h1>Turn a pile of stuff into clean sale listings.</h1>
+          <p class="lede">
+            Send rough item photos and notes. I can turn them into clear titles,
+            short descriptions, suggested price ranges, and a simple tracker so
+            garage-sale, moving-sale, or Marketplace posts are easier to finish.
+          </p>
+          <p class="lede">
+            You approve and post everything yourself. I do not handle payments,
+            pickups, meetups, or buyer messages.
+          </p>
+          <div class="actions">
+            <a class="button" href="mailto:nadeemskamel@gmail.com?subject=Listing%20helper%20sample">Ask About A Small Batch</a>
+            <a class="button secondary" href="marketplace-listing-checklist.pdf">Download Checklist</a>
+          </div>
+        </div>
+
+        <aside class="sample" aria-label="Sample listing copy">
+          <div class="sample-head">Example Output</div>
+          <div class="sample-body">
+            <div class="listing">
+              <h3>Set of 4 Gray Wood Bar Stools</h3>
+              <p class="price">$95-$150 suggested range</p>
+              <p>Set of 4 gray solid-wood bar stools. Comfortable height for a kitchen island or counter seating area. Used condition with some visible scuffs, but sturdy and ready to use.</p>
+            </div>
+            <div class="listing">
+              <h3>Student Desk</h3>
+              <p class="price">$35-$75 suggested range</p>
+              <p>Simple desk that would work well for a student room, small office, or apartment setup. Used but clean. Buyer must pick up.</p>
+            </div>
+            <div class="listing">
+              <h3>Owner Check</h3>
+              <p>Confirm dimensions, working condition, and any damage before posting. Add close-up photos where condition matters.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="white">
+        <div class="wrap">
+          <h2>Good Fits</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Moving Or Downsizing</h3>
+              <p>Furniture, home goods, garage items, boxes, and anything that needs clearer copy before posting.</p>
+            </article>
+            <article class="card">
+              <h3>Garage Sale Prep</h3>
+              <p>A price tracker, short item descriptions, bundle ideas, and a printable list for the day of the sale.</p>
+            </article>
+            <article class="card">
+              <h3>Student Move-Out</h3>
+              <p>Dorm furniture, electronics, kitchen starter bundles, and easy copy for local pickup posts.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>How A First Batch Works</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>1. Send A Few Items</h3>
+              <p>Start with 3-5 rough items, whatever notes you already have, and photos if available.</p>
+            </article>
+            <article class="card">
+              <h3>2. Review A Sample</h3>
+              <p>I return cleaned-up titles, descriptions, price ranges, and a small tracker so you can judge the fit.</p>
+            </article>
+            <article class="card">
+              <h3>3. Approve The Batch</h3>
+              <p>If it helps, we agree on a small fixed batch before I do more. You approve every listing before posting.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="white">
+        <div class="wrap note">
+          <h2>Typical Small Scope</h2>
+          <p class="muted">
+            A quick batch is usually about 8-10 items. A tidy sale batch is
+            usually about 20-25 items. Pricing depends on how many items, how
+            rough the notes are, and whether you want a printable sale sheet.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>Small local document/listing help by Nadeem Kamel. Contact: <a href="mailto:nadeemskamel@gmail.com">nadeemskamel@gmail.com</a>.</p>
+      </div>
+    </footer>
+  </body>
+</html>
+
