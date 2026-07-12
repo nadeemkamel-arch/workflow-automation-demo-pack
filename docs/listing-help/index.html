@@ -114,6 +114,17 @@
         gap: 12px;
       }
 
+      .fast-lane {
+        margin-top: 24px;
+        padding: 16px 18px;
+        border: 1px solid var(--line);
+        border-left: 5px solid var(--gold);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .fast-lane strong { color: var(--green); }
+
       .button {
         min-height: 44px;
         padding: 10px 15px;
@@ -196,6 +207,18 @@
         border-left: 5px solid var(--gold);
       }
 
+      .send-box {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #f8fbf8;
+      }
+
+      .send-box ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
       footer {
         padding: 34px 0 44px;
         border-top: 1px solid var(--line);
@@ -243,8 +266,14 @@
             You approve and post everything yourself. I do not handle payments,
             pickups, meetups, or buyer messages.
           </p>
+          <div class="fast-lane">
+            <strong>Sale coming up soon?</strong>
+            Send the sale date, about how many items you have, and 3-5 sample
+            photos or rough notes. I can usually tell quickly whether a small
+            listing batch or printable sale sheet would help.
+          </div>
           <div class="actions">
-            <a class="button" href="mailto:nadeemskamel@gmail.com?subject=Listing%20helper%20sample">Ask About A Small Batch</a>
+            <a class="button" href="mailto:nadeemskamel@gmail.com?subject=Listing%20helper%20sample&body=Hi%20Nadeem%2C%0A%0AI%20have%20a%20garage%2Fmoving%2Fyard%20sale%20on%3A%20%5Bdate%5D%0AAbout%20how%20many%20items%3A%20%5Bnumber%5D%0AWhat%20I%20need%3A%20%5Blisting%20copy%20%2F%20prices%20%2F%20tracker%20%2F%20printable%20sale%20sheet%5D%0AI%20can%20send%203-5%20sample%20photos%2Fnotes.%0A%0AThanks%21">Send A Sample Batch</a>
             <a class="button secondary" href="marketplace-listing-checklist.pdf">Download Checklist</a>
           </div>
         </div>
@@ -311,13 +340,37 @@
       </section>
 
       <section class="white">
-        <div class="wrap note">
-          <h2>Typical Small Scope</h2>
-          <p class="muted">
-            A quick batch is usually about 8-10 items. A tidy sale batch is
-            usually about 20-25 items. Pricing depends on how many items, how
-            rough the notes are, and whether you want a printable sale sheet.
-          </p>
+        <div class="wrap">
+          <h2>What To Send First</h2>
+          <div class="grid">
+            <article class="send-box">
+              <h3>For A Quick Sample</h3>
+              <ul>
+                <li>3-5 item photos or rough notes</li>
+                <li>sale date or posting deadline</li>
+                <li>pickup-only or delivery expectation</li>
+                <li>anything broken, missing, or untested</li>
+              </ul>
+            </article>
+            <article class="send-box">
+              <h3>Common First Batch</h3>
+              <ul>
+                <li>free 3-5 item sample</li>
+                <li>8-10 item quick batch: about $25</li>
+                <li>20-25 item tidy sale batch: about $45</li>
+                <li>printable sale sheet quoted after seeing the list</li>
+              </ul>
+            </article>
+            <article class="send-box">
+              <h3>Owner Keeps Control</h3>
+              <ul>
+                <li>you approve every description</li>
+                <li>you post the final listings</li>
+                <li>you handle buyer messages and pickup</li>
+                <li>no sale guarantees or condition guesses</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </section>
     </main>
@@ -329,4 +382,3 @@
     </footer>
   </body>
 </html>
-
