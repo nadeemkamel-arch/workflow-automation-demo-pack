@@ -16,6 +16,10 @@ Neighborhood listing helper page:
 
 https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/listing-help/
 
+Word and manuscript rescue page:
+
+https://nadeemkamel-arch.github.io/workflow-automation-demo-pack/document-help/
+
 Free workflow fit check:
 
 https://github.com/nadeemkamel-arch/workflow-automation-demo-pack/issues/new?template=workflow-fit-check.yml
@@ -77,6 +81,7 @@ Good starter projects are intentionally small:
 - **Prelaunch QA Smoke Test**: test a small app, signup flow, or beta build and return a bug report, UX notes, retest checklist, and launch gate.
 - **Document/API Intake Sprint**: turn sample documents or exports into extracted fields, review routing, staged API payloads, and a runbook.
 - **Neighborhood Listing Helper**: turn rough item photos and notes into clean sale listing titles, descriptions, suggested price ranges, owner-check questions, and a simple tracker.
+- **Word and Manuscript Rescue**: repair Word styles, sections, page numbering, headers, margins, and print-ready PDF output, starting with a free three-page sample.
 - **Conversation Flow QA Sprint**: turn draft prompts or customer-message examples into response rules, edge cases, test messages, and handoff notes.
 - **WhatsApp/Gmail Handoff Sprint**: turn inbound messages into AI draft approvals, human-handoff packets, pause/resume state, and no-auto-send logs.
 - **Telegram Lead MVP Sprint**: turn a short intake flow into scored leads, AI summary payloads, source tracking, and owner notifications.

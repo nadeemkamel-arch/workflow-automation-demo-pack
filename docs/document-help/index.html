@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Word &amp; Manuscript Rescue | Nadeem Kamel</title>
+    <meta
+      name="description"
+      content="Friendly help cleaning up Word documents and book manuscripts, with a free three-page formatting sample before any paid work."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --paper: #f4f6f2;
+        --white: #ffffff;
+        --ink: #1f2726;
+        --muted: #5d6763;
+        --line: #cad2cc;
+        --forest: #284a43;
+        --rust: #a85f3a;
+        --blue: #37627b;
+        --soft-green: #e8efea;
+        --soft-rust: #f3e9e3;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+      }
+
+      a { color: var(--blue); }
+
+      .wrap {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      header {
+        position: relative;
+        z-index: 5;
+        background: var(--white);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbar {
+        min-height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+
+      .brand {
+        color: var(--ink);
+        font-weight: 850;
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 14px;
+      }
+
+      nav a { text-decoration: none; }
+
+      .hero {
+        position: relative;
+        min-height: 620px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        background-image: url("assets/manuscript-chapter-preview.png");
+        background-position: center 24%;
+        background-size: cover;
+      }
+
+      .hero::before {
+        position: absolute;
+        inset: 0;
+        content: "";
+        background: rgba(244, 246, 242, 0.9);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        width: min(800px, 100%);
+        padding: 72px 0 64px;
+      }
+
+      h1, h2, h3, p { margin-top: 0; }
+
+      h1 {
+        max-width: 780px;
+        margin-bottom: 20px;
+        color: var(--forest);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-bottom: 18px;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+        letter-spacing: 0;
+      }
+
+      .kicker {
+        margin-bottom: 12px;
+        color: var(--rust);
+        font-size: 14px;
+        font-weight: 850;
+        text-transform: uppercase;
+      }
+
+      .lede {
+        max-width: 720px;
+        color: #404b47;
+        font-size: 20px;
+      }
+
+      .actions {
+        margin-top: 26px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .button {
+        min-height: 44px;
+        padding: 10px 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid var(--forest);
+        border-radius: 6px;
+        background: var(--forest);
+        color: var(--white);
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: rgba(255, 255, 255, 0.68);
+        color: var(--forest);
+      }
+
+      .sample-note {
+        max-width: 720px;
+        margin: 0;
+        padding-left: 15px;
+        border-left: 4px solid var(--rust);
+        color: var(--muted);
+      }
+
+      .promise-strip {
+        padding: 24px 0;
+        background: var(--white);
+      }
+
+      section {
+        padding: 58px 0;
+        border-top: 1px solid var(--line);
+      }
+
+      section.white { background: var(--white); }
+
+      .intro-grid,
+      .sample-grid,
+      .process-grid,
+      .scope-grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      .intro-grid { grid-template-columns: minmax(0, 1fr) minmax(280px, 0.72fr); }
+      .sample-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .process-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .scope-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+      .plain-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border-top: 1px solid var(--line);
+      }
+
+      .plain-list li {
+        padding: 13px 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .plain-list strong {
+        display: block;
+        margin-bottom: 2px;
+      }
+
+      .price-box {
+        align-self: start;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--soft-green);
+      }
+
+      .price-box .amount {
+        margin-bottom: 8px;
+        color: var(--forest);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+      }
+
+      .price-box p:last-child { margin-bottom: 0; }
+
+      figure { margin: 0; }
+
+      .sample-page {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--line);
+        background: var(--white);
+        box-shadow: 0 14px 30px rgba(31, 39, 38, 0.1);
+      }
+
+      figcaption {
+        margin-top: 10px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .sample-links {
+        margin-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .step {
+        padding-top: 16px;
+        border-top: 4px solid var(--blue);
+      }
+
+      .step-number {
+        margin-bottom: 8px;
+        color: var(--rust);
+        font-weight: 850;
+      }
+
+      .scope-block {
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        background: var(--white);
+      }
+
+      .scope-block.not-included { background: var(--soft-rust); }
+
+      .scope-block ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .cta-band {
+        background: var(--forest);
+        color: var(--white);
+      }
+
+      .cta-band h2 { color: var(--white); }
+      .cta-band p { max-width: 760px; color: #e2ebe6; }
+      .cta-band .button { border-color: var(--white); background: var(--white); color: var(--forest); }
+      .cta-band .button.secondary { background: transparent; color: var(--white); }
+
+      footer {
+        padding: 36px 0 44px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 780px) {
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+          padding: 15px 0;
+        }
+
+        .hero {
+          min-height: 580px;
+          background-position: center top;
+        }
+
+        .hero-content { padding: 54px 0 48px; }
+
+        h1 { font-size: 46px; }
+        h2 { font-size: 30px; }
+
+        .intro-grid,
+        .sample-grid,
+        .process-grid,
+        .scope-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .actions .button { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar wrap">
+        <a class="brand" href="../">Nadeem Kamel</a>
+        <nav aria-label="Primary">
+          <a href="#sample">Sample</a>
+          <a href="#process">How It Works</a>
+          <a href="#scope">Scope</a>
+          <a href="../listing-help/">Listing Help</a>
+          <a href="mailto:nadeemskamel@gmail.com?subject=Word%20document%20help">Email</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="wrap">
+          <div class="hero-content">
+            <p class="kicker">San Diego &amp; Remote</p>
+            <h1 id="page-title">Word &amp; Manuscript Rescue</h1>
+            <p class="lede">
+              Stuck on chapter breaks, page numbers, margins, headers, or a print-ready PDF?
+              Send three representative pages. I will return a cleaned sample and tell you
+              honestly whether the rest is a good fit.
+            </p>
+            <div class="actions">
+              <a
+                class="button"
+                href="mailto:nadeemskamel@gmail.com?subject=Three-page%20Word%20formatting%20sample&amp;body=Hi%20Nadeem%2C%0A%0AI%20need%20help%20with%3A%20%5BWord%20document%20%2F%20manuscript%20%2F%20Lulu%20file%20%2F%20other%5D%0AApproximate%20page%20count%3A%20%5Bnumber%5D%0AWhat%20is%20going%20wrong%3A%20%5Bshort%20description%5D%0ADeadline%3A%20%5Bdate%5D%0A%0AI%20can%20attach%20three%20representative%20pages.%0A"
+              >Send Three Sample Pages</a>
+              <a class="button secondary" href="manuscript-formatting-sample.pdf">View the PDF Sample</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="promise-strip" aria-label="Free sample promise">
+        <div class="wrap">
+          <p class="sample-note">
+            The three-page sample is free. There is no payment or commitment unless you like
+            the result and approve a fixed quote for the remaining file.
+          </p>
+        </div>
+      </section>
+
+      <section class="white" aria-labelledby="fit-title">
+        <div class="wrap intro-grid">
+          <div>
+            <h2 id="fit-title">The Annoying Word Problems</h2>
+            <ul class="plain-list">
+              <li><strong>Styles drift everywhere.</strong> Headings, paragraphs, lists, and spacing no longer match.</li>
+              <li><strong>Pages move unexpectedly.</strong> Section breaks, blank pages, headers, and numbering fight each other.</li>
+              <li><strong>The manuscript looks unfinished.</strong> Chapter openings, margins, gutters, and running heads need a consistent system.</li>
+              <li><strong>The PDF does not match Word.</strong> Fonts, images, page dimensions, or export settings produce a bad print file.</li>
+            </ul>
+          </div>
+          <aside class="price-box" aria-label="Typical price range">
+            <p class="kicker">Start Small</p>
+            <p class="amount">Free 3-page sample</p>
+            <p>
+              Paid work starts at $45. Mostly-text manuscript cleanup usually falls around
+              $75-$150 after I inspect the length and complexity. You get the quote first.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="sample" aria-labelledby="sample-title">
+        <div class="wrap">
+          <h2 id="sample-title">A Real Formatting Sample</h2>
+          <p class="lede">
+            This fictional four-page excerpt was built in Word with reusable paragraph styles,
+            chapter sections, running heads, and automatic page numbers, then rendered and checked page by page.
+          </p>
+          <div class="sample-grid" style="margin-top: 28px">
+            <figure>
+              <img
+                class="sample-page"
+                src="assets/manuscript-cover-preview.png"
+                alt="Fictional manuscript cover page titled The Quiet Archive"
+              />
+              <figcaption>Title-page hierarchy with restrained editorial typography.</figcaption>
+            </figure>
+            <figure>
+              <img
+                class="sample-page"
+                src="assets/manuscript-chapter-preview.png"
+                alt="Fictional manuscript chapter page with clean paragraph formatting and page number"
+              />
+              <figcaption>Chapter opening, first-paragraph treatment, body style, and automatic numbering.</figcaption>
+            </figure>
+          </div>
+          <div class="sample-links">
+            <a href="manuscript-formatting-sample.pdf">Open the complete PDF</a>
+            <a href="manuscript-formatting-sample.docx">Download the editable Word sample</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="white" aria-labelledby="process-title">
+        <div class="wrap">
+          <h2 id="process-title">How a First Fix Works</h2>
+          <div class="process-grid">
+            <article class="step">
+              <p class="step-number">01</p>
+              <h3>Send Three Pages</h3>
+              <p>Choose pages that show the real problem. Redact names or private details if needed.</p>
+            </article>
+            <article class="step">
+              <p class="step-number">02</p>
+              <h3>Review the Repair</h3>
+              <p>I return a corrected sample and explain what needs to change across the full file.</p>
+            </article>
+            <article class="step">
+              <p class="step-number">03</p>
+              <h3>Approve a Fixed Quote</h3>
+              <p>If the sample helps, we agree on the deliverables, deadline, revisions, and price before I continue.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="scope" aria-labelledby="scope-title">
+        <div class="wrap">
+          <h2 id="scope-title">Clear Scope, Clean Handoff</h2>
+          <div class="scope-grid">
+            <article class="scope-block">
+              <h3>Common Deliverables</h3>
+              <ul>
+                <li>clean editable Word file</li>
+                <li>consistent paragraph and heading styles</li>
+                <li>repaired sections, headers, footers, and page numbers</li>
+                <li>page size, margins, and gutter setup</li>
+                <li>print-ready PDF and page-by-page render check</li>
+                <li>short note explaining the changes</li>
+              </ul>
+            </article>
+            <article class="scope-block not-included">
+              <h3>Only When Separately Agreed</h3>
+              <ul>
+                <li>copy editing or rewriting</li>
+                <li>cover design or spine layout</li>
+                <li>image restoration or complex full-bleed design</li>
+                <li>publishing-account access or uploads</li>
+                <li>ISBN, retailer, or distribution approval work</li>
+                <li>rush work before the file is inspected</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="white" aria-labelledby="privacy-title">
+        <div class="wrap intro-grid">
+          <div>
+            <h2 id="privacy-title">Your Original Stays Intact</h2>
+            <p class="lede">
+              I work from a copy, preserve the source file, and do not need your publishing login.
+              Samples can be redacted. Client files are not added to public examples or reused as portfolio material.
+            </p>
+          </div>
+          <div>
+            <h3>Helpful Details</h3>
+            <ul class="plain-list">
+              <li>current format: Word, Google Docs, or PDF</li>
+              <li>approximate page count</li>
+              <li>deadline and intended use</li>
+              <li>three pages showing the problem</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="contact-title">
+        <div class="wrap">
+          <h2 id="contact-title">Start With Three Pages</h2>
+          <p>
+            You do not need to diagnose the Word problem first. Send the pages that look wrong
+            and a short note about what you are trying to produce.
+          </p>
+          <div class="actions">
+            <a
+              class="button"
+              href="mailto:nadeemskamel@gmail.com?subject=Three-page%20Word%20formatting%20sample&amp;body=Hi%20Nadeem%2C%0A%0AI%20need%20help%20with%3A%20%5BWord%20document%20%2F%20manuscript%20%2F%20Lulu%20file%20%2F%20other%5D%0AApproximate%20page%20count%3A%20%5Bnumber%5D%0AWhat%20is%20going%20wrong%3A%20%5Bshort%20description%5D%0ADeadline%3A%20%5Bdate%5D%0A%0AI%20can%20attach%20three%20representative%20pages.%0A"
+            >Email the Sample</a>
+            <a class="button secondary" href="manuscript-formatting-sample.pdf">Inspect the Proof First</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          Word and manuscript formatting by Nadeem Kamel.
+          Contact: <a href="mailto:nadeemskamel@gmail.com">nadeemskamel@gmail.com</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
